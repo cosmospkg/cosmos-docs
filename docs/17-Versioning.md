@@ -38,15 +38,18 @@ Each Galaxy has a `meta.toml` with:
 version = "2024.04.17"
 ```
 This version is used for:
+
 - Identifying sync points
 - Snapshotting a full system state
 - Reference in freeze/lockfile scenarios
 
 **Preferred format: `YYYY.MM.DD`** for clarity and traceability
+
 - Easy to sort
 - Helps with security updates or multiple changes in a month
 
 Galaxies **must** update `meta.toml` if any of the following change:
+
 - New Star added
 - Existing Star updated
 - Any Star removed
@@ -63,6 +66,7 @@ Ultimately, archival policies are up to the maintainer. Cosmos recommends preser
 
 ## 🌍 Constellation Stability
 Constellations are install presets. If a Constellation references Stars that change, that's fine—but users should be encouraged to:
+
 - Pin Constellation files to Galaxy versions
 - Create locked snapshots of their system after install
 

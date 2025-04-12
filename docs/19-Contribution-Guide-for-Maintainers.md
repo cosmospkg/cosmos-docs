@@ -6,6 +6,7 @@ This guide is for maintainers of Cosmos Galaxies and package authors who want to
 
 ## 🌟 Your Responsibilities
 If you're maintaining a Galaxy or publishing Stars, you are expected to:
+
 - Keep `meta.toml` up to date (names, versions, descriptions, star list)
 - Update or rebuild tarballs when package contents change
 - Recalculate checksums if hashes are implemented
@@ -20,6 +21,7 @@ If that sounds like a lot of work—it is. Cosmos assumes you take ownership ser
 
 ## ⚙️ Creating a Star
 Use `stellar new-star <name>` to scaffold a new package:
+
 - Edit `star.toml` to define name, version, and dependencies
 - Add an `install.sh` or `nova.lua` script
 - Place files in a `files/` directory relative to the star
@@ -69,6 +71,7 @@ core-galaxy/
 ```
 
 You can host this via:
+
 - S3 (static file bucket)
 - GitHub Pages
 - Any static HTTP server

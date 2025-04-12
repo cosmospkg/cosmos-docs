@@ -153,6 +153,7 @@ cache_dir = "/var/lib/cosmos"
 ---
 
 All Cosmos formats prioritize:
+
 - Human readability
 - Git friendliness
 - Simplicity and forward compatibility

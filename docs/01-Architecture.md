@@ -43,6 +43,7 @@ Cosmos is built as a modular, layered system with a clear separation of responsi
 > Terminal interface for users, using `clap`.
 
 Implements commands like:
+
 - `cosmos install foo`
 - `cosmos uninstall foo`
 - `cosmos update foo`
@@ -69,6 +70,7 @@ The CLI **calls into `cosmos-core`** and reads config from a central TOML file.
 > Maintainer-side tool for **creating and building packages**.
 
 Functions:
+
 - Create new `star.toml` scaffolds
 - Build package tarballs
 - Run pre- and post-build tests

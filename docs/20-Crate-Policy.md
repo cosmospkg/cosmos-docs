@@ -16,6 +16,7 @@ Cosmos is built to run in minimal, musl-based, interpreter-free environments wit
 ## ✅ Allowed Crate Behavior
 
 All crates must:
+
 - Compile statically (no dynamic linking)
 - Be **pure Rust**, or optional FFI that can be disabled
 - Avoid build scripts that invoke system tools
@@ -71,6 +72,7 @@ Before adding a new crate:
 cargo tree -e normal
 ```
 Check for:
+
 - `-sys` crates
 - Dynamic linking
 - Build scripts (`build.rs`) doing sketchy stuff

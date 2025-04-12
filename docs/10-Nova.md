@@ -46,6 +46,7 @@ Cosmos executes Nova scripts inside a controlled environment.
 
 #### `run(command: string)`
 Runs a shell command in the current working directory.
+
 - Inherits stdout/stderr
 - Returns exit code
 - Raises error if non-zero
@@ -71,6 +72,7 @@ Returns true if a file exists under real root.
 Cosmos will pass an install root path (e.g. `/`, or `/mnt/wombat-root`) to the Nova runtime. All file operations are resolved **relative to this root**, enforced internally.
 
 This enables:
+
 - Real system installs
 - Chroot builds
 - Fake-root dry runs for package testing
@@ -93,6 +95,7 @@ Nova gives Cosmos packages a portable, audit-friendly install logic system that 
 
 ## ⚠️ Trust & Safety Warning
 > Nova is sandboxed in spirit, not at the syscall level. It aims to provide a clean API and scoped file operations, but:
+
 - run() executes real binaries on your system
 - Nova does not chroot, isolate namespaces, or drop privileges
 - Scripts can still execute destructive commands if written maliciously

@@ -94,6 +94,7 @@ cosmos install --Constellation desktop
 ## 👩‍💻 Universe
 
 The **Universe** is the local system's package state. It is defined by `universe.toml` and tracks:
+
 - Installed Stars
 - Their versions
 - Files installed by each Star

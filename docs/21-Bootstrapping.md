@@ -6,6 +6,7 @@ This guide walks through how to build a working root filesystem using Cosmos alo
 
 ## 🌜 What Is Bootstrapping?
 Bootstrapping is the act of building a usable system from near-zero. With Cosmos, this means:
+
 - No shell
 - No package manager
 - No userland

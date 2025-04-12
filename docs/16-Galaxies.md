@@ -1,6 +1,7 @@
 # 16 – Galaxies
 
 Galaxies are where Stars go to live (or die). A Galaxy in Cosmos is a plain folder that contains:
+
 - A `meta.toml` file with basic info
 - A list of available Star packages
 - An optional `/packages/` directory full of compressed tarballs
@@ -41,6 +42,7 @@ https://mirror.example.org/galaxies/core/
 ```
 
 This can be served from:
+
 - S3
 - GitHub Pages
 - Your personal server
@@ -51,6 +53,7 @@ This can be served from:
 
 ## 🚫 Rules of Hosting a Galaxy
 Managing a Galaxy sounds cool until you realize it means:
+
 - **Maintaining packages** regularly
 - **Keeping `meta.toml` in sync** with the actual contents
 - **Testing packages** so they don’t destroy someone’s root directory
@@ -65,11 +68,13 @@ If you're not ready to maintain your own galaxy, don't. Use someone else's. Fork
 
 ## 🌌 The Official Galaxy
 If Cosmos ever gets an official Galaxy, it will probably be hosted on:
+
 - S3 or a static file server
 - With no TLS
 - With a massive readme warning you not to blindly trust it
 
 This is because Cosmos believes in:
+
 - Simplicity
 - Reproducibility
 - You being responsible for your own system

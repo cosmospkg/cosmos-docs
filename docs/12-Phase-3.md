@@ -81,6 +81,7 @@ This document outlines future enhancements and optional tools for Cosmos that go
 Cosmos will **not** use `libgit2`, shell out to `git`, or embed Git transport support.
 
 If you want to host Galaxies in Git:
+
 - Clone them manually
 - Serve them via raw HTTP or GitHub Pages
 - Use Git to version content, but not to sync it

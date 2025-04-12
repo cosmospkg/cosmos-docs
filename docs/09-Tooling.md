@@ -6,6 +6,7 @@ This document defines the maintainer-side tooling that powers Cosmos package cre
 
 ## ✨ What is Stellar?
 Stellar is a CLI tool used by package authors and system maintainers. It performs tasks related to:
+
 - Scaffolding new Stars
 - Fetching remote sources for local builds
 - Building package tarballs
@@ -21,11 +22,13 @@ Stellar is not required for *using* Cosmos—only for *building* Stars and Galax
 
 ### `stellar new-star <name>`
 Scaffolds a new `star.toml` and optional build script.
+
 - Prompts for version, description, type (normal/nebula)
 - Creates folder with stub files and `files/` layout
 
 ### `stellar build-star <path>`
 Builds a `.tar.gz` of the Star using `star.toml`
+
 - Copies files into temp dir
 - Includes optional `install.lua` Nova script if present
 - Runs Nova script to prepare files (if needed) during build
@@ -42,6 +45,7 @@ Fetches the *remote source* defined in `star.toml`
 
 ### `stellar validate <path>`
 Validates:
+
 - Presence of required fields
 - Correct semver and dependencies
 - Script syntax (basic checks)
@@ -53,12 +57,14 @@ Gives advice on naming conventions, doc clarity, and structure
 
 ### `stellar galaxy-init <name>`
 Creates a new Galaxy repo with:
+
 - `meta.toml`
 - `stars/` directory
 - `packages/` directory
 
 ### `stellar index-galaxy <path>` *(future)*
 Generates/updates the `[stars]` table in `meta.toml`
+
 - Scans `stars/` for `.toml` files
 - Extracts name + version
 - Sorts and deduplicates entries

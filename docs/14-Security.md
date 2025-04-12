@@ -11,6 +11,7 @@ Cosmos is built for systems that are already trusted, constrained, or purpose-bu
 nothing or managing an offline system, TLS and GPG are often just extra ways for things to break.
 
 Instead, Cosmos gives you:
+
 - Plain files
 - Predictable layouts
 - Auditable integrity
@@ -64,6 +65,7 @@ You are responsible for trusting the transport medium.
 > Cosmos does not attempt to "secure" things with signatures or crypto if the system using it is already untrusted. Cosmos does not enforce privilege isolation. It does not chroot, drop privileges, or namespace-isolate builds.
 
 This philosophy mirrors tools like Alpine and Suckless:
+
 - Auditable, human-readable scripts
 - Encourage system owners to vet their inputs
 - Minimal system dependencies
