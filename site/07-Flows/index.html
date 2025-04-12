@@ -1208,14 +1208,9 @@
 <li>Skip if already installed</li>
 <li>Otherwise, locate the dependency and install it the same way</li>
 <li><strong>Core</strong> downloads the <code>.tar.gz</code> if needed (unless in offline mode)</li>
-<li>
-<ol>
 <li><strong>Core</strong> extracts the tarball to a temporary directory and runs the installation script (if any) from that location</li>
-</ol>
-</li>
-<li>
-<p><strong>Core</strong> updates <code>universe.toml</code> with installed files</p>
-</li>
+<li>If there's no install script, it extracts <code>files/*</code> to the <code>install_root</code></li>
+<li><strong>Core</strong> updates <code>universe.toml</code> with installed files</li>
 </ol>
 <hr />
 <h3 id="offline-mode">⚡ Offline Mode</h3>
