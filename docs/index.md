@@ -1,6 +1,6 @@
 # Cosmos Documentation
 
-Welcome to the official documentation for **Cosmos** — a minimal, musl-first, static binary package management system for people who want their OS to survive without Bash, Python, or feelings.
+Welcome to the official documentation for **Cosmos** — a minimal, musl-first, static binary package management system for people who want their OS to survive without Bash, Python, or curl.
 
 This documentation is structured to cover everything from core concepts to philosophy, CLI usage, system bootstrapping, and how to maintain your own galaxies without summoning `libgit2`.
 
