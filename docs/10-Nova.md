@@ -45,7 +45,7 @@ Cosmos executes Nova scripts inside a controlled environment.
 ### Functions Provided:
 
 #### `run(command: array of strings)`
-Runs a shell command in the current working directory.
+Runs a system command in the current working directory.
 
 - Inherits stdout/stderr
 - Returns exit code
