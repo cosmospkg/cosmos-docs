@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.cosmos-pkg.org/18-Versioning/">
+        <link rel="canonical" href="https://docs.cosmos-pkg.org/22-Crate-Policy/">
       
       
-        <link rel="prev" href="../17-Galaxies/">
+        <link rel="prev" href="../21-Contribution-Guide-for-Maintainers/">
       
       
-        <link rel="next" href="../19-Cosmos-Contribution/">
+        <link rel="next" href="../23-Bootstrapping/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>18 – Versioning and Release Policy - Cosmos Package Manager Documentation</title>
+        <title>22 – Crate Policy - Cosmos Package Manager Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#18-versioning-and-release-policy" class="md-skip">
+        <a href="#22-crate-policy" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              18 – Versioning and Release Policy
+              22 – Crate Policy
             
           </span>
         </div>
@@ -592,12 +592,100 @@
   
   
     <li class="md-nav__item">
-      <a href="../17-Galaxies/" class="md-nav__link">
+      <a href="../17-FAQ/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    17 – Galaxies
+    23 - Frequently Asked Questions (FAQ)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-Galaxies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    18 – Galaxies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-Versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    19 – Versioning and Release Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-Cosmos-Contribution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    20 – Contributing to Cosmos (Project Guidelines)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-Contribution-Guide-for-Maintainers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    21 – Maintaining Galaxies and Stars
     
   </span>
   
@@ -628,7 +716,7 @@
   
   
   <span class="md-ellipsis">
-    18 – Versioning and Release Policy
+    22 – Crate Policy
     
   </span>
   
@@ -641,7 +729,7 @@
   
   
   <span class="md-ellipsis">
-    18 – Versioning and Release Policy
+    22 – Crate Policy
     
   </span>
   
@@ -664,37 +752,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#versioning-philosophy" class="md-nav__link">
+  <a href="#build-target-philosophy" class="md-nav__link">
     <span class="md-ellipsis">
-      🔄 Versioning Philosophy
+      🧱 Build Target Philosophy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#star-versioning" class="md-nav__link">
+  <a href="#allowed-crate-behavior" class="md-nav__link">
     <span class="md-ellipsis">
-      ✨ Star Versioning
+      ✅ Allowed Crate Behavior
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#galaxy-versioning" class="md-nav__link">
+  <a href="#cryptography-hashing" class="md-nav__link">
     <span class="md-ellipsis">
-      🌌 Galaxy Versioning
+      🔐 Cryptography &amp; Hashing
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🌌 Galaxy Versioning">
+    <nav class="md-nav" aria-label="🔐 Cryptography &amp; Hashing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#galaxy-archival-recommended" class="md-nav__link">
+  <a href="#approved" class="md-nav__link">
     <span class="md-ellipsis">
-      🔄 Galaxy Archival (Recommended)
+      ✅ Approved:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forbidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Forbidden:
     </span>
   </a>
   
@@ -706,37 +803,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#constellation-stability" class="md-nav__link">
+  <a href="#compression-archiving" class="md-nav__link">
     <span class="md-ellipsis">
-      🌍 Constellation Stability
+      📦 Compression &amp; Archiving
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deprecation-and-removal" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❌ Deprecation and Removal
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="❌ Deprecation and Removal">
+    <nav class="md-nav" aria-label="📦 Compression &amp; Archiving">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#stars" class="md-nav__link">
+  <a href="#safe" class="md-nav__link">
     <span class="md-ellipsis">
-      Stars:
+      ✅ Safe:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#galaxies" class="md-nav__link">
+  <a href="#unsafe" class="md-nav__link">
     <span class="md-ellipsis">
-      Galaxies:
+      ❌ Unsafe:
     </span>
   </a>
   
@@ -748,9 +836,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#release-recommendations" class="md-nav__link">
+  <a href="#feature-flag-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      🔖 Release Recommendations
+      🛠 Feature Flag Rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crate-audit-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔬 Crate Audit Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#our-build-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧼 Our Build Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Summary
     </span>
   </a>
   
@@ -771,100 +886,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../19-Cosmos-Contribution/" class="md-nav__link">
+      <a href="../23-Bootstrapping/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    19 – Contributing to Cosmos (Project Guidelines)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../20-Contribution-Guide-for-Maintainers/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    20 – Maintaining Galaxies and Stars
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../21-Crate-Policy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    21 – Crate Policy
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../22-Bootstrapping/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    22 – Bootstrapping a System with Cosmos
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../23-FAQ/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    23 – Bootstrapping a System with Cosmos
     
   </span>
   
@@ -901,37 +928,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#versioning-philosophy" class="md-nav__link">
+  <a href="#build-target-philosophy" class="md-nav__link">
     <span class="md-ellipsis">
-      🔄 Versioning Philosophy
+      🧱 Build Target Philosophy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#star-versioning" class="md-nav__link">
+  <a href="#allowed-crate-behavior" class="md-nav__link">
     <span class="md-ellipsis">
-      ✨ Star Versioning
+      ✅ Allowed Crate Behavior
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#galaxy-versioning" class="md-nav__link">
+  <a href="#cryptography-hashing" class="md-nav__link">
     <span class="md-ellipsis">
-      🌌 Galaxy Versioning
+      🔐 Cryptography &amp; Hashing
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🌌 Galaxy Versioning">
+    <nav class="md-nav" aria-label="🔐 Cryptography &amp; Hashing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#galaxy-archival-recommended" class="md-nav__link">
+  <a href="#approved" class="md-nav__link">
     <span class="md-ellipsis">
-      🔄 Galaxy Archival (Recommended)
+      ✅ Approved:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forbidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Forbidden:
     </span>
   </a>
   
@@ -943,37 +979,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#constellation-stability" class="md-nav__link">
+  <a href="#compression-archiving" class="md-nav__link">
     <span class="md-ellipsis">
-      🌍 Constellation Stability
+      📦 Compression &amp; Archiving
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deprecation-and-removal" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❌ Deprecation and Removal
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="❌ Deprecation and Removal">
+    <nav class="md-nav" aria-label="📦 Compression &amp; Archiving">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#stars" class="md-nav__link">
+  <a href="#safe" class="md-nav__link">
     <span class="md-ellipsis">
-      Stars:
+      ✅ Safe:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#galaxies" class="md-nav__link">
+  <a href="#unsafe" class="md-nav__link">
     <span class="md-ellipsis">
-      Galaxies:
+      ❌ Unsafe:
     </span>
   </a>
   
@@ -985,9 +1012,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#release-recommendations" class="md-nav__link">
+  <a href="#feature-flag-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      🔖 Release Recommendations
+      🛠 Feature Flag Rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crate-audit-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔬 Crate Audit Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#our-build-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧼 Our Build Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Summary
     </span>
   </a>
   
@@ -1009,97 +1063,127 @@
 
 
 
-<h1 id="18-versioning-and-release-policy">18 – Versioning and Release Policy</h1>
-<p>This document defines the versioning strategy for Cosmos Stars, Galaxies, and the overall ecosystem. It also outlines how packages should be updated, deprecated, or removed.</p>
+<h1 id="22-crate-policy">22 – Crate Policy</h1>
+<p>Cosmos is built to run in minimal, musl-based, interpreter-free environments with zero dynamic linking. This document defines what crates are allowed and what constraints they must follow to be included in the Cosmos ecosystem.</p>
 <hr />
-<h2 id="versioning-philosophy">🔄 Versioning Philosophy</h2>
+<h2 id="build-target-philosophy">🧱 Build Target Philosophy</h2>
 <ul>
-<li><strong>Stars follow SemVer</strong> (<code>major.minor.patch</code>)</li>
-<li><strong>Galaxies are versioned by date</strong> (<code>YYYY.MM.DD</code>, e.g., <code>2024.04.17</code>)</li>
-<li><strong>Cosmos itself</strong> will follow SemVer but moves slowly</li>
+<li><strong>musl-first</strong>, <strong>libc-agnostic</strong></li>
+<li>If Rust can target it, Cosmos should build on it</li>
+<li>All code must build with <strong>just <code>cargo build --release</code></strong></li>
+<li>No external build systems, no <code>make</code>, no <code>pkg-config</code>, no <code>cc</code> crates</li>
 </ul>
-<p>Versioning exists for <strong>clarity and reproducibility</strong>, not hype. If nothing changed, the version doesn't change.</p>
 <hr />
-<h2 id="star-versioning">✨ Star Versioning</h2>
-<p>Every Star must define:</p>
-<pre><code class="language-toml">version = &quot;1.2.3&quot;
+<h2 id="allowed-crate-behavior">✅ Allowed Crate Behavior</h2>
+<p>All crates must:</p>
+<ul>
+<li>Compile statically (no dynamic linking)</li>
+<li>Be <strong>pure Rust</strong>, or optional FFI that can be disabled</li>
+<li>Avoid build scripts that invoke system tools</li>
+<li>Build with <strong>no extra linker args</strong> under musl or glibc</li>
+</ul>
+<hr />
+<h2 id="cryptography-hashing">🔐 Cryptography &amp; Hashing</h2>
+<p>Only <strong>pure Rust</strong> implementations allowed.</p>
+<h3 id="approved">✅ Approved:</h3>
+<ul>
+<li><code>sha2</code> (for SHA-256/SHA-512)</li>
+<li><code>blake3</code></li>
+<li><code>digest</code></li>
+<li><code>md-5</code></li>
+<li><code>hex</code></li>
+</ul>
+<h3 id="forbidden">❌ Forbidden:</h3>
+<ul>
+<li><code>ring</code> (requires C + custom asm)</li>
+<li><code>openssl</code> / <code>native-tls</code> (requires dynamic libs)</li>
+<li><code>libgit2</code>, <code>libz</code>, or anything with a <code>-sys</code> suffix</li>
+</ul>
+<hr />
+<h2 id="compression-archiving">📦 Compression &amp; Archiving</h2>
+<h3 id="safe">✅ Safe:</h3>
+<ul>
+<li><code>flate2</code> with <code>features = ["miniz_oxide"]</code> and <code>default-features = false</code></li>
+<li><code>tar</code></li>
+</ul>
+<h3 id="unsafe">❌ Unsafe:</h3>
+<ul>
+<li><code>flate2</code> with <code>zlib</code> feature</li>
+<li>Any crate that uses system-level compressors</li>
+</ul>
+<hr />
+<h2 id="feature-flag-rules">🛠 Feature Flag Rules</h2>
+<ul>
+<li>Optional features are great. Required features with native code are not.</li>
+<li>Default features must be <strong>fully statically linkable</strong></li>
+<li>All crates should have the ability to compile cleanly for:</li>
+<li><code>x86_64-unknown-linux-musl</code></li>
+<li><code>aarch64-unknown-linux-musl</code></li>
+<li><code>x86_64-unknown-linux-gnu</code></li>
+</ul>
+<hr />
+<h2 id="crate-audit-tips">🔬 Crate Audit Tips</h2>
+<p>Before adding a new crate:</p>
+<pre><code class="language-bash">cargo tree -e normal
 </code></pre>
+<p>Check for:</p>
 <ul>
-<li>Stars are expected to follow SemVer</li>
-<li>Breaking changes to install logic = major bump</li>
-<li>Dependency changes = minor bump</li>
-<li>Tarball rebuild or checksum-only = patch bump</li>
-</ul>
-<p>New versions must be uploaded with updated filenames:</p>
-<pre><code>zlib-1.2.3.tar.gz
-</code></pre>
-<p>Old versions may be kept for compatibility.</p>
-<hr />
-<h2 id="galaxy-versioning">🌌 Galaxy Versioning</h2>
-<p>Each Galaxy has a <code>meta.toml</code> with:</p>
-<pre><code class="language-toml">version = &quot;2024.04.17&quot;
-</code></pre>
-<p>This version is used for:</p>
-<ul>
-<li>Identifying sync points</li>
-<li>Snapshotting a full system state</li>
-<li>Reference in freeze/lockfile scenarios</li>
-</ul>
-<p><strong>Preferred format: <code>YYYY.MM.DD</code></strong> for clarity and traceability</p>
-<ul>
-<li>Easy to sort</li>
-<li>Helps with security updates or multiple changes in a month</li>
-</ul>
-<p>Galaxies <strong>must</strong> update <code>meta.toml</code> if any of the following change:</p>
-<ul>
-<li>New Star added</li>
-<li>Existing Star updated</li>
-<li>Any Star removed</li>
-</ul>
-<h3 id="galaxy-archival-recommended">🔄 Galaxy Archival (Recommended)</h3>
-<ul>
-<li>It is <strong>not required</strong> to archive every Galaxy version</li>
-<li>However, maintainers are <strong>strongly encouraged</strong> to retain the past 3–6 months of Galaxy snapshots</li>
-<li>For long-term reproducibility (e.g., distro builds), consider archiving stable versions <strong>annually</strong></li>
-<li>Rolling releases can prune aggressively, but should still tag known good versions</li>
-</ul>
-<p>Ultimately, archival policies are up to the maintainer. Cosmos recommends preserving history, but does not enforce it.</p>
-<hr />
-<h2 id="constellation-stability">🌍 Constellation Stability</h2>
-<p>Constellations are install presets. If a Constellation references Stars that change, that's fine—but users should be encouraged to:</p>
-<ul>
-<li>Pin Constellation files to Galaxy versions</li>
-<li>Create locked snapshots of their system after install</li>
-</ul>
-<p>Example:</p>
-<pre><code class="language-toml">members = [
-  &quot;core-utils@1.0.0&quot;,
-  &quot;busybox@1.36.0&quot;
-]
-</code></pre>
-<p>Version pinning is optional but strongly encouraged for reproducibility.</p>
-<hr />
-<h2 id="deprecation-and-removal">❌ Deprecation and Removal</h2>
-<h3 id="stars">Stars:</h3>
-<ul>
-<li>Deprecated Stars should remain in the Galaxy but clearly marked in <code>description</code></li>
-<li>Removed Stars must be deleted from <code>stars/</code> and <code>packages/</code> but remain listed in old Galaxy versions</li>
-</ul>
-<h3 id="galaxies">Galaxies:</h3>
-<ul>
-<li>Galaxies are never deleted, only archived with new versions (if the maintainer chooses to)</li>
-<li>The latest version is expected to be symlinked or aliased in mirrors</li>
+<li><code>-sys</code> crates</li>
+<li>Dynamic linking</li>
+<li>Build scripts (<code>build.rs</code>) doing sketchy stuff</li>
+<li>Optional features that need to be disabled</li>
 </ul>
 <hr />
-<h2 id="release-recommendations">🔖 Release Recommendations</h2>
+<h2 id="our-build-environment">🧼 Our Build Environment</h2>
 <ul>
-<li>Use Git tags for Galaxy releases (<code>core-2024.04.17</code>)</li>
-<li>Use signed commits if hosting public Galaxies</li>
-<li>Tarballs should include version in filename</li>
-<li>Include changelogs if maintaining official sets</li>
+<li><code>cargo build --release</code> must be enough</li>
+<li>No external toolchains, no linker magic</li>
+<li>CI or local builds should always work under:
+  <code>bash
+  RUSTFLAGS="-C target-feature=+crt-static"</code></li>
 </ul>
 <hr />
-<p>Versioning is about trust and stability, not chasing numbers. Cosmos prefers boring, explicit, and stable packages over rapid churn.</p>
+<h2 id="summary">✅ Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Policy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TLS Support</td>
+<td>❌ None (Cosmos does not do TLS)</td>
+</tr>
+<tr>
+<td>Dynamic Linking</td>
+<td>❌ Forbidden</td>
+</tr>
+<tr>
+<td>Shell Usage</td>
+<td>❌ Forbidden</td>
+</tr>
+<tr>
+<td>C Libraries</td>
+<td>❌ Forbidden unless <strong>optional</strong> and unused</td>
+</tr>
+<tr>
+<td>Cargo Build-Only</td>
+<td>✅ Required</td>
+</tr>
+<tr>
+<td>musl Compatibility</td>
+<td>✅ Required</td>
+</tr>
+<tr>
+<td>glibc Compatibility</td>
+<td>✅ Nice to have</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Cosmos should build anywhere Rust does, with <strong>nothing but <code>cargo build</code> and a dream</strong>.</p>
 
 
 

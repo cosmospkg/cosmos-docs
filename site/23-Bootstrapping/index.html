@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://docs.cosmos-pkg.org/21-Crate-Policy/">
+        <link rel="canonical" href="https://docs.cosmos-pkg.org/23-Bootstrapping/">
       
       
-        <link rel="prev" href="../20-Contribution-Guide-for-Maintainers/">
+        <link rel="prev" href="../22-Crate-Policy/">
       
-      
-        <link rel="next" href="../22-Bootstrapping/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>21 – Crate Policy - Cosmos Package Manager Documentation</title>
+        <title>23 – Bootstrapping a System with Cosmos - Cosmos Package Manager Documentation</title>
       
     
     
@@ -64,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#21-crate-policy" class="md-skip">
+        <a href="#23-bootstrapping-a-system-with-cosmos" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              21 – Crate Policy
+              23 – Bootstrapping a System with Cosmos
             
           </span>
         </div>
@@ -592,12 +590,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../17-Galaxies/" class="md-nav__link">
+      <a href="../17-FAQ/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    17 – Galaxies
+    23 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -614,12 +612,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../18-Versioning/" class="md-nav__link">
+      <a href="../18-Galaxies/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    18 – Versioning and Release Policy
+    18 – Galaxies
     
   </span>
   
@@ -636,12 +634,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../19-Cosmos-Contribution/" class="md-nav__link">
+      <a href="../19-Versioning/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    19 – Contributing to Cosmos (Project Guidelines)
+    19 – Versioning and Release Policy
     
   </span>
   
@@ -658,12 +656,56 @@
   
   
     <li class="md-nav__item">
-      <a href="../20-Contribution-Guide-for-Maintainers/" class="md-nav__link">
+      <a href="../20-Cosmos-Contribution/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    20 – Maintaining Galaxies and Stars
+    20 – Contributing to Cosmos (Project Guidelines)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-Contribution-Guide-for-Maintainers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    21 – Maintaining Galaxies and Stars
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-Crate-Policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    22 – Crate Policy
     
   </span>
   
@@ -694,7 +736,7 @@
   
   
   <span class="md-ellipsis">
-    21 – Crate Policy
+    23 – Bootstrapping a System with Cosmos
     
   </span>
   
@@ -707,7 +749,7 @@
   
   
   <span class="md-ellipsis">
-    21 – Crate Policy
+    23 – Bootstrapping a System with Cosmos
     
   </span>
   
@@ -730,120 +772,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#build-target-philosophy" class="md-nav__link">
+  <a href="#what-is-bootstrapping" class="md-nav__link">
     <span class="md-ellipsis">
-      🧱 Build Target Philosophy
+      🌜 What Is Bootstrapping?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#allowed-crate-behavior" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Allowed Crate Behavior
+      ✅ Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cryptography-hashing" class="md-nav__link">
+  <a href="#install-process" class="md-nav__link">
     <span class="md-ellipsis">
-      🔐 Cryptography &amp; Hashing
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔐 Cryptography &amp; Hashing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#approved" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Approved:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#forbidden" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❌ Forbidden:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compression-archiving" class="md-nav__link">
-    <span class="md-ellipsis">
-      📦 Compression &amp; Archiving
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📦 Compression &amp; Archiving">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#safe" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Safe:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unsafe" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❌ Unsafe:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#feature-flag-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      🛠 Feature Flag Rules
+      🔨 Install Process
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#crate-audit-tips" class="md-nav__link">
+  <a href="#what-to-install-first" class="md-nav__link">
     <span class="md-ellipsis">
-      🔬 Crate Audit Tips
+      🔄 What to Install First
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#our-build-environment" class="md-nav__link">
+  <a href="#use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      🧼 Our Build Environment
+      🌐 Use Cases
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#what-cosmos-does-not-do" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Summary
+      🚫 What Cosmos Does Not Do
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pro-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🫰 Pro Tips
     </span>
   </a>
   
@@ -853,50 +838,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../22-Bootstrapping/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    22 – Bootstrapping a System with Cosmos
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../23-FAQ/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -928,120 +869,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#build-target-philosophy" class="md-nav__link">
+  <a href="#what-is-bootstrapping" class="md-nav__link">
     <span class="md-ellipsis">
-      🧱 Build Target Philosophy
+      🌜 What Is Bootstrapping?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#allowed-crate-behavior" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Allowed Crate Behavior
+      ✅ Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cryptography-hashing" class="md-nav__link">
+  <a href="#install-process" class="md-nav__link">
     <span class="md-ellipsis">
-      🔐 Cryptography &amp; Hashing
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔐 Cryptography &amp; Hashing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#approved" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Approved:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#forbidden" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❌ Forbidden:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compression-archiving" class="md-nav__link">
-    <span class="md-ellipsis">
-      📦 Compression &amp; Archiving
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📦 Compression &amp; Archiving">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#safe" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Safe:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unsafe" class="md-nav__link">
-    <span class="md-ellipsis">
-      ❌ Unsafe:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#feature-flag-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      🛠 Feature Flag Rules
+      🔨 Install Process
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#crate-audit-tips" class="md-nav__link">
+  <a href="#what-to-install-first" class="md-nav__link">
     <span class="md-ellipsis">
-      🔬 Crate Audit Tips
+      🔄 What to Install First
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#our-build-environment" class="md-nav__link">
+  <a href="#use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      🧼 Our Build Environment
+      🌐 Use Cases
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#what-cosmos-does-not-do" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Summary
+      🚫 What Cosmos Does Not Do
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pro-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🫰 Pro Tips
     </span>
   </a>
   
@@ -1063,127 +947,79 @@
 
 
 
-<h1 id="21-crate-policy">21 – Crate Policy</h1>
-<p>Cosmos is built to run in minimal, musl-based, interpreter-free environments with zero dynamic linking. This document defines what crates are allowed and what constraints they must follow to be included in the Cosmos ecosystem.</p>
+<h1 id="23-bootstrapping-a-system-with-cosmos">23 – Bootstrapping a System with Cosmos</h1>
+<p>This guide walks through how to build a working root filesystem using Cosmos alone. It assumes you have a Cosmos binary, a Galaxy source (HTTP, file, or USB), and a directory to install into.</p>
 <hr />
-<h2 id="build-target-philosophy">🧱 Build Target Philosophy</h2>
+<h2 id="what-is-bootstrapping">🌜 What Is Bootstrapping?</h2>
+<p>Bootstrapping is the act of building a usable system from near-zero. With Cosmos, this means:</p>
 <ul>
-<li><strong>musl-first</strong>, <strong>libc-agnostic</strong></li>
-<li>If Rust can target it, Cosmos should build on it</li>
-<li>All code must build with <strong>just <code>cargo build --release</code></strong></li>
-<li>No external build systems, no <code>make</code>, no <code>pkg-config</code>, no <code>cc</code> crates</li>
+<li>No shell</li>
+<li>No package manager</li>
+<li>No userland</li>
+<li>Just a tarball or static binary and a goal</li>
 </ul>
+<p>Cosmos enables you to go from "nothing but libc" to a minimal, functional user environment.</p>
 <hr />
-<h2 id="allowed-crate-behavior">✅ Allowed Crate Behavior</h2>
-<p>All crates must:</p>
+<h2 id="requirements">✅ Requirements</h2>
 <ul>
-<li>Compile statically (no dynamic linking)</li>
-<li>Be <strong>pure Rust</strong>, or optional FFI that can be disabled</li>
-<li>Avoid build scripts that invoke system tools</li>
-<li>Build with <strong>no extra linker args</strong> under musl or glibc</li>
-</ul>
-<hr />
-<h2 id="cryptography-hashing">🔐 Cryptography &amp; Hashing</h2>
-<p>Only <strong>pure Rust</strong> implementations allowed.</p>
-<h3 id="approved">✅ Approved:</h3>
-<ul>
-<li><code>sha2</code> (for SHA-256/SHA-512)</li>
-<li><code>blake3</code></li>
-<li><code>digest</code></li>
-<li><code>md-5</code></li>
-<li><code>hex</code></li>
-</ul>
-<h3 id="forbidden">❌ Forbidden:</h3>
-<ul>
-<li><code>ring</code> (requires C + custom asm)</li>
-<li><code>openssl</code> / <code>native-tls</code> (requires dynamic libs)</li>
-<li><code>libgit2</code>, <code>libz</code>, or anything with a <code>-sys</code> suffix</li>
+<li>Statically compiled <code>cosmos</code> binary (no interpreter or dynamic libs)</li>
+<li>Galaxy source (USB, HTTP, Git clone, etc.)</li>
+<li>Writable mount point (e.g. <code>/mnt/wombat</code>)</li>
 </ul>
 <hr />
-<h2 id="compression-archiving">📦 Compression &amp; Archiving</h2>
-<h3 id="safe">✅ Safe:</h3>
-<ul>
-<li><code>flate2</code> with <code>features = ["miniz_oxide"]</code> and <code>default-features = false</code></li>
-<li><code>tar</code></li>
-</ul>
-<h3 id="unsafe">❌ Unsafe:</h3>
-<ul>
-<li><code>flate2</code> with <code>zlib</code> feature</li>
-<li>Any crate that uses system-level compressors</li>
-</ul>
-<hr />
-<h2 id="feature-flag-rules">🛠 Feature Flag Rules</h2>
-<ul>
-<li>Optional features are great. Required features with native code are not.</li>
-<li>Default features must be <strong>fully statically linkable</strong></li>
-<li>All crates should have the ability to compile cleanly for:</li>
-<li><code>x86_64-unknown-linux-musl</code></li>
-<li><code>aarch64-unknown-linux-musl</code></li>
-<li><code>x86_64-unknown-linux-gnu</code></li>
-</ul>
-<hr />
-<h2 id="crate-audit-tips">🔬 Crate Audit Tips</h2>
-<p>Before adding a new crate:</p>
-<pre><code class="language-bash">cargo tree -e normal
+<h2 id="install-process">🔨 Install Process</h2>
+<pre><code class="language-bash"># Optional: create target root
+mkdir -p /mnt/wombat
+
+# somewhere earlier, you add a local/mounted Galaxy
+
+# Install base system
+cosmos install --root /mnt/wombat core-stack
+
+# Bind system dirs for chroot
+mount --bind /dev /mnt/wombat/dev
+mount --bind /proc /mnt/wombat/proc
+mount --bind /sys /mnt/wombat/sys
+
+# Optional: copy /etc/passwd or minimal shadow configs
+cp -r /etc/skel /mnt/wombat/etc/
+
+# Chroot in
+chroot /mnt/wombat /bin/sh
 </code></pre>
-<p>Check for:</p>
+<hr />
+<h2 id="what-to-install-first">🔄 What to Install First</h2>
+<pre><code class="language-bash">cosmos install core-stack
+cosmos install net-tools
+cosmos install busybox
+</code></pre>
+<p>A full Constellation file (e.g. <code>bootstrap.toml</code>) can define this list.</p>
+<hr />
+<h2 id="use-cases">🌐 Use Cases</h2>
 <ul>
-<li><code>-sys</code> crates</li>
-<li>Dynamic linking</li>
-<li>Build scripts (<code>build.rs</code>) doing sketchy stuff</li>
-<li>Optional features that need to be disabled</li>
+<li>Minimal Linux from scratch builds</li>
+<li>Custom distro bootstrapping</li>
+<li>Initramfs builds</li>
+<li>Embedded rescue environments</li>
 </ul>
 <hr />
-<h2 id="our-build-environment">🧼 Our Build Environment</h2>
+<h2 id="what-cosmos-does-not-do">🚫 What Cosmos Does <em>Not</em> Do</h2>
 <ul>
-<li><code>cargo build --release</code> must be enough</li>
-<li>No external toolchains, no linker magic</li>
-<li>CI or local builds should always work under:
-  <code>bash
-  RUSTFLAGS="-C target-feature=+crt-static"</code></li>
+<li>Partition drives</li>
+<li>Configure bootloaders</li>
+<li>Handle systemd or runit setup</li>
+</ul>
+<p>Cosmos installs files and packages—nothing more. It is your tool for building a system, not for booting one.</p>
+<hr />
+<h2 id="pro-tips">🫰 Pro Tips</h2>
+<ul>
+<li>Test bootstrap flows inside a container or VM before bare metal</li>
+<li>Keep a Galaxy synced to USB in case your network goes down</li>
+<li>Use a Nebula to define your base stack for repeatable installs</li>
+<li>Use <code>cosmos freeze</code> (future) to snapshot what you just installed</li>
 </ul>
 <hr />
-<h2 id="summary">✅ Summary</h2>
-<table>
-<thead>
-<tr>
-<th>Requirement</th>
-<th>Policy</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>TLS Support</td>
-<td>❌ None (Cosmos does not do TLS)</td>
-</tr>
-<tr>
-<td>Dynamic Linking</td>
-<td>❌ Forbidden</td>
-</tr>
-<tr>
-<td>Shell Usage</td>
-<td>❌ Forbidden</td>
-</tr>
-<tr>
-<td>C Libraries</td>
-<td>❌ Forbidden unless <strong>optional</strong> and unused</td>
-</tr>
-<tr>
-<td>Cargo Build-Only</td>
-<td>✅ Required</td>
-</tr>
-<tr>
-<td>musl Compatibility</td>
-<td>✅ Required</td>
-</tr>
-<tr>
-<td>glibc Compatibility</td>
-<td>✅ Nice to have</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p>Cosmos should build anywhere Rust does, with <strong>nothing but <code>cargo build</code> and a dream</strong>.</p>
+<p>With Cosmos, you can go from a blank directory to a bootable rootfs with only a few commands—no interpreters, no curl, no Python, no tears.</p>
 
 
 

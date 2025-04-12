@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.cosmos-pkg.org/19-Cosmos-Contribution/">
+        <link rel="canonical" href="https://docs.cosmos-pkg.org/19-Versioning/">
       
       
-        <link rel="prev" href="../18-Versioning/">
+        <link rel="prev" href="../18-Galaxies/">
       
       
-        <link rel="next" href="../20-Contribution-Guide-for-Maintainers/">
+        <link rel="next" href="../20-Cosmos-Contribution/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>19 – Contributing to Cosmos (Project Guidelines) - Cosmos Package Manager Documentation</title>
+        <title>19 – Versioning and Release Policy - Cosmos Package Manager Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#19-contributing-to-cosmos-project-guidelines" class="md-skip">
+        <a href="#19-versioning-and-release-policy" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              19 – Contributing to Cosmos (Project Guidelines)
+              19 – Versioning and Release Policy
             
           </span>
         </div>
@@ -592,12 +592,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../17-Galaxies/" class="md-nav__link">
+      <a href="../17-FAQ/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    17 – Galaxies
+    23 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -614,12 +614,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../18-Versioning/" class="md-nav__link">
+      <a href="../18-Galaxies/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    18 – Versioning and Release Policy
+    18 – Galaxies
     
   </span>
   
@@ -650,7 +650,7 @@
   
   
   <span class="md-ellipsis">
-    19 – Contributing to Cosmos (Project Guidelines)
+    19 – Versioning and Release Policy
     
   </span>
   
@@ -663,7 +663,7 @@
   
   
   <span class="md-ellipsis">
-    19 – Contributing to Cosmos (Project Guidelines)
+    19 – Versioning and Release Policy
     
   </span>
   
@@ -686,72 +686,93 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#project-philosophy" class="md-nav__link">
+  <a href="#versioning-philosophy" class="md-nav__link">
     <span class="md-ellipsis">
-      🛠️ Project Philosophy
+      🔄 Versioning Philosophy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#star-versioning" class="md-nav__link">
     <span class="md-ellipsis">
-      🎓 Getting Started
+      ✨ Star Versioning
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#code-guidelines" class="md-nav__link">
+  <a href="#galaxy-versioning" class="md-nav__link">
     <span class="md-ellipsis">
-      🔨 Code Guidelines
+      🌌 Galaxy Versioning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌌 Galaxy Versioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#galaxy-archival-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Galaxy Archival (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constellation-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Constellation Stability
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pull-requests" class="md-nav__link">
+  <a href="#deprecation-and-removal" class="md-nav__link">
     <span class="md-ellipsis">
-      🔄 Pull Requests
+      ❌ Deprecation and Removal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❌ Deprecation and Removal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stars:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#feature-flags" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#galaxies" class="md-nav__link">
     <span class="md-ellipsis">
-      📊 Feature Flags
+      Galaxies:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#docs-and-comments" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✏️ Docs and Comments
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#licensing-and-attribution" class="md-nav__link">
+  <a href="#release-recommendations" class="md-nav__link">
     <span class="md-ellipsis">
-      🌐 Licensing and Attribution
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#where-to-help" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌟 Where to Help
+      🔖 Release Recommendations
     </span>
   </a>
   
@@ -772,12 +793,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../20-Contribution-Guide-for-Maintainers/" class="md-nav__link">
+      <a href="../20-Cosmos-Contribution/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    20 – Maintaining Galaxies and Stars
+    20 – Contributing to Cosmos (Project Guidelines)
     
   </span>
   
@@ -794,12 +815,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../21-Crate-Policy/" class="md-nav__link">
+      <a href="../21-Contribution-Guide-for-Maintainers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    21 – Crate Policy
+    21 – Maintaining Galaxies and Stars
     
   </span>
   
@@ -816,12 +837,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../22-Bootstrapping/" class="md-nav__link">
+      <a href="../22-Crate-Policy/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    22 – Bootstrapping a System with Cosmos
+    22 – Crate Policy
     
   </span>
   
@@ -838,12 +859,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../23-FAQ/" class="md-nav__link">
+      <a href="../23-Bootstrapping/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    23 – Bootstrapping a System with Cosmos
     
   </span>
   
@@ -880,72 +901,93 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#project-philosophy" class="md-nav__link">
+  <a href="#versioning-philosophy" class="md-nav__link">
     <span class="md-ellipsis">
-      🛠️ Project Philosophy
+      🔄 Versioning Philosophy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#star-versioning" class="md-nav__link">
     <span class="md-ellipsis">
-      🎓 Getting Started
+      ✨ Star Versioning
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#code-guidelines" class="md-nav__link">
+  <a href="#galaxy-versioning" class="md-nav__link">
     <span class="md-ellipsis">
-      🔨 Code Guidelines
+      🌌 Galaxy Versioning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌌 Galaxy Versioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#galaxy-archival-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Galaxy Archival (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constellation-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Constellation Stability
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pull-requests" class="md-nav__link">
+  <a href="#deprecation-and-removal" class="md-nav__link">
     <span class="md-ellipsis">
-      🔄 Pull Requests
+      ❌ Deprecation and Removal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❌ Deprecation and Removal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stars:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#feature-flags" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#galaxies" class="md-nav__link">
     <span class="md-ellipsis">
-      📊 Feature Flags
+      Galaxies:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#docs-and-comments" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✏️ Docs and Comments
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#licensing-and-attribution" class="md-nav__link">
+  <a href="#release-recommendations" class="md-nav__link">
     <span class="md-ellipsis">
-      🌐 Licensing and Attribution
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#where-to-help" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌟 Where to Help
+      🔖 Release Recommendations
     </span>
   </a>
   
@@ -967,77 +1009,97 @@
 
 
 
-<h1 id="19-contributing-to-cosmos-project-guidelines">19 – Contributing to Cosmos (Project Guidelines)</h1>
-<p>This guide is for contributors to the Cosmos codebase itself—including <code>cosmos-core</code>, <code>cosmos-cli</code>, <code>stellar</code>, <code>nova</code>, and related tooling.</p>
+<h1 id="19-versioning-and-release-policy">19 – Versioning and Release Policy</h1>
+<p>This document defines the versioning strategy for Cosmos Stars, Galaxies, and the overall ecosystem. It also outlines how packages should be updated, deprecated, or removed.</p>
 <hr />
-<h2 id="project-philosophy">🛠️ Project Philosophy</h2>
+<h2 id="versioning-philosophy">🔄 Versioning Philosophy</h2>
 <ul>
-<li>Cosmos is modular, minimal, and predictable</li>
-<li>Contributions should avoid feature bloat or scope creep</li>
-<li>Every crate should do one thing well and be testable in isolation</li>
+<li><strong>Stars follow SemVer</strong> (<code>major.minor.patch</code>)</li>
+<li><strong>Galaxies are versioned by date</strong> (<code>YYYY.MM.DD</code>, e.g., <code>2024.04.17</code>)</li>
+<li><strong>Cosmos itself</strong> will follow SemVer but moves slowly</li>
+</ul>
+<p>Versioning exists for <strong>clarity and reproducibility</strong>, not hype. If nothing changed, the version doesn't change.</p>
+<hr />
+<h2 id="star-versioning">✨ Star Versioning</h2>
+<p>Every Star must define:</p>
+<pre><code class="language-toml">version = &quot;1.2.3&quot;
+</code></pre>
+<ul>
+<li>Stars are expected to follow SemVer</li>
+<li>Breaking changes to install logic = major bump</li>
+<li>Dependency changes = minor bump</li>
+<li>Tarball rebuild or checksum-only = patch bump</li>
+</ul>
+<p>New versions must be uploaded with updated filenames:</p>
+<pre><code>zlib-1.2.3.tar.gz
+</code></pre>
+<p>Old versions may be kept for compatibility.</p>
+<hr />
+<h2 id="galaxy-versioning">🌌 Galaxy Versioning</h2>
+<p>Each Galaxy has a <code>meta.toml</code> with:</p>
+<pre><code class="language-toml">version = &quot;2024.04.17&quot;
+</code></pre>
+<p>This version is used for:</p>
+<ul>
+<li>Identifying sync points</li>
+<li>Snapshotting a full system state</li>
+<li>Reference in freeze/lockfile scenarios</li>
+</ul>
+<p><strong>Preferred format: <code>YYYY.MM.DD</code></strong> for clarity and traceability</p>
+<ul>
+<li>Easy to sort</li>
+<li>Helps with security updates or multiple changes in a month</li>
+</ul>
+<p>Galaxies <strong>must</strong> update <code>meta.toml</code> if any of the following change:</p>
+<ul>
+<li>New Star added</li>
+<li>Existing Star updated</li>
+<li>Any Star removed</li>
+</ul>
+<h3 id="galaxy-archival-recommended">🔄 Galaxy Archival (Recommended)</h3>
+<ul>
+<li>It is <strong>not required</strong> to archive every Galaxy version</li>
+<li>However, maintainers are <strong>strongly encouraged</strong> to retain the past 3–6 months of Galaxy snapshots</li>
+<li>For long-term reproducibility (e.g., distro builds), consider archiving stable versions <strong>annually</strong></li>
+<li>Rolling releases can prune aggressively, but should still tag known good versions</li>
+</ul>
+<p>Ultimately, archival policies are up to the maintainer. Cosmos recommends preserving history, but does not enforce it.</p>
+<hr />
+<h2 id="constellation-stability">🌍 Constellation Stability</h2>
+<p>Constellations are install presets. If a Constellation references Stars that change, that's fine—but users should be encouraged to:</p>
+<ul>
+<li>Pin Constellation files to Galaxy versions</li>
+<li>Create locked snapshots of their system after install</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-toml">members = [
+  &quot;core-utils@1.0.0&quot;,
+  &quot;busybox@1.36.0&quot;
+]
+</code></pre>
+<p>Version pinning is optional but strongly encouraged for reproducibility.</p>
+<hr />
+<h2 id="deprecation-and-removal">❌ Deprecation and Removal</h2>
+<h3 id="stars">Stars:</h3>
+<ul>
+<li>Deprecated Stars should remain in the Galaxy but clearly marked in <code>description</code></li>
+<li>Removed Stars must be deleted from <code>stars/</code> and <code>packages/</code> but remain listed in old Galaxy versions</li>
+</ul>
+<h3 id="galaxies">Galaxies:</h3>
+<ul>
+<li>Galaxies are never deleted, only archived with new versions (if the maintainer chooses to)</li>
+<li>The latest version is expected to be symlinked or aliased in mirrors</li>
 </ul>
 <hr />
-<h2 id="getting-started">🎓 Getting Started</h2>
-<ol>
-<li>Clone the repo</li>
-<li>Use the latest stable Rust (<code>rustup update</code>)</li>
-<li>Build the workspace:
-   <code>bash
-   cargo build --workspace</code></li>
-<li>Run all tests:
-   <code>bash
-   cargo test --workspace</code></li>
-<li>Optional: install <code>cargo-make</code> or <code>just</code> if you're using task runners</li>
-</ol>
-<hr />
-<h2 id="code-guidelines">🔨 Code Guidelines</h2>
+<h2 id="release-recommendations">🔖 Release Recommendations</h2>
 <ul>
-<li>Follow Rust 2021 edition idioms</li>
-<li>Use <code>thiserror</code> for error enums</li>
-<li>Favor <code>Result&lt;T, CosmosError&gt;</code> over panics</li>
-<li>Don’t use <code>unwrap()</code> unless you <em>really</em> mean it</li>
-<li>All FFI functions must be <code>#[no_mangle]</code> and use C types</li>
+<li>Use Git tags for Galaxy releases (<code>core-2024.04.17</code>)</li>
+<li>Use signed commits if hosting public Galaxies</li>
+<li>Tarballs should include version in filename</li>
+<li>Include changelogs if maintaining official sets</li>
 </ul>
 <hr />
-<h2 id="pull-requests">🔄 Pull Requests</h2>
-<ul>
-<li>One logical change per PR</li>
-<li>PR title should summarize purpose</li>
-<li>Document new CLI commands, options, or config fields</li>
-<li>Include tests where applicable</li>
-<li>Update relevant markdown docs in <code>/docs</code></li>
-</ul>
-<hr />
-<h2 id="feature-flags">📊 Feature Flags</h2>
-<ul>
-<li>Use <code>#[cfg(feature = "ffi")]</code> for optional components</li>
-<li>Don’t enable features by default unless essential</li>
-</ul>
-<hr />
-<h2 id="docs-and-comments">✏️ Docs and Comments</h2>
-<ul>
-<li>Public functions should have doc comments</li>
-<li>Internal helpers can use line comments for clarity</li>
-<li>Markdown docs should be updated when adding major features</li>
-</ul>
-<hr />
-<h2 id="licensing-and-attribution">🌐 Licensing and Attribution</h2>
-<ul>
-<li>All contributions are MIT licensed</li>
-<li>Add your name to the AUTHORS file if you wish</li>
-<li>Respect the project's tone: technical, clear, with dry humor allowed</li>
-</ul>
-<hr />
-<h2 id="where-to-help">🌟 Where to Help</h2>
-<ul>
-<li>Finish Nova runtime logic</li>
-<li>Improve dependency resolution logic</li>
-<li>Add <code>stellar lint</code> / <code>stellar test</code> features</li>
-<li>Write sample Stars for testing and examples</li>
-<li>Write CLI integration tests</li>
-</ul>
-<hr />
-<p>Cosmos is built for clarity and longevity. Contributions that make it more robust, understandable, and portable are always welcome.</p>
+<p>Versioning is about trust and stability, not chasing numbers. Cosmos prefers boring, explicit, and stable packages over rapid churn.</p>
 
 
 

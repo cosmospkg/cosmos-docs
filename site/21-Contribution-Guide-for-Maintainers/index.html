@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.cosmos-pkg.org/23-FAQ/">
+        <link rel="canonical" href="https://docs.cosmos-pkg.org/21-Contribution-Guide-for-Maintainers/">
       
       
-        <link rel="prev" href="../22-Bootstrapping/">
+        <link rel="prev" href="../20-Cosmos-Contribution/">
       
+      
+        <link rel="next" href="../22-Crate-Policy/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>23 - Frequently Asked Questions (FAQ) - Cosmos Package Manager Documentation</title>
+        <title>21 – Maintaining Galaxies and Stars - Cosmos Package Manager Documentation</title>
       
     
     
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#23-frequently-asked-questions-faq" class="md-skip">
+        <a href="#21-maintaining-galaxies-and-stars" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              23 - Frequently Asked Questions (FAQ)
+              21 – Maintaining Galaxies and Stars
             
           </span>
         </div>
@@ -590,12 +592,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../17-Galaxies/" class="md-nav__link">
+      <a href="../17-FAQ/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    17 – Galaxies
+    23 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -612,12 +614,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../18-Versioning/" class="md-nav__link">
+      <a href="../18-Galaxies/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    18 – Versioning and Release Policy
+    18 – Galaxies
     
   </span>
   
@@ -634,12 +636,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../19-Cosmos-Contribution/" class="md-nav__link">
+      <a href="../19-Versioning/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    19 – Contributing to Cosmos (Project Guidelines)
+    19 – Versioning and Release Policy
     
   </span>
   
@@ -656,56 +658,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../20-Contribution-Guide-for-Maintainers/" class="md-nav__link">
+      <a href="../20-Cosmos-Contribution/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    20 – Maintaining Galaxies and Stars
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../21-Crate-Policy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    21 – Crate Policy
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../22-Bootstrapping/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    22 – Bootstrapping a System with Cosmos
+    20 – Contributing to Cosmos (Project Guidelines)
     
   </span>
   
@@ -736,7 +694,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    21 – Maintaining Galaxies and Stars
     
   </span>
   
@@ -749,7 +707,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    21 – Maintaining Galaxies and Stars
     
   </span>
   
@@ -772,114 +730,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-does-cosmos-link-to-libmso6-on-glibc" class="md-nav__link">
+  <a href="#your-responsibilities" class="md-nav__link">
     <span class="md-ellipsis">
-      🤔 Why does Cosmos link to libm.so.6 on glibc?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🤔 Why does Cosmos link to libm.so.6 on glibc?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#isnt-this-a-security-concern" class="md-nav__link">
-    <span class="md-ellipsis">
-      💥 Isn’t this a security concern?
+      🌟 Your Responsibilities
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-if-i-want-to-strip-cosmos-down-even-more" class="md-nav__link">
+  <a href="#creating-a-star" class="md-nav__link">
     <span class="md-ellipsis">
-      🧱 What if I want to strip Cosmos down even more?
+      ⚙️ Creating a Star
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-small-can-the-binary-get" class="md-nav__link">
+  <a href="#making-a-nebula" class="md-nav__link">
     <span class="md-ellipsis">
-      🛰️ How small can the binary get?
+      ✨ Making a Nebula
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-not-use-tls-or-gpg" class="md-nav__link">
+  <a href="#structuring-a-galaxy" class="md-nav__link">
     <span class="md-ellipsis">
-      🧪 Why not use TLS or GPG?
+      📄 Structuring a Galaxy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-is-everything-named-after-space-stuff" class="md-nav__link">
+  <a href="#common-mistakes" class="md-nav__link">
     <span class="md-ellipsis">
-      🪐 Why is everything named after space stuff?
+      ❌ Common Mistakes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#can-i-use-cosmos-in-my-initramfs-or-rescue-usb" class="md-nav__link">
+  <a href="#release-checklist" class="md-nav__link">
     <span class="md-ellipsis">
-      🐚 Can I use Cosmos in my initramfs or rescue USB?
+      🚀 Release Checklist
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#does-cosmos-do-dependency-resolution" class="md-nav__link">
+  <a href="#publishing-and-hosting-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      🧪 Does Cosmos do dependency resolution?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whats-the-difference-between-stars-nebulae-and-constellations" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 What’s the difference between Stars, Nebulae, and Constellations?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#where-is-the-package-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔍 Where is the package database?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-if-i-want-to-contribute-a-faq-question" class="md-nav__link">
-    <span class="md-ellipsis">
-      👽 What if I want to contribute a FAQ question?
+      🤖 Publishing and Hosting Tips
     </span>
   </a>
   
@@ -889,6 +796,50 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-Crate-Policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    22 – Crate Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-Bootstrapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    23 – Bootstrapping a System with Cosmos
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -920,114 +871,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-does-cosmos-link-to-libmso6-on-glibc" class="md-nav__link">
+  <a href="#your-responsibilities" class="md-nav__link">
     <span class="md-ellipsis">
-      🤔 Why does Cosmos link to libm.so.6 on glibc?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🤔 Why does Cosmos link to libm.so.6 on glibc?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#isnt-this-a-security-concern" class="md-nav__link">
-    <span class="md-ellipsis">
-      💥 Isn’t this a security concern?
+      🌟 Your Responsibilities
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-if-i-want-to-strip-cosmos-down-even-more" class="md-nav__link">
+  <a href="#creating-a-star" class="md-nav__link">
     <span class="md-ellipsis">
-      🧱 What if I want to strip Cosmos down even more?
+      ⚙️ Creating a Star
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-small-can-the-binary-get" class="md-nav__link">
+  <a href="#making-a-nebula" class="md-nav__link">
     <span class="md-ellipsis">
-      🛰️ How small can the binary get?
+      ✨ Making a Nebula
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-not-use-tls-or-gpg" class="md-nav__link">
+  <a href="#structuring-a-galaxy" class="md-nav__link">
     <span class="md-ellipsis">
-      🧪 Why not use TLS or GPG?
+      📄 Structuring a Galaxy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-is-everything-named-after-space-stuff" class="md-nav__link">
+  <a href="#common-mistakes" class="md-nav__link">
     <span class="md-ellipsis">
-      🪐 Why is everything named after space stuff?
+      ❌ Common Mistakes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#can-i-use-cosmos-in-my-initramfs-or-rescue-usb" class="md-nav__link">
+  <a href="#release-checklist" class="md-nav__link">
     <span class="md-ellipsis">
-      🐚 Can I use Cosmos in my initramfs or rescue USB?
+      🚀 Release Checklist
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#does-cosmos-do-dependency-resolution" class="md-nav__link">
+  <a href="#publishing-and-hosting-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      🧪 Does Cosmos do dependency resolution?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whats-the-difference-between-stars-nebulae-and-constellations" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 What’s the difference between Stars, Nebulae, and Constellations?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#where-is-the-package-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔍 Where is the package database?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-if-i-want-to-contribute-a-faq-question" class="md-nav__link">
-    <span class="md-ellipsis">
-      👽 What if I want to contribute a FAQ question?
+      🤖 Publishing and Hosting Tips
     </span>
   </a>
   
@@ -1049,115 +949,102 @@
 
 
 
-<h1 id="23-frequently-asked-questions-faq">23 - Frequently Asked Questions (FAQ)</h1>
+<h1 id="21-maintaining-galaxies-and-stars">21 – Maintaining Galaxies and Stars</h1>
+<p>This guide is for maintainers of Cosmos Galaxies and package authors who want to build Stars (or Nebulae) that others can install.</p>
 <hr />
-<h2 id="why-does-cosmos-link-to-libmso6-on-glibc">🤔 Why does Cosmos link to <code>libm.so.6</code> on glibc?</h2>
-<p>This is normal and expected.</p>
-<p>Cosmos uses <code>flate2</code> for handling <code>.tar.gz</code> packages. That crate performs simple math operations, and due to how <strong>glibc</strong> handles math internally, some functions are dynamically linked to <code>libm.so.6</code>.</p>
-<p>This only affects <strong>glibc builds</strong>. If you build Cosmos for <strong>musl</strong> (<code>x86_64-unknown-linux-musl</code>), it will be <strong>fully static</strong> and contain no dynamic dependencies.</p>
-<h3 id="summary">Summary:</h3>
+<h2 id="your-responsibilities">🌟 Your Responsibilities</h2>
+<p>If you're maintaining a Galaxy or publishing Stars, you are expected to:</p>
 <ul>
-<li><strong>glibc builds:</strong> dynamically link <code>libc.so.6</code> and <code>libm.so.6</code> (expected)</li>
-<li><strong>musl builds:</strong> fully static, <code>ldd</code> returns "not a dynamic executable"</li>
+<li>Keep <code>meta.toml</code> up to date (names, versions, descriptions, star list)</li>
+<li>Update or rebuild tarballs when package contents change</li>
+<li>Recalculate checksums if hashes are implemented</li>
+<li>Test packages before publishing them (install + uninstall)</li>
+<li>Use SemVer responsibly for Star versioning</li>
+<li>Use <code>YYYY.MM.DD</code> format for Galaxy versions in <code>meta.toml</code></li>
+<li>Consider archiving versions of your Galaxy for long-term reproducibility (3–6 months minimum is recommended)</li>
 </ul>
+<p>If that sounds like a lot of work—it is. Cosmos assumes you take ownership seriously.</p>
 <hr />
-<h2 id="isnt-this-a-security-concern">💥 Isn’t this a security concern?</h2>
-<p>Only if your threat model includes trigonometry.</p>
-<p>Linking <code>libm</code> doesn't affect the stability, reproducibility, or offline usage of Cosmos. It’s the same math library that ships with every glibc-based system.</p>
-<p>If you need a <strong>truly static</strong> binary for initramfs, recovery, or embedded environments, we recommend using the <code>musl</code> target.</p>
-<pre><code class="language-bash">rustup target add x86_64-unknown-linux-musl
-cargo build --release --target x86_64-unknown-linux-musl
+<h2 id="creating-a-star">⚙️ Creating a Star</h2>
+<p>Use <code>stellar new-star &lt;name&gt;</code> to scaffold a new package:</p>
+<ul>
+<li>Edit <code>star.toml</code> to define name, version, and dependencies</li>
+<li>Add an <code>install.sh</code> or <code>nova.lua</code> script</li>
+<li>Place files in a <code>files/</code> directory relative to the star</li>
+</ul>
+<p>Then:</p>
+<pre><code class="language-bash">stellar build-star ./your-package
 </code></pre>
+<p>This creates a <code>.tar.gz</code> that installs under Cosmos.</p>
 <hr />
-<h2 id="what-if-i-want-to-strip-cosmos-down-even-more">🧱 What if I want to strip Cosmos down even more?</h2>
-<p>Set this in <code>.cargo/config.toml</code>:</p>
-<pre><code class="language-toml">[profile.release]
-panic = &quot;abort&quot;
+<h2 id="making-a-nebula">✨ Making a Nebula</h2>
+<p>A Nebula is a dependency-only Star:</p>
+<pre><code class="language-toml">name = &quot;core-stack&quot;
+type = &quot;nebula&quot;
+version = &quot;1.0.0&quot;
+
+[dependencies]
+musl = &quot;^1.2.4&quot;
+busybox = &quot;^1.36&quot;
 </code></pre>
-<p>This can remove <code>libgcc_s.so.1</code> from glibc builds.
-Use <code>strip</code> to remove debug symbols and reduce size:</p>
-<pre><code class="language-bash">strip ./target/release/cosmos-cli
+<p>Nebulae should have no <code>source</code>, no <code>install_script</code>, and no <code>files/</code>.</p>
+<hr />
+<h2 id="structuring-a-galaxy">📄 Structuring a Galaxy</h2>
+<pre><code class="language-toml"># meta.toml
+name = &quot;core&quot;
+description = &quot;Minimal bootable stack&quot;
+version = &quot;2024.04.17&quot;
+stars = [&quot;musl&quot;, &quot;busybox&quot;, &quot;zlib&quot;]
 </code></pre>
-<hr />
-<h2 id="how-small-can-the-binary-get">🛰️ How small can the binary get?</h2>
-<p>With a musl static build + stripping, Cosmos CLI can be <strong>under 4 MB</strong>, even with Nova embedded. Most installs will work offline and fit in a bootable initramfs.</p>
-<hr />
-<h2 id="why-not-use-tls-or-gpg">🧪 Why not use TLS or GPG?</h2>
-<p>Cosmos does not ship with TLS, GPG, or any central trust mechanism. You’re expected to:</p>
+<pre><code>core-galaxy/
+├── meta.toml
+├── stars/
+│   ├── musl.toml
+│   ├── busybox.toml
+│   └── zlib.toml
+├── packages/
+│   ├── musl-1.2.4.tar.gz
+│   └── busybox-1.36.0.tar.gz
+</code></pre>
+<p>You can host this via:</p>
 <ul>
-<li>Host Galaxies from trusted sources (USB, internal HTTP, S3)</li>
-<li>Manually verify what you install</li>
-<li>Use <code>cosmos freeze</code> (coming soon) for lockfile verification</li>
+<li>S3 (static file bucket)</li>
+<li>GitHub Pages</li>
+<li>Any static HTTP server</li>
+<li>A USB stick you left plugged in since last fall</li>
 </ul>
-<p>See the <a href="./14-Security.md">Security Model</a> for full rationale.</p>
 <hr />
-<h2 id="why-is-everything-named-after-space-stuff">🪐 Why is everything named after space stuff?</h2>
-<p>Because it’s internally consistent, poetic, and structurally accurate:</p>
+<h2 id="common-mistakes">❌ Common Mistakes</h2>
 <ul>
-<li>Cosmos = the full system</li>
-<li>Galaxies = repositories</li>
-<li>Stars = packages</li>
-<li>Nebulae = meta-packages</li>
-<li>Constellations = install presets</li>
-<li>Universe = installed state</li>
-<li>Nova = installer scripting engine</li>
+<li>Forgetting to bump versions after a change</li>
+<li>Publishing a tarball with the wrong contents</li>
+<li>Mismatching star name vs filename</li>
+<li>Forgetting to update <code>meta.toml</code></li>
+<li>Publishing a Galaxy without testing anything</li>
 </ul>
-<p>It sounds fun, but it actually makes the entire system easy to reason about. You don’t need to memorize terminology. You just need to understand space.</p>
+<p>Cosmos won’t stop you. But it will laugh quietly when your Galaxy breaks.</p>
 <hr />
-<h2 id="can-i-use-cosmos-in-my-initramfs-or-rescue-usb">🐚 Can I use Cosmos in my initramfs or rescue USB?</h2>
-<p>Absolutely. That’s what it’s built for.</p>
-<p>The entire system is designed to:
-- Be static (especially with musl)
-- Work offline
-- Install to any rootfs
-- Run without Python, Bash, or shared libraries</p>
-<p>If you can boot a shell and run a binary, you can use Cosmos.</p>
-<hr />
-<h2 id="does-cosmos-do-dependency-resolution">🧪 Does Cosmos do dependency resolution?</h2>
-<p>Yes — minimal and predictable.</p>
+<h2 id="release-checklist">🚀 Release Checklist</h2>
 <ul>
-<li>Uses semver-style constraints defined in <code>star.toml</code></li>
-<li>Resolves across configured Galaxies in order</li>
-<li>Does not re-resolve dependencies on update</li>
-<li>No graph solving, no “intelligent” magic</li>
+<li>[ ] Does every Star have a valid <code>star.toml</code>?</li>
+<li>[ ] Are the tarballs named correctly?</li>
+<li>[ ] Is <code>meta.toml</code> version bumped?</li>
+<li>[ ] Are dependencies valid?</li>
+<li>[ ] Can everything install cleanly with no internet?</li>
+<li>[ ] Has this Galaxy been archived or tagged in Git for historical reference?</li>
 </ul>
-<p>You get reproducibility over reactivity.</p>
+<p>If yes: congratulations. You made a Galaxy.</p>
+<p>If no: go fix it before someone files a bug at 3AM.</p>
 <hr />
-<h2 id="whats-the-difference-between-stars-nebulae-and-constellations">🧠 What’s the difference between Stars, Nebulae, and Constellations?</h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Star</td>
-<td>A package (with tarball and install logic)</td>
-</tr>
-<tr>
-<td>Nebula</td>
-<td>A dependency-only meta-package</td>
-</tr>
-<tr>
-<td>Constellation</td>
-<td>A user-defined install preset</td>
-</tr>
-</tbody>
-</table>
-<p>Nebulae have no install script or files — they just express dependencies. Constellations are external TOML presets, not tracked in the system state.</p>
+<h2 id="publishing-and-hosting-tips">🤖 Publishing and Hosting Tips</h2>
+<ul>
+<li>Use Git tags for Galaxy versions (<code>core-2024.04.17</code>)</li>
+<li>Pin Galaxy metadata to specific Star versions</li>
+<li>Use symlinks for "latest"</li>
+<li>Mirror Galaxies to USB, IPFS, Git, or whatever works for your threat model</li>
+</ul>
 <hr />
-<h2 id="where-is-the-package-database">🔍 Where is the package database?</h2>
-<p>There isn’t one. Cosmos tracks installs using a plain TOML file: <code>universe.toml</code>.</p>
-<p>It logs:
-- Installed Stars
-- Their versions
-- Their installed file paths</p>
-<p>You can inspect it, edit it, back it up, and diff it manually. No SQLite, no JSON soup, no binary blobs.</p>
-<hr />
-<h2 id="what-if-i-want-to-contribute-a-faq-question">👽 What if I want to contribute a FAQ question?</h2>
-<p>PRs welcome. Especially sarcastic ones.</p>
+<p>Maintaining Galaxies is an act of service. Do it well, or don’t do it at all.</p>
 
 
 

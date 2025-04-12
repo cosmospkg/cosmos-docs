@@ -63,7 +63,7 @@ Cosmos does not ship with TLS, GPG, or any central trust mechanism. You’re exp
 - Manually verify what you install
 - Use `cosmos freeze` (coming soon) for lockfile verification
 
-See the [Security Model](./14-Security.md) for full rationale.
+See the [Security Model](./15-Security.md) for full rationale.
 
 ---
 
