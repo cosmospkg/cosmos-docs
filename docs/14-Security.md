@@ -35,7 +35,7 @@ Security is something you layer on *if* and *when* you need it.
   - File paths
   - IPFS or Git
 
-> If you want encrypted transport, you can use `scp`, `rsync`, `tailscale`, or just unplug your damn machine.
+> If you want encrypted transport, you can use `scp`, `rsync`, `tailscale`, or just unplug your machine.
 
 > If you don’t trust your Galaxy source, you have no security.
 
@@ -51,18 +51,23 @@ You are responsible for trusting the transport medium.
 ---
 
 ## ✨ Nova Safety
-- Nova is a **restricted Lua runtime** with no `os.execute`, no global `io`, and no raw filesystem access
+- Nova is a restricted Lua runtime designed to provide a safe API surface for install scripts. However, Nova does not prevent host escape if malicious scripts are written. It is sandboxed in spirit, not in syscall.
 - All file ops go through Cosmos' internal API (e.g. `copy`, `run`, `symlink`)
+- But run() executes real binaries on the real system
 - All paths are forced under a real root prefix passed in by Cosmos
+- If your script runs `rm -rf /`, that’s on you
+- `--safe` flag is an upcoming feature that disables `run()` and other unsafe operations
 
 ---
 
 ## ⚠️ Responsibility Statement
-> Cosmos does not attempt to "secure" things with signatures or crypto if the system using it is already untrusted.
+> Cosmos does not attempt to "secure" things with signatures or crypto if the system using it is already untrusted. Cosmos does not enforce privilege isolation. It does not chroot, drop privileges, or namespace-isolate builds.
 
 This philosophy mirrors tools like Alpine and Suckless:
-- Focus on small, auditable parts
+- Auditable, human-readable scripts
 - Encourage system owners to vet their inputs
+- Minimal system dependencies
+- Full transparency over runtime behavior
 - Let users opt into higher security layers (signed hashes, reproducible builds) without mandating them
 
 ---

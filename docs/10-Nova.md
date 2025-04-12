@@ -91,3 +91,9 @@ This enables:
 
 Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.
 
+## ⚠️ Trust & Safety Warning
+> Nova is sandboxed in spirit, not at the syscall level. It aims to provide a clean API and scoped file operations, but:
+- run() executes real binaries on your system
+- Nova does not chroot, isolate namespaces, or drop privileges
+- Scripts can still execute destructive commands if written maliciously
+- `--safe` flag is an upcoming feature that disables `run()` and other unsafe operations

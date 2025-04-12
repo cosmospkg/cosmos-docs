@@ -625,6 +625,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#trust-safety-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Trust &amp; Safety Warning
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1061,6 +1070,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#trust-safety-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Trust &amp; Safety Warning
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1150,6 +1168,14 @@ end
 <li><code>filemap()</code>: declare expected outputs for validation</li>
 </ul>
 <p>Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.</p>
+<h2 id="trust-safety-warning">⚠️ Trust &amp; Safety Warning</h2>
+<blockquote>
+<p>Nova is sandboxed in spirit, not at the syscall level. It aims to provide a clean API and scoped file operations, but:
+- run() executes real binaries on your system
+- Nova does not chroot, isolate namespaces, or drop privileges
+- Scripts can still execute destructive commands if written maliciously
+- <code>--safe</code> flag is an upcoming feature that disables <code>run()</code> and other unsafe operations</p>
+</blockquote>
 
 
 

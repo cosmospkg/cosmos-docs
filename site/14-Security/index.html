@@ -942,7 +942,7 @@ nothing or managing an offline system, TLS and GPG are often just extra ways for
 <li>IPFS or Git</li>
 </ul>
 <blockquote>
-<p>If you want encrypted transport, you can use <code>scp</code>, <code>rsync</code>, <code>tailscale</code>, or just unplug your damn machine.</p>
+<p>If you want encrypted transport, you can use <code>scp</code>, <code>rsync</code>, <code>tailscale</code>, or just unplug your machine.</p>
 <p>If you don’t trust your Galaxy source, you have no security.</p>
 </blockquote>
 <p>You are responsible for trusting the transport medium.</p>
@@ -956,18 +956,23 @@ nothing or managing an offline system, TLS and GPG are often just extra ways for
 <hr />
 <h2 id="nova-safety">✨ Nova Safety</h2>
 <ul>
-<li>Nova is a <strong>restricted Lua runtime</strong> with no <code>os.execute</code>, no global <code>io</code>, and no raw filesystem access</li>
+<li>Nova is a restricted Lua runtime designed to provide a safe API surface for install scripts. However, Nova does not prevent host escape if malicious scripts are written. It is sandboxed in spirit, not in syscall.</li>
 <li>All file ops go through Cosmos' internal API (e.g. <code>copy</code>, <code>run</code>, <code>symlink</code>)</li>
+<li>But run() executes real binaries on the real system</li>
 <li>All paths are forced under a real root prefix passed in by Cosmos</li>
+<li>If your script runs <code>rm -rf /</code>, that’s on you</li>
+<li><code>--safe</code> flag is an upcoming feature that disables <code>run()</code> and other unsafe operations</li>
 </ul>
 <hr />
 <h2 id="responsibility-statement">⚠️ Responsibility Statement</h2>
 <blockquote>
-<p>Cosmos does not attempt to "secure" things with signatures or crypto if the system using it is already untrusted.</p>
+<p>Cosmos does not attempt to "secure" things with signatures or crypto if the system using it is already untrusted. Cosmos does not enforce privilege isolation. It does not chroot, drop privileges, or namespace-isolate builds.</p>
 </blockquote>
 <p>This philosophy mirrors tools like Alpine and Suckless:
-- Focus on small, auditable parts
+- Auditable, human-readable scripts
 - Encourage system owners to vet their inputs
+- Minimal system dependencies
+- Full transparency over runtime behavior
 - Let users opt into higher security layers (signed hashes, reproducible builds) without mandating them</p>
 <hr />
 <h2 id="future-ideas">🛡️ Future Ideas</h2>
