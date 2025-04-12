@@ -1,0 +1,4 @@
+site_name: Cosmos Package Manager Documentation
+site_url: https://docs.cosmos-pkg.org
+theme:
+  name: material
