@@ -18,7 +18,7 @@ version = "1.2.13"
 description = "Compression library"
 type = "normal"  # or "nebula"
 source = "http://mirror.example.org/zlib-1.2.13.tar.gz"
-install_script = "./install.lua"
+install_script = "install.lua"
 
 [dependencies]
 musl = ">=1.2.0"
