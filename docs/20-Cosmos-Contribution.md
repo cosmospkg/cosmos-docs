@@ -1,4 +1,4 @@
-# 19 – Contributing to Cosmos (Project Guidelines)
+# 20 – Contributing to Cosmos (Project Guidelines)
 
 This guide is for contributors to the Cosmos codebase itself—including `cosmos-core`, `cosmos-cli`, `stellar`, `nova`, and related tooling.
 

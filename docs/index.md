@@ -35,23 +35,23 @@ This documentation covers core concepts, architecture, CLI usage, Nova scripting
 - [14 – Design Rationale](./14-Design-Rationale.md)
 - [15 – Security Model](./15-Security.md)
 - [16 – Examples and Usage](./16-Examples.md)
-- [23 – FAQ](./23-FAQ.md)
+- [17 – FAQ](./17-FAQ.md)
 
 ---
 
 ## 🌌 Package & Galaxy Maintenance
 
-- [17 – Galaxies](./17-Galaxies.md)
-- [18 – Versioning and Releases](./18-Versioning.md)
-- [19 – Cosmos Contribution Guide](./19-Cosmos-Contribution.md)
-- [20 – Maintainer Guide for Galaxies & Stars](./20-Contribution-Guide-for-Maintainers.md)
-- [21 – Crate Policy](./21-Crate-Policy.md)
+- [18 – Galaxies](./18-Galaxies.md)
+- [19 – Versioning and Releases](./19-Versioning.md)
+- [20 – Cosmos Contribution Guide](./20-Cosmos-Contribution.md)
+- [21 – Maintainer Guide for Galaxies & Stars](./21-Contribution-Guide-for-Maintainers.md)
+- [22 – Crate Policy](./22-Crate-Policy.md)
 
 ---
 
 ## 🧱 System Building
 
-- [22 – Bootstrapping](./22-Bootstrapping.md)
+- [23 – Bootstrapping](./23-Bootstrapping.md)
 
 ---
 

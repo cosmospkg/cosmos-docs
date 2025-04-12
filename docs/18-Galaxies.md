@@ -1,4 +1,4 @@
-# 17 – Galaxies
+# 18 – Galaxies
 
 Galaxies are where Stars go to live (or die). A Galaxy in Cosmos is a plain folder that contains:
 

@@ -1,4 +1,4 @@
-# 21 – Crate Policy
+# 22 – Crate Policy
 
 Cosmos is built to run in minimal, musl-based, interpreter-free environments with zero dynamic linking. This document defines what crates are allowed and what constraints they must follow to be included in the Cosmos ecosystem.
 

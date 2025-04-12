@@ -1,4 +1,4 @@
-# 20 – Maintaining Galaxies and Stars
+# 21 – Maintaining Galaxies and Stars
 
 This guide is for maintainers of Cosmos Galaxies and package authors who want to build Stars (or Nebulae) that others can install.
 

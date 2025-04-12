@@ -1,4 +1,4 @@
-# 18 – Versioning and Release Policy
+# 19 – Versioning and Release Policy
 
 This document defines the versioning strategy for Cosmos Stars, Galaxies, and the overall ecosystem. It also outlines how packages should be updated, deprecated, or removed.
 

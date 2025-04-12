@@ -1,4 +1,4 @@
-# 22 – Bootstrapping a System with Cosmos
+# 23 – Bootstrapping a System with Cosmos
 
 This guide walks through how to build a working root filesystem using Cosmos alone. It assumes you have a Cosmos binary, a Galaxy source (HTTP, file, or USB), and a directory to install into.
 
