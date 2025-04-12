@@ -1017,17 +1017,23 @@
 <p>Each Galaxy has a <code>meta.toml</code> with:</p>
 <pre><code class="language-toml">version = &quot;2024.04.17&quot;
 </code></pre>
-<p>This version is used for:
-- Identifying sync points
-- Snapshotting a full system state
-- Reference in freeze/lockfile scenarios</p>
-<p><strong>Preferred format: <code>YYYY.MM.DD</code></strong> for clarity and traceability
-- Easy to sort
-- Helps with security updates or multiple changes in a month</p>
-<p>Galaxies <strong>must</strong> update <code>meta.toml</code> if any of the following change:
-- New Star added
-- Existing Star updated
-- Any Star removed</p>
+<p>This version is used for:</p>
+<ul>
+<li>Identifying sync points</li>
+<li>Snapshotting a full system state</li>
+<li>Reference in freeze/lockfile scenarios</li>
+</ul>
+<p><strong>Preferred format: <code>YYYY.MM.DD</code></strong> for clarity and traceability</p>
+<ul>
+<li>Easy to sort</li>
+<li>Helps with security updates or multiple changes in a month</li>
+</ul>
+<p>Galaxies <strong>must</strong> update <code>meta.toml</code> if any of the following change:</p>
+<ul>
+<li>New Star added</li>
+<li>Existing Star updated</li>
+<li>Any Star removed</li>
+</ul>
 <h3 id="galaxy-archival-recommended">🔄 Galaxy Archival (Recommended)</h3>
 <ul>
 <li>It is <strong>not required</strong> to archive every Galaxy version</li>
@@ -1038,9 +1044,11 @@
 <p>Ultimately, archival policies are up to the maintainer. Cosmos recommends preserving history, but does not enforce it.</p>
 <hr />
 <h2 id="constellation-stability">🌍 Constellation Stability</h2>
-<p>Constellations are install presets. If a Constellation references Stars that change, that's fine—but users should be encouraged to:
-- Pin Constellation files to Galaxy versions
-- Create locked snapshots of their system after install</p>
+<p>Constellations are install presets. If a Constellation references Stars that change, that's fine—but users should be encouraged to:</p>
+<ul>
+<li>Pin Constellation files to Galaxy versions</li>
+<li>Create locked snapshots of their system after install</li>
+</ul>
 <p>Example:</p>
 <pre><code class="language-toml">members = [
   &quot;core-utils@1.0.0&quot;,

@@ -1063,12 +1063,14 @@
 <blockquote>
 <p>Terminal interface for users, using <code>clap</code>.</p>
 </blockquote>
-<p>Implements commands like:
-- <code>cosmos install foo</code>
-- <code>cosmos uninstall foo</code>
-- <code>cosmos update foo</code>
-- <code>cosmos status</code>
-- <code>cosmos sync</code></p>
+<p>Implements commands like:</p>
+<ul>
+<li><code>cosmos install foo</code></li>
+<li><code>cosmos uninstall foo</code></li>
+<li><code>cosmos update foo</code></li>
+<li><code>cosmos status</code></li>
+<li><code>cosmos sync</code></li>
+</ul>
 <p>The CLI <strong>calls into <code>cosmos-core</code></strong> and reads config from a central TOML file.</p>
 <hr />
 <h3 id="3-cosmos-universe">3. <code>cosmos-universe</code></h3>
@@ -1090,11 +1092,13 @@
 <blockquote>
 <p>Maintainer-side tool for <strong>creating and building packages</strong>.</p>
 </blockquote>
-<p>Functions:
-- Create new <code>star.toml</code> scaffolds
-- Build package tarballs
-- Run pre- and post-build tests
-- Lint and validate packages</p>
+<p>Functions:</p>
+<ul>
+<li>Create new <code>star.toml</code> scaffolds</li>
+<li>Build package tarballs</li>
+<li>Run pre- and post-build tests</li>
+<li>Lint and validate packages</li>
+</ul>
 <p>Future versions may integrate with <code>nova</code>.</p>
 <hr />
 <h3 id="5-nova-optional">5. <code>nova</code> <em>(optional)</em></h3>

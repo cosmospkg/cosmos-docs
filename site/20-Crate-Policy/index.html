@@ -1053,11 +1053,13 @@
 </ul>
 <hr />
 <h2 id="allowed-crate-behavior">✅ Allowed Crate Behavior</h2>
-<p>All crates must:
-- Compile statically (no dynamic linking)
-- Be <strong>pure Rust</strong>, or optional FFI that can be disabled
-- Avoid build scripts that invoke system tools
-- Build with <strong>no extra linker args</strong> under musl or glibc</p>
+<p>All crates must:</p>
+<ul>
+<li>Compile statically (no dynamic linking)</li>
+<li>Be <strong>pure Rust</strong>, or optional FFI that can be disabled</li>
+<li>Avoid build scripts that invoke system tools</li>
+<li>Build with <strong>no extra linker args</strong> under musl or glibc</li>
+</ul>
 <hr />
 <h2 id="cryptography-hashing">🔐 Cryptography &amp; Hashing</h2>
 <p>Only <strong>pure Rust</strong> implementations allowed.</p>
@@ -1102,11 +1104,13 @@
 <p>Before adding a new crate:</p>
 <pre><code class="language-bash">cargo tree -e normal
 </code></pre>
-<p>Check for:
-- <code>-sys</code> crates
-- Dynamic linking
-- Build scripts (<code>build.rs</code>) doing sketchy stuff
-- Optional features that need to be disabled</p>
+<p>Check for:</p>
+<ul>
+<li><code>-sys</code> crates</li>
+<li>Dynamic linking</li>
+<li>Build scripts (<code>build.rs</code>) doing sketchy stuff</li>
+<li>Optional features that need to be disabled</li>
+</ul>
 <hr />
 <h2 id="our-build-environment">🧼 Our Build Environment</h2>
 <ul>

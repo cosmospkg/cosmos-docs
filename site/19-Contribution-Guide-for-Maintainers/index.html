@@ -931,21 +931,25 @@
 <p>This guide is for maintainers of Cosmos Galaxies and package authors who want to build Stars (or Nebulae) that others can install.</p>
 <hr />
 <h2 id="your-responsibilities">🌟 Your Responsibilities</h2>
-<p>If you're maintaining a Galaxy or publishing Stars, you are expected to:
-- Keep <code>meta.toml</code> up to date (names, versions, descriptions, star list)
-- Update or rebuild tarballs when package contents change
-- Recalculate checksums if hashes are implemented
-- Test packages before publishing them (install + uninstall)
-- Use SemVer responsibly for Star versioning
-- Use <code>YYYY.MM.DD</code> format for Galaxy versions in <code>meta.toml</code>
-- Consider archiving versions of your Galaxy for long-term reproducibility (3–6 months minimum is recommended)</p>
+<p>If you're maintaining a Galaxy or publishing Stars, you are expected to:</p>
+<ul>
+<li>Keep <code>meta.toml</code> up to date (names, versions, descriptions, star list)</li>
+<li>Update or rebuild tarballs when package contents change</li>
+<li>Recalculate checksums if hashes are implemented</li>
+<li>Test packages before publishing them (install + uninstall)</li>
+<li>Use SemVer responsibly for Star versioning</li>
+<li>Use <code>YYYY.MM.DD</code> format for Galaxy versions in <code>meta.toml</code></li>
+<li>Consider archiving versions of your Galaxy for long-term reproducibility (3–6 months minimum is recommended)</li>
+</ul>
 <p>If that sounds like a lot of work—it is. Cosmos assumes you take ownership seriously.</p>
 <hr />
 <h2 id="creating-a-star">⚙️ Creating a Star</h2>
-<p>Use <code>stellar new-star &lt;name&gt;</code> to scaffold a new package:
-- Edit <code>star.toml</code> to define name, version, and dependencies
-- Add an <code>install.sh</code> or <code>nova.lua</code> script
-- Place files in a <code>files/</code> directory relative to the star</p>
+<p>Use <code>stellar new-star &lt;name&gt;</code> to scaffold a new package:</p>
+<ul>
+<li>Edit <code>star.toml</code> to define name, version, and dependencies</li>
+<li>Add an <code>install.sh</code> or <code>nova.lua</code> script</li>
+<li>Place files in a <code>files/</code> directory relative to the star</li>
+</ul>
 <p>Then:</p>
 <pre><code class="language-bash">stellar build-star ./your-package
 </code></pre>
@@ -980,11 +984,13 @@ stars = [&quot;musl&quot;, &quot;busybox&quot;, &quot;zlib&quot;]
 │   ├── musl-1.2.4.tar.gz
 │   └── busybox-1.36.0.tar.gz
 </code></pre>
-<p>You can host this via:
-- S3 (static file bucket)
-- GitHub Pages
-- Any static HTTP server
-- A USB stick you left plugged in since last fall</p>
+<p>You can host this via:</p>
+<ul>
+<li>S3 (static file bucket)</li>
+<li>GitHub Pages</li>
+<li>Any static HTTP server</li>
+<li>A USB stick you left plugged in since last fall</li>
+</ul>
 <hr />
 <h2 id="common-mistakes">❌ Common Mistakes</h2>
 <ul>

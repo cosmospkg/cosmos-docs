@@ -1033,27 +1033,33 @@
 <p>This document defines the maintainer-side tooling that powers Cosmos package creation and validation. The tool is called <strong>Stellar</strong>, and it is used to create, build, verify, and lint Stars and Nebulae.</p>
 <hr />
 <h2 id="what-is-stellar">✨ What is Stellar?</h2>
-<p>Stellar is a CLI tool used by package authors and system maintainers. It performs tasks related to:
-- Scaffolding new Stars
-- Fetching remote sources for local builds
-- Building package tarballs
-- Running install logic (optionally using Nova)
-- Validating dependencies
-- Packaging and indexing for Galaxies</p>
+<p>Stellar is a CLI tool used by package authors and system maintainers. It performs tasks related to:</p>
+<ul>
+<li>Scaffolding new Stars</li>
+<li>Fetching remote sources for local builds</li>
+<li>Building package tarballs</li>
+<li>Running install logic (optionally using Nova)</li>
+<li>Validating dependencies</li>
+<li>Packaging and indexing for Galaxies</li>
+</ul>
 <p>Stellar is not required for <em>using</em> Cosmos—only for <em>building</em> Stars and Galaxies.</p>
 <hr />
 <h2 id="commands">🚀 Commands</h2>
 <h3 id="stellar-new-star-name"><code>stellar new-star &lt;name&gt;</code></h3>
-<p>Scaffolds a new <code>star.toml</code> and optional build script.
-- Prompts for version, description, type (normal/nebula)
-- Creates folder with stub files and <code>files/</code> layout</p>
+<p>Scaffolds a new <code>star.toml</code> and optional build script.</p>
+<ul>
+<li>Prompts for version, description, type (normal/nebula)</li>
+<li>Creates folder with stub files and <code>files/</code> layout</li>
+</ul>
 <h3 id="stellar-build-star-path"><code>stellar build-star &lt;path&gt;</code></h3>
-<p>Builds a <code>.tar.gz</code> of the Star using <code>star.toml</code>
-- Copies files into temp dir
-- Includes optional <code>install.lua</code> Nova script if present
-- Runs Nova script to prepare files (if needed) during build
-- Outputs tarball in <code>./dist/</code> or configured output dir
-- Produces a <code>.tar.gz</code> with the contents of <code>files/</code> and any <code>install.lua</code> script</p>
+<p>Builds a <code>.tar.gz</code> of the Star using <code>star.toml</code></p>
+<ul>
+<li>Copies files into temp dir</li>
+<li>Includes optional <code>install.lua</code> Nova script if present</li>
+<li>Runs Nova script to prepare files (if needed) during build</li>
+<li>Outputs tarball in <code>./dist/</code> or configured output dir</li>
+<li>Produces a <code>.tar.gz</code> with the contents of <code>files/</code> and any <code>install.lua</code> script</li>
+</ul>
 <h3 id="stellar-fetch-path"><code>stellar fetch &lt;path&gt;</code></h3>
 <p>Fetches the <em>remote source</em> defined in <code>star.toml</code>
 - Supports HTTP or local file URI (no Git yet)
@@ -1062,24 +1068,30 @@
 - Does <strong>not</strong> modify <code>star.toml</code>
 - Maintainer must later update <code>source</code> to the final tarball path post-build</p>
 <h3 id="stellar-validate-path"><code>stellar validate &lt;path&gt;</code></h3>
-<p>Validates:
-- Presence of required fields
-- Correct semver and dependencies
-- Script syntax (basic checks)
-- Source URL accessibility (if specified)
-- Ensures only one install script exists (<code>install.lua</code> or <code>install.sh</code>)</p>
+<p>Validates:</p>
+<ul>
+<li>Presence of required fields</li>
+<li>Correct semver and dependencies</li>
+<li>Script syntax (basic checks)</li>
+<li>Source URL accessibility (if specified)</li>
+<li>Ensures only one install script exists (<code>install.lua</code> or <code>install.sh</code>)</li>
+</ul>
 <h3 id="stellar-lint-path-future"><code>stellar lint &lt;path&gt;</code> <em>(future)</em></h3>
 <p>Gives advice on naming conventions, doc clarity, and structure</p>
 <h3 id="stellar-galaxy-init-name"><code>stellar galaxy-init &lt;name&gt;</code></h3>
-<p>Creates a new Galaxy repo with:
-- <code>meta.toml</code>
-- <code>stars/</code> directory
-- <code>packages/</code> directory</p>
+<p>Creates a new Galaxy repo with:</p>
+<ul>
+<li><code>meta.toml</code></li>
+<li><code>stars/</code> directory</li>
+<li><code>packages/</code> directory</li>
+</ul>
 <h3 id="stellar-index-galaxy-path-future"><code>stellar index-galaxy &lt;path&gt;</code> <em>(future)</em></h3>
-<p>Generates/updates the <code>[stars]</code> table in <code>meta.toml</code>
-- Scans <code>stars/</code> for <code>.toml</code> files
-- Extracts name + version
-- Sorts and deduplicates entries</p>
+<p>Generates/updates the <code>[stars]</code> table in <code>meta.toml</code></p>
+<ul>
+<li>Scans <code>stars/</code> for <code>.toml</code> files</li>
+<li>Extracts name + version</li>
+<li>Sorts and deduplicates entries</li>
+</ul>
 <hr />
 <h2 id="example-workflow">🔍 Example Workflow</h2>
 <pre><code class="language-bash">stellar new-star hello

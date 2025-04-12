@@ -918,10 +918,12 @@
 </blockquote>
 <p>Cosmos is built for systems that are already trusted, constrained, or purpose-built. If you're bootstrapping from 
 nothing or managing an offline system, TLS and GPG are often just extra ways for things to break.</p>
-<p>Instead, Cosmos gives you:
-- Plain files
-- Predictable layouts
-- Auditable integrity</p>
+<p>Instead, Cosmos gives you:</p>
+<ul>
+<li>Plain files</li>
+<li>Predictable layouts</li>
+<li>Auditable integrity</li>
+</ul>
 <p>Security is something you layer on <em>if</em> and <em>when</em> you need it.</p>
 <hr />
 <h2 id="trust-model">🔐 Trust Model</h2>
@@ -968,12 +970,14 @@ nothing or managing an offline system, TLS and GPG are often just extra ways for
 <blockquote>
 <p>Cosmos does not attempt to "secure" things with signatures or crypto if the system using it is already untrusted. Cosmos does not enforce privilege isolation. It does not chroot, drop privileges, or namespace-isolate builds.</p>
 </blockquote>
-<p>This philosophy mirrors tools like Alpine and Suckless:
-- Auditable, human-readable scripts
-- Encourage system owners to vet their inputs
-- Minimal system dependencies
-- Full transparency over runtime behavior
-- Let users opt into higher security layers (signed hashes, reproducible builds) without mandating them</p>
+<p>This philosophy mirrors tools like Alpine and Suckless:</p>
+<ul>
+<li>Auditable, human-readable scripts</li>
+<li>Encourage system owners to vet their inputs</li>
+<li>Minimal system dependencies</li>
+<li>Full transparency over runtime behavior</li>
+<li>Let users opt into higher security layers (signed hashes, reproducible builds) without mandating them</li>
+</ul>
 <hr />
 <h2 id="future-ideas">🛡️ Future Ideas</h2>
 <ul>

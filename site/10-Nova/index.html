@@ -1132,10 +1132,12 @@ end
 <p>Cosmos executes Nova scripts inside a controlled environment.</p>
 <h3 id="functions-provided">Functions Provided:</h3>
 <h4 id="runcommand-string"><code>run(command: string)</code></h4>
-<p>Runs a shell command in the current working directory.
-- Inherits stdout/stderr
-- Returns exit code
-- Raises error if non-zero</p>
+<p>Runs a shell command in the current working directory.</p>
+<ul>
+<li>Inherits stdout/stderr</li>
+<li>Returns exit code</li>
+<li>Raises error if non-zero</li>
+</ul>
 <h4 id="copyfrom-string-to-string"><code>copy(from: string, to: string)</code></h4>
 <p>Copies a file from <code>from</code> (relative to working dir) to <code>to</code> (absolute path under real root).</p>
 <h4 id="symlinktarget-string-linkname-string"><code>symlink(target: string, linkname: string)</code></h4>
@@ -1149,10 +1151,12 @@ end
 <hr />
 <h2 id="root-behavior">🏠 Root Behavior</h2>
 <p>Cosmos will pass an install root path (e.g. <code>/</code>, or <code>/mnt/wombat-root</code>) to the Nova runtime. All file operations are resolved <strong>relative to this root</strong>, enforced internally.</p>
-<p>This enables:
-- Real system installs
-- Chroot builds
-- Fake-root dry runs for package testing</p>
+<p>This enables:</p>
+<ul>
+<li>Real system installs</li>
+<li>Chroot builds</li>
+<li>Fake-root dry runs for package testing</li>
+</ul>
 <hr />
 <h2 id="error-handling">🤖 Error Handling</h2>
 <ul>
@@ -1170,12 +1174,14 @@ end
 <p>Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.</p>
 <h2 id="trust-safety-warning">⚠️ Trust &amp; Safety Warning</h2>
 <blockquote>
-<p>Nova is sandboxed in spirit, not at the syscall level. It aims to provide a clean API and scoped file operations, but:
-- run() executes real binaries on your system
-- Nova does not chroot, isolate namespaces, or drop privileges
-- Scripts can still execute destructive commands if written maliciously
-- <code>--safe</code> flag is an upcoming feature that disables <code>run()</code> and other unsafe operations</p>
+<p>Nova is sandboxed in spirit, not at the syscall level. It aims to provide a clean API and scoped file operations, but:</p>
 </blockquote>
+<ul>
+<li>run() executes real binaries on your system</li>
+<li>Nova does not chroot, isolate namespaces, or drop privileges</li>
+<li>Scripts can still execute destructive commands if written maliciously</li>
+<li><code>--safe</code> flag is an upcoming feature that disables <code>run()</code> and other unsafe operations</li>
+</ul>
 
 
 

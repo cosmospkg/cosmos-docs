@@ -922,11 +922,13 @@
 
 
 <h1 id="16-galaxies">16 – Galaxies</h1>
-<p>Galaxies are where Stars go to live (or die). A Galaxy in Cosmos is a plain folder that contains:
-- A <code>meta.toml</code> file with basic info
-- A list of available Star packages
-- An optional <code>/packages/</code> directory full of compressed tarballs
-- A <code>/stars/</code> directory full of individual <code>star.toml</code> files</p>
+<p>Galaxies are where Stars go to live (or die). A Galaxy in Cosmos is a plain folder that contains:</p>
+<ul>
+<li>A <code>meta.toml</code> file with basic info</li>
+<li>A list of available Star packages</li>
+<li>An optional <code>/packages/</code> directory full of compressed tarballs</li>
+<li>A <code>/stars/</code> directory full of individual <code>star.toml</code> files</li>
+</ul>
 <p>Galaxies are designed to be as dumb and static as possible—because the smartest systems are the ones that survive a power outage.</p>
 <hr />
 <h2 id="example-metatoml">🖊️ Example <code>meta.toml</code></h2>
@@ -953,32 +955,40 @@ zlib = &quot;1.2.13&quot;
     ├── busybox-1.36.0.tar.gz
     └── zlib-1.2.13.tar.gz
 </code></pre>
-<p>This can be served from:
-- S3
-- GitHub Pages
-- Your personal server
-- A USB stick you found in a drawer from 2008
-- <strong>A Git repo you cloned manually</strong> (Cosmos will never do this for you)</p>
+<p>This can be served from:</p>
+<ul>
+<li>S3</li>
+<li>GitHub Pages</li>
+<li>Your personal server</li>
+<li>A USB stick you found in a drawer from 2008</li>
+<li><strong>A Git repo you cloned manually</strong> (Cosmos will never do this for you)</li>
+</ul>
 <hr />
 <h2 id="rules-of-hosting-a-galaxy">🚫 Rules of Hosting a Galaxy</h2>
-<p>Managing a Galaxy sounds cool until you realize it means:
-- <strong>Maintaining packages</strong> regularly
-- <strong>Keeping <code>meta.toml</code> in sync</strong> with the actual contents
-- <strong>Testing packages</strong> so they don’t destroy someone’s root directory
-- <strong>Updating checksums</strong> when you change a tarball
-- <strong>Being up 24/7</strong> if others depend on it</p>
+<p>Managing a Galaxy sounds cool until you realize it means:</p>
+<ul>
+<li><strong>Maintaining packages</strong> regularly</li>
+<li><strong>Keeping <code>meta.toml</code> in sync</strong> with the actual contents</li>
+<li><strong>Testing packages</strong> so they don’t destroy someone’s root directory</li>
+<li><strong>Updating checksums</strong> when you change a tarball</li>
+<li><strong>Being up 24/7</strong> if others depend on it</li>
+</ul>
 <p>You break it? You bought it.</p>
 <p>If you're not ready to maintain your own galaxy, don't. Use someone else's. Fork one. Remix one. Or go build Stars and let someone else host them.</p>
 <hr />
 <h2 id="the-official-galaxy">🌌 The Official Galaxy</h2>
-<p>If Cosmos ever gets an official Galaxy, it will probably be hosted on:
-- S3 or a static file server
-- With no TLS
-- With a massive readme warning you not to blindly trust it</p>
-<p>This is because Cosmos believes in:
-- Simplicity
-- Reproducibility
-- You being responsible for your own system</p>
+<p>If Cosmos ever gets an official Galaxy, it will probably be hosted on:</p>
+<ul>
+<li>S3 or a static file server</li>
+<li>With no TLS</li>
+<li>With a massive readme warning you not to blindly trust it</li>
+</ul>
+<p>This is because Cosmos believes in:</p>
+<ul>
+<li>Simplicity</li>
+<li>Reproducibility</li>
+<li>You being responsible for your own system</li>
+</ul>
 <hr />
 <h2 id="final-notes">🌊 Final Notes</h2>
 <p>Galaxies are boring by design. That makes them reliable. If it can't be served over <code>python3 -m http.server</code>, it's probably too complicated.</p>
