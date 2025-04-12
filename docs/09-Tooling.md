@@ -77,7 +77,7 @@ stellar new-star hello
 # edit files and install.lua...
 stellar fetch ./hello       # get source code
 stellar build-star ./hello  # run build() inside install.lua
-stellar validate ./hello/star.toml
+stellar validate ./hello
 # manually update star.toml source = "file://..."
 # copy tarball to core-galaxy/packages/
 ```
