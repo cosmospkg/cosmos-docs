@@ -44,7 +44,7 @@ Fetches the *remote source* defined in `star.toml`
 - Maintainer must later update `source` to the final tarball path post-build
 
 ### `stellar validate <path>`
-Validates:
+Validates a star:
 
 - Presence of required fields
 - Correct semver and dependencies
