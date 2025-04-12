@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.cosmos-pkg.org/10-Nova/">
+        <link rel="canonical" href="https://docs.cosmos-pkg.org/22-Bootstrapping/">
       
       
-        <link rel="prev" href="../09-Tooling/">
+        <link rel="prev" href="../21-Crate-Policy/">
       
       
-        <link rel="next" href="../11-Transport/">
+        <link rel="next" href="../23-FAQ/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>10 – Nova Scripting Engine - Cosmos Package Manager Documentation</title>
+        <title>22 – Bootstrapping a System with Cosmos - Cosmos Package Manager Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-nova-scripting-engine" class="md-skip">
+        <a href="#22-bootstrapping-a-system-with-cosmos" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10 – Nova Scripting Engine
+              22 – Bootstrapping a System with Cosmos
             
           </span>
         </div>
@@ -435,32 +435,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    10 – Nova Scripting Engine
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../10-Nova/" class="md-nav__link">
         
   
   
@@ -471,173 +449,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧑‍💻 Goals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Core Principles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Basic Script Layout
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      copy(from: string, to: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏠 Root Behavior
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤖 Error Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌐 Future Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -888,10 +699,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../22-Bootstrapping/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    22 – Bootstrapping a System with Cosmos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -902,6 +735,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-bootstrapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌜 What Is Bootstrapping?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔨 Install Process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-install-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 What to Install First
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-cosmos-does-not-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚫 What Cosmos Does Not Do
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pro-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🫰 Pro Tips
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -955,147 +871,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
+  <a href="#what-is-bootstrapping" class="md-nav__link">
     <span class="md-ellipsis">
-      🧑‍💻 Goals
+      🌜 What Is Bootstrapping?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚖️ Core Principles
+      ✅ Requirements
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
+  <a href="#install-process" class="md-nav__link">
     <span class="md-ellipsis">
-      📄 Basic Script Layout
+      🔨 Install Process
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
+  <a href="#what-to-install-first" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      copy(from: string, to: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏠 Root Behavior
+      🔄 What to Install First
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
+  <a href="#use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      🤖 Error Handling
+      🌐 Use Cases
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
+  <a href="#what-cosmos-does-not-do" class="md-nav__link">
     <span class="md-ellipsis">
-      🌐 Future Features
+      🚫 What Cosmos Does Not Do
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
+  <a href="#pro-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
+      🫰 Pro Tips
     </span>
   </a>
   
@@ -1117,93 +949,79 @@
 
 
 
-<h1 id="10-nova-scripting-engine">10 – Nova Scripting Engine</h1>
-<p>Nova is the optional, portable scripting engine for Cosmos. It is designed to replace shell-based <code>install_script</code> fields in <code>star.toml</code> with a safe, cross-platform alternative powered by Lua.</p>
-<p>Nova provides a constrained API surface tailored for packaging use cases: building, copying, and linking files during installation.</p>
-<p>Nova scripts are not standalone. They are invoked by Cosmos during install, with the runtime context passed in (e.g. real root path).</p>
+<h1 id="22-bootstrapping-a-system-with-cosmos">22 – Bootstrapping a System with Cosmos</h1>
+<p>This guide walks through how to build a working root filesystem using Cosmos alone. It assumes you have a Cosmos binary, a Galaxy source (HTTP, file, or USB), and a directory to install into.</p>
 <hr />
-<h2 id="goals">🧑‍💻 Goals</h2>
+<h2 id="what-is-bootstrapping">🌜 What Is Bootstrapping?</h2>
+<p>Bootstrapping is the act of building a usable system from near-zero. With Cosmos, this means:</p>
 <ul>
-<li>Replace raw shell scripts with safer, deterministic logic</li>
-<li>Avoid external interpreter dependencies (Nova is embedded)</li>
-<li>Allow packaging logic to be readable and portable</li>
-<li>Make error handling and file safety first-class citizens</li>
+<li>No shell</li>
+<li>No package manager</li>
+<li>No userland</li>
+<li>Just a tarball or static binary and a goal</li>
+</ul>
+<p>Cosmos enables you to go from "nothing but libc" to a minimal, functional user environment.</p>
+<hr />
+<h2 id="requirements">✅ Requirements</h2>
+<ul>
+<li>Statically compiled <code>cosmos</code> binary (no interpreter or dynamic libs)</li>
+<li>Galaxy source (USB, HTTP, Git clone, etc.)</li>
+<li>Writable mount point (e.g. <code>/mnt/wombat</code>)</li>
 </ul>
 <hr />
-<h2 id="core-principles">⚖️ Core Principles</h2>
-<ul>
-<li>Nova scripts are written in <strong>Lua 5.4+</strong></li>
-<li>They are run inside a sandboxed Cosmos environment</li>
-<li>They do not have access to arbitrary system utilities (no <code>os.execute</code>)</li>
-<li>All filesystem operations are relative to the <strong>real root</strong>, which is passed by Cosmos</li>
-<li>Nova never decides where files go—the package author does</li>
-</ul>
-<hr />
-<h2 id="basic-script-layout">📄 Basic Script Layout</h2>
-<pre><code class="language-lua">function build()
-  run({&quot;make&quot;})
-end
+<h2 id="install-process">🔨 Install Process</h2>
+<pre><code class="language-bash"># Optional: create target root
+mkdir -p /mnt/wombat
 
-function install()
-  copy(&quot;bin/tool&quot;, &quot;/usr/bin/tool&quot;)
-  symlink(&quot;/usr/bin/tool&quot;, &quot;/usr/bin/t&quot;)
-end
+# somewhere earlier, you add a local/mounted Galaxy
+
+# Install base system
+cosmos install --root /mnt/wombat core-stack
+
+# Bind system dirs for chroot
+mount --bind /dev /mnt/wombat/dev
+mount --bind /proc /mnt/wombat/proc
+mount --bind /sys /mnt/wombat/sys
+
+# Optional: copy /etc/passwd or minimal shadow configs
+cp -r /etc/skel /mnt/wombat/etc/
+
+# Chroot in
+chroot /mnt/wombat /bin/sh
 </code></pre>
 <hr />
-<h2 id="runtime-environment">⚖️ Runtime Environment</h2>
-<p>Cosmos executes Nova scripts inside a controlled environment.</p>
-<h3 id="functions-provided">Functions Provided:</h3>
-<h4 id="runcommand-array-of-strings"><code>run(command: array of strings)</code></h4>
-<p>Runs a system command in the current working directory.</p>
-<ul>
-<li>Inherits stdout/stderr</li>
-<li>Returns exit code</li>
-<li>Raises error if non-zero</li>
-</ul>
-<h4 id="copyfrom-string-to-string"><code>copy(from: string, to: string)</code></h4>
-<p>Copies a file from <code>from</code> (relative to working dir) to <code>to</code> (absolute path under real root).</p>
-<h4 id="symlinktarget-string-linkname-string"><code>symlink(target: string, linkname: string)</code></h4>
-<p>Creates a symlink from <code>linkname</code> to <code>target</code>, both rooted in the real root.</p>
-<h4 id="mkdirpath-string"><code>mkdir(path: string)</code></h4>
-<p>Creates a directory if it doesn't exist.</p>
-<h4 id="chmodpath-string-mode-number"><code>chmod(path: string, mode: number)</code></h4>
-<p>Sets file permissions (octal).</p>
-<h4 id="existspath-string"><code>exists(path: string)</code></h4>
-<p>Returns true if a file exists under real root.</p>
+<h2 id="what-to-install-first">🔄 What to Install First</h2>
+<pre><code class="language-bash">cosmos install core-stack
+cosmos install net-tools
+cosmos install busybox
+</code></pre>
+<p>A full Constellation file (e.g. <code>bootstrap.toml</code>) can define this list.</p>
 <hr />
-<h2 id="root-behavior">🏠 Root Behavior</h2>
-<p>Cosmos will pass an install root path (e.g. <code>/</code>, or <code>/mnt/wombat-root</code>) to the Nova runtime. All file operations are resolved <strong>relative to this root</strong>, enforced internally.</p>
-<p>This enables:</p>
+<h2 id="use-cases">🌐 Use Cases</h2>
 <ul>
-<li>Real system installs</li>
-<li>Chroot builds</li>
-<li>Fake-root dry runs for package testing</li>
+<li>Minimal Linux from scratch builds</li>
+<li>Custom distro bootstrapping</li>
+<li>Initramfs builds</li>
+<li>Embedded rescue environments</li>
 </ul>
 <hr />
-<h2 id="error-handling">🤖 Error Handling</h2>
+<h2 id="what-cosmos-does-not-do">🚫 What Cosmos Does <em>Not</em> Do</h2>
 <ul>
-<li>Any failure in <code>run</code>, <code>copy</code>, etc. halts the script</li>
-<li>Cosmos will abort the install and clean up temp dirs</li>
-<li>Future: line numbers and error tracing for better debugging</li>
+<li>Partition drives</li>
+<li>Configure bootloaders</li>
+<li>Handle systemd or runit setup</li>
+</ul>
+<p>Cosmos installs files and packages—nothing more. It is your tool for building a system, not for booting one.</p>
+<hr />
+<h2 id="pro-tips">🫰 Pro Tips</h2>
+<ul>
+<li>Test bootstrap flows inside a container or VM before bare metal</li>
+<li>Keep a Galaxy synced to USB in case your network goes down</li>
+<li>Use a Nebula to define your base stack for repeatable installs</li>
+<li>Use <code>cosmos freeze</code> (future) to snapshot what you just installed</li>
 </ul>
 <hr />
-<h2 id="future-features">🌐 Future Features</h2>
-<ul>
-<li><code>env(key, value)</code>: set environment variables for future <code>run()</code> calls</li>
-<li><code>log()</code>: structured logging support</li>
-<li><code>filemap()</code>: declare expected outputs for validation</li>
-</ul>
-<p>Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.</p>
-<h2 id="trust-safety-warning">⚠️ Trust &amp; Safety Warning</h2>
-<blockquote>
-<p>Nova is sandboxed in spirit, not at the syscall level. It aims to provide a clean API and scoped file operations, but:</p>
-</blockquote>
-<ul>
-<li>run() executes real binaries on your system</li>
-<li>Nova does not chroot, isolate namespaces, or drop privileges</li>
-<li>Scripts can still execute destructive commands if written maliciously</li>
-<li><code>--safe</code> flag is an upcoming feature that disables <code>run()</code> and other unsafe operations</li>
-</ul>
+<p>With Cosmos, you can go from a blank directory to a bootable rootfs with only a few commands—no interpreters, no curl, no Python, no tears.</p>
 
 
 

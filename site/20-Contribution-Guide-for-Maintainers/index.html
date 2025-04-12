@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.cosmos-pkg.org/10-Nova/">
+        <link rel="canonical" href="https://docs.cosmos-pkg.org/20-Contribution-Guide-for-Maintainers/">
       
       
-        <link rel="prev" href="../09-Tooling/">
+        <link rel="prev" href="../19-Cosmos-Contribution/">
       
       
-        <link rel="next" href="../11-Transport/">
+        <link rel="next" href="../21-Crate-Policy/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>10 – Nova Scripting Engine - Cosmos Package Manager Documentation</title>
+        <title>20 – Maintaining Galaxies and Stars - Cosmos Package Manager Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-nova-scripting-engine" class="md-skip">
+        <a href="#20-maintaining-galaxies-and-stars" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10 – Nova Scripting Engine
+              20 – Maintaining Galaxies and Stars
             
           </span>
         </div>
@@ -435,32 +435,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    10 – Nova Scripting Engine
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../10-Nova/" class="md-nav__link">
         
   
   
@@ -471,173 +449,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧑‍💻 Goals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Core Principles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Basic Script Layout
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      copy(from: string, to: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏠 Root Behavior
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤖 Error Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌐 Future Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -844,10 +655,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../20-Contribution-Guide-for-Maintainers/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    20 – Maintaining Galaxies and Stars
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -858,6 +691,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#your-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 Your Responsibilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-star" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Creating a Star
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-a-nebula" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Making a Nebula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structuring-a-galaxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Structuring a Galaxy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Common Mistakes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Release Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-and-hosting-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 Publishing and Hosting Tips
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -955,147 +871,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
+  <a href="#your-responsibilities" class="md-nav__link">
     <span class="md-ellipsis">
-      🧑‍💻 Goals
+      🌟 Your Responsibilities
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
+  <a href="#creating-a-star" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚖️ Core Principles
+      ⚙️ Creating a Star
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
+  <a href="#making-a-nebula" class="md-nav__link">
     <span class="md-ellipsis">
-      📄 Basic Script Layout
+      ✨ Making a Nebula
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
+  <a href="#structuring-a-galaxy" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      copy(from: string, to: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏠 Root Behavior
+      📄 Structuring a Galaxy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
+  <a href="#common-mistakes" class="md-nav__link">
     <span class="md-ellipsis">
-      🤖 Error Handling
+      ❌ Common Mistakes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
+  <a href="#release-checklist" class="md-nav__link">
     <span class="md-ellipsis">
-      🌐 Future Features
+      🚀 Release Checklist
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
+  <a href="#publishing-and-hosting-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
+      🤖 Publishing and Hosting Tips
     </span>
   </a>
   
@@ -1117,93 +949,102 @@
 
 
 
-<h1 id="10-nova-scripting-engine">10 – Nova Scripting Engine</h1>
-<p>Nova is the optional, portable scripting engine for Cosmos. It is designed to replace shell-based <code>install_script</code> fields in <code>star.toml</code> with a safe, cross-platform alternative powered by Lua.</p>
-<p>Nova provides a constrained API surface tailored for packaging use cases: building, copying, and linking files during installation.</p>
-<p>Nova scripts are not standalone. They are invoked by Cosmos during install, with the runtime context passed in (e.g. real root path).</p>
+<h1 id="20-maintaining-galaxies-and-stars">20 – Maintaining Galaxies and Stars</h1>
+<p>This guide is for maintainers of Cosmos Galaxies and package authors who want to build Stars (or Nebulae) that others can install.</p>
 <hr />
-<h2 id="goals">🧑‍💻 Goals</h2>
+<h2 id="your-responsibilities">🌟 Your Responsibilities</h2>
+<p>If you're maintaining a Galaxy or publishing Stars, you are expected to:</p>
 <ul>
-<li>Replace raw shell scripts with safer, deterministic logic</li>
-<li>Avoid external interpreter dependencies (Nova is embedded)</li>
-<li>Allow packaging logic to be readable and portable</li>
-<li>Make error handling and file safety first-class citizens</li>
+<li>Keep <code>meta.toml</code> up to date (names, versions, descriptions, star list)</li>
+<li>Update or rebuild tarballs when package contents change</li>
+<li>Recalculate checksums if hashes are implemented</li>
+<li>Test packages before publishing them (install + uninstall)</li>
+<li>Use SemVer responsibly for Star versioning</li>
+<li>Use <code>YYYY.MM.DD</code> format for Galaxy versions in <code>meta.toml</code></li>
+<li>Consider archiving versions of your Galaxy for long-term reproducibility (3–6 months minimum is recommended)</li>
 </ul>
+<p>If that sounds like a lot of work—it is. Cosmos assumes you take ownership seriously.</p>
 <hr />
-<h2 id="core-principles">⚖️ Core Principles</h2>
+<h2 id="creating-a-star">⚙️ Creating a Star</h2>
+<p>Use <code>stellar new-star &lt;name&gt;</code> to scaffold a new package:</p>
 <ul>
-<li>Nova scripts are written in <strong>Lua 5.4+</strong></li>
-<li>They are run inside a sandboxed Cosmos environment</li>
-<li>They do not have access to arbitrary system utilities (no <code>os.execute</code>)</li>
-<li>All filesystem operations are relative to the <strong>real root</strong>, which is passed by Cosmos</li>
-<li>Nova never decides where files go—the package author does</li>
+<li>Edit <code>star.toml</code> to define name, version, and dependencies</li>
+<li>Add an <code>install.sh</code> or <code>nova.lua</code> script</li>
+<li>Place files in a <code>files/</code> directory relative to the star</li>
 </ul>
-<hr />
-<h2 id="basic-script-layout">📄 Basic Script Layout</h2>
-<pre><code class="language-lua">function build()
-  run({&quot;make&quot;})
-end
-
-function install()
-  copy(&quot;bin/tool&quot;, &quot;/usr/bin/tool&quot;)
-  symlink(&quot;/usr/bin/tool&quot;, &quot;/usr/bin/t&quot;)
-end
+<p>Then:</p>
+<pre><code class="language-bash">stellar build-star ./your-package
 </code></pre>
+<p>This creates a <code>.tar.gz</code> that installs under Cosmos.</p>
 <hr />
-<h2 id="runtime-environment">⚖️ Runtime Environment</h2>
-<p>Cosmos executes Nova scripts inside a controlled environment.</p>
-<h3 id="functions-provided">Functions Provided:</h3>
-<h4 id="runcommand-array-of-strings"><code>run(command: array of strings)</code></h4>
-<p>Runs a system command in the current working directory.</p>
-<ul>
-<li>Inherits stdout/stderr</li>
-<li>Returns exit code</li>
-<li>Raises error if non-zero</li>
-</ul>
-<h4 id="copyfrom-string-to-string"><code>copy(from: string, to: string)</code></h4>
-<p>Copies a file from <code>from</code> (relative to working dir) to <code>to</code> (absolute path under real root).</p>
-<h4 id="symlinktarget-string-linkname-string"><code>symlink(target: string, linkname: string)</code></h4>
-<p>Creates a symlink from <code>linkname</code> to <code>target</code>, both rooted in the real root.</p>
-<h4 id="mkdirpath-string"><code>mkdir(path: string)</code></h4>
-<p>Creates a directory if it doesn't exist.</p>
-<h4 id="chmodpath-string-mode-number"><code>chmod(path: string, mode: number)</code></h4>
-<p>Sets file permissions (octal).</p>
-<h4 id="existspath-string"><code>exists(path: string)</code></h4>
-<p>Returns true if a file exists under real root.</p>
+<h2 id="making-a-nebula">✨ Making a Nebula</h2>
+<p>A Nebula is a dependency-only Star:</p>
+<pre><code class="language-toml">name = &quot;core-stack&quot;
+type = &quot;nebula&quot;
+version = &quot;1.0.0&quot;
+
+[dependencies]
+musl = &quot;^1.2.4&quot;
+busybox = &quot;^1.36&quot;
+</code></pre>
+<p>Nebulae should have no <code>source</code>, no <code>install_script</code>, and no <code>files/</code>.</p>
 <hr />
-<h2 id="root-behavior">🏠 Root Behavior</h2>
-<p>Cosmos will pass an install root path (e.g. <code>/</code>, or <code>/mnt/wombat-root</code>) to the Nova runtime. All file operations are resolved <strong>relative to this root</strong>, enforced internally.</p>
-<p>This enables:</p>
+<h2 id="structuring-a-galaxy">📄 Structuring a Galaxy</h2>
+<pre><code class="language-toml"># meta.toml
+name = &quot;core&quot;
+description = &quot;Minimal bootable stack&quot;
+version = &quot;2024.04.17&quot;
+stars = [&quot;musl&quot;, &quot;busybox&quot;, &quot;zlib&quot;]
+</code></pre>
+<pre><code>core-galaxy/
+├── meta.toml
+├── stars/
+│   ├── musl.toml
+│   ├── busybox.toml
+│   └── zlib.toml
+├── packages/
+│   ├── musl-1.2.4.tar.gz
+│   └── busybox-1.36.0.tar.gz
+</code></pre>
+<p>You can host this via:</p>
 <ul>
-<li>Real system installs</li>
-<li>Chroot builds</li>
-<li>Fake-root dry runs for package testing</li>
+<li>S3 (static file bucket)</li>
+<li>GitHub Pages</li>
+<li>Any static HTTP server</li>
+<li>A USB stick you left plugged in since last fall</li>
 </ul>
 <hr />
-<h2 id="error-handling">🤖 Error Handling</h2>
+<h2 id="common-mistakes">❌ Common Mistakes</h2>
 <ul>
-<li>Any failure in <code>run</code>, <code>copy</code>, etc. halts the script</li>
-<li>Cosmos will abort the install and clean up temp dirs</li>
-<li>Future: line numbers and error tracing for better debugging</li>
+<li>Forgetting to bump versions after a change</li>
+<li>Publishing a tarball with the wrong contents</li>
+<li>Mismatching star name vs filename</li>
+<li>Forgetting to update <code>meta.toml</code></li>
+<li>Publishing a Galaxy without testing anything</li>
+</ul>
+<p>Cosmos won’t stop you. But it will laugh quietly when your Galaxy breaks.</p>
+<hr />
+<h2 id="release-checklist">🚀 Release Checklist</h2>
+<ul>
+<li>[ ] Does every Star have a valid <code>star.toml</code>?</li>
+<li>[ ] Are the tarballs named correctly?</li>
+<li>[ ] Is <code>meta.toml</code> version bumped?</li>
+<li>[ ] Are dependencies valid?</li>
+<li>[ ] Can everything install cleanly with no internet?</li>
+<li>[ ] Has this Galaxy been archived or tagged in Git for historical reference?</li>
+</ul>
+<p>If yes: congratulations. You made a Galaxy.</p>
+<p>If no: go fix it before someone files a bug at 3AM.</p>
+<hr />
+<h2 id="publishing-and-hosting-tips">🤖 Publishing and Hosting Tips</h2>
+<ul>
+<li>Use Git tags for Galaxy versions (<code>core-2024.04.17</code>)</li>
+<li>Pin Galaxy metadata to specific Star versions</li>
+<li>Use symlinks for "latest"</li>
+<li>Mirror Galaxies to USB, IPFS, Git, or whatever works for your threat model</li>
 </ul>
 <hr />
-<h2 id="future-features">🌐 Future Features</h2>
-<ul>
-<li><code>env(key, value)</code>: set environment variables for future <code>run()</code> calls</li>
-<li><code>log()</code>: structured logging support</li>
-<li><code>filemap()</code>: declare expected outputs for validation</li>
-</ul>
-<p>Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.</p>
-<h2 id="trust-safety-warning">⚠️ Trust &amp; Safety Warning</h2>
-<blockquote>
-<p>Nova is sandboxed in spirit, not at the syscall level. It aims to provide a clean API and scoped file operations, but:</p>
-</blockquote>
-<ul>
-<li>run() executes real binaries on your system</li>
-<li>Nova does not chroot, isolate namespaces, or drop privileges</li>
-<li>Scripts can still execute destructive commands if written maliciously</li>
-<li><code>--safe</code> flag is an upcoming feature that disables <code>run()</code> and other unsafe operations</li>
-</ul>
+<p>Maintaining Galaxies is an act of service. Do it well, or don’t do it at all.</p>
 
 
 

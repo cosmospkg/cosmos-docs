@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.cosmos-pkg.org/10-Nova/">
+        <link rel="canonical" href="https://docs.cosmos-pkg.org/15-Security/">
       
       
-        <link rel="prev" href="../09-Tooling/">
+        <link rel="prev" href="../14-Design-Rationale/">
       
       
-        <link rel="next" href="../11-Transport/">
+        <link rel="next" href="../16-Examples/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>10 – Nova Scripting Engine - Cosmos Package Manager Documentation</title>
+        <title>15 – Security Model - Cosmos Package Manager Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-nova-scripting-engine" class="md-skip">
+        <a href="#15-security-model" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10 – Nova Scripting Engine
+              15 – Security Model
             
           </span>
         </div>
@@ -435,32 +435,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    10 – Nova Scripting Engine
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../10-Nova/" class="md-nav__link">
         
   
   
@@ -471,173 +449,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧑‍💻 Goals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Core Principles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Basic Script Layout
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      copy(from: string, to: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏠 Root Behavior
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤖 Error Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌐 Future Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -734,10 +545,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../15-Security/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    15 – Security Model
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -748,6 +581,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#trust-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Trust Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-tls-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ No TLS Required
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 Integrity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nova-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Nova Safety
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsibility-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Responsibility Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛡️ Future Ideas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -955,147 +862,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
+  <a href="#trust-model" class="md-nav__link">
     <span class="md-ellipsis">
-      🧑‍💻 Goals
+      🔐 Trust Model
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
+  <a href="#no-tls-required" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚖️ Core Principles
+      ❌ No TLS Required
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
+  <a href="#integrity" class="md-nav__link">
     <span class="md-ellipsis">
-      📄 Basic Script Layout
+      🔢 Integrity
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
+  <a href="#nova-safety" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      copy(from: string, to: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏠 Root Behavior
+      ✨ Nova Safety
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
+  <a href="#responsibility-statement" class="md-nav__link">
     <span class="md-ellipsis">
-      🤖 Error Handling
+      ⚠️ Responsibility Statement
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
+  <a href="#future-ideas" class="md-nav__link">
     <span class="md-ellipsis">
-      🌐 Future Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
+      🛡️ Future Ideas
     </span>
   </a>
   
@@ -1117,93 +931,83 @@
 
 
 
-<h1 id="10-nova-scripting-engine">10 – Nova Scripting Engine</h1>
-<p>Nova is the optional, portable scripting engine for Cosmos. It is designed to replace shell-based <code>install_script</code> fields in <code>star.toml</code> with a safe, cross-platform alternative powered by Lua.</p>
-<p>Nova provides a constrained API surface tailored for packaging use cases: building, copying, and linking files during installation.</p>
-<p>Nova scripts are not standalone. They are invoked by Cosmos during install, with the runtime context passed in (e.g. real root path).</p>
+<h1 id="15-security-model">15 – Security Model</h1>
+<p>Cosmos takes a pragmatic approach to security. It prioritizes simplicity, verifiability, and deterministic behavior over complex trust chains or opaque cryptographic systems. This document outlines the current and planned security considerations.</p>
 <hr />
-<h2 id="goals">🧑‍💻 Goals</h2>
-<ul>
-<li>Replace raw shell scripts with safer, deterministic logic</li>
-<li>Avoid external interpreter dependencies (Nova is embedded)</li>
-<li>Allow packaging logic to be readable and portable</li>
-<li>Make error handling and file safety first-class citizens</li>
-</ul>
-<hr />
-<h2 id="core-principles">⚖️ Core Principles</h2>
-<ul>
-<li>Nova scripts are written in <strong>Lua 5.4+</strong></li>
-<li>They are run inside a sandboxed Cosmos environment</li>
-<li>They do not have access to arbitrary system utilities (no <code>os.execute</code>)</li>
-<li>All filesystem operations are relative to the <strong>real root</strong>, which is passed by Cosmos</li>
-<li>Nova never decides where files go—the package author does</li>
-</ul>
-<hr />
-<h2 id="basic-script-layout">📄 Basic Script Layout</h2>
-<pre><code class="language-lua">function build()
-  run({&quot;make&quot;})
-end
-
-function install()
-  copy(&quot;bin/tool&quot;, &quot;/usr/bin/tool&quot;)
-  symlink(&quot;/usr/bin/tool&quot;, &quot;/usr/bin/t&quot;)
-end
-</code></pre>
-<hr />
-<h2 id="runtime-environment">⚖️ Runtime Environment</h2>
-<p>Cosmos executes Nova scripts inside a controlled environment.</p>
-<h3 id="functions-provided">Functions Provided:</h3>
-<h4 id="runcommand-array-of-strings"><code>run(command: array of strings)</code></h4>
-<p>Runs a system command in the current working directory.</p>
-<ul>
-<li>Inherits stdout/stderr</li>
-<li>Returns exit code</li>
-<li>Raises error if non-zero</li>
-</ul>
-<h4 id="copyfrom-string-to-string"><code>copy(from: string, to: string)</code></h4>
-<p>Copies a file from <code>from</code> (relative to working dir) to <code>to</code> (absolute path under real root).</p>
-<h4 id="symlinktarget-string-linkname-string"><code>symlink(target: string, linkname: string)</code></h4>
-<p>Creates a symlink from <code>linkname</code> to <code>target</code>, both rooted in the real root.</p>
-<h4 id="mkdirpath-string"><code>mkdir(path: string)</code></h4>
-<p>Creates a directory if it doesn't exist.</p>
-<h4 id="chmodpath-string-mode-number"><code>chmod(path: string, mode: number)</code></h4>
-<p>Sets file permissions (octal).</p>
-<h4 id="existspath-string"><code>exists(path: string)</code></h4>
-<p>Returns true if a file exists under real root.</p>
-<hr />
-<h2 id="root-behavior">🏠 Root Behavior</h2>
-<p>Cosmos will pass an install root path (e.g. <code>/</code>, or <code>/mnt/wombat-root</code>) to the Nova runtime. All file operations are resolved <strong>relative to this root</strong>, enforced internally.</p>
-<p>This enables:</p>
-<ul>
-<li>Real system installs</li>
-<li>Chroot builds</li>
-<li>Fake-root dry runs for package testing</li>
-</ul>
-<hr />
-<h2 id="error-handling">🤖 Error Handling</h2>
-<ul>
-<li>Any failure in <code>run</code>, <code>copy</code>, etc. halts the script</li>
-<li>Cosmos will abort the install and clean up temp dirs</li>
-<li>Future: line numbers and error tracing for better debugging</li>
-</ul>
-<hr />
-<h2 id="future-features">🌐 Future Features</h2>
-<ul>
-<li><code>env(key, value)</code>: set environment variables for future <code>run()</code> calls</li>
-<li><code>log()</code>: structured logging support</li>
-<li><code>filemap()</code>: declare expected outputs for validation</li>
-</ul>
-<p>Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.</p>
-<h2 id="trust-safety-warning">⚠️ Trust &amp; Safety Warning</h2>
+<p>Let’s get something out of the way:</p>
 <blockquote>
-<p>Nova is sandboxed in spirit, not at the syscall level. It aims to provide a clean API and scoped file operations, but:</p>
+<p>If you’re mad there's no TLS, no GPG, and no certificate pinning, you might be looking for the wrong package manager.</p>
 </blockquote>
+<p>Cosmos is built for systems that are already trusted, constrained, or purpose-built. If you're bootstrapping from 
+nothing or managing an offline system, TLS and GPG are often just extra ways for things to break.</p>
+<p>Instead, Cosmos gives you:</p>
 <ul>
-<li>run() executes real binaries on your system</li>
-<li>Nova does not chroot, isolate namespaces, or drop privileges</li>
-<li>Scripts can still execute destructive commands if written maliciously</li>
+<li>Plain files</li>
+<li>Predictable layouts</li>
+<li>Auditable integrity</li>
+</ul>
+<p>Security is something you layer on <em>if</em> and <em>when</em> you need it.</p>
+<hr />
+<h2 id="trust-model">🔐 Trust Model</h2>
+<ul>
+<li>Trust is placed in the source of the Galaxy you sync</li>
+<li>Galaxies are expected to be hosted by trusted parties (e.g. your own USB, S3, HTTP mirror, or Git repo)</li>
+<li>There is <strong>no central verification authority</strong></li>
+</ul>
+<hr />
+<h2 id="no-tls-required">❌ No TLS Required</h2>
+<ul>
+<li>Cosmos intentionally does <strong>not require HTTPS</strong> or OpenSSL</li>
+<li>This removes runtime SSL dependencies (libssl, cert bundles, etc.)</li>
+<li>Galaxies can be served from:</li>
+<li>Plain HTTP</li>
+<li>USB drives</li>
+<li>File paths</li>
+<li>IPFS or Git</li>
+</ul>
+<blockquote>
+<p>If you want encrypted transport, you can use <code>scp</code>, <code>rsync</code>, <code>tailscale</code>, or just unplug your machine.</p>
+<p>If you don’t trust your Galaxy source, you have no security.</p>
+</blockquote>
+<p>You are responsible for trusting the transport medium.</p>
+<hr />
+<h2 id="integrity">🔢 Integrity</h2>
+<ul>
+<li>Future: hashes of downloaded Star tarballs can be included in <code>star.toml</code></li>
+<li>Future: <code>cosmos verify</code> command will compare installed files to original tarball</li>
+<li>Future: <code>cosmos freeze</code> lockfiles will pin exact versions and hashes</li>
+</ul>
+<hr />
+<h2 id="nova-safety">✨ Nova Safety</h2>
+<ul>
+<li>Nova is a restricted Lua runtime designed to provide a safe API surface for install scripts. However, Nova does not prevent host escape if malicious scripts are written. It is sandboxed in spirit, not in syscall.</li>
+<li>All file ops go through Cosmos' internal API (e.g. <code>copy</code>, <code>run</code>, <code>symlink</code>)</li>
+<li>But run() executes real binaries on the real system</li>
+<li>All paths are forced under a real root prefix passed in by Cosmos</li>
+<li>If your script runs <code>rm -rf /</code>, that’s on you</li>
 <li><code>--safe</code> flag is an upcoming feature that disables <code>run()</code> and other unsafe operations</li>
 </ul>
+<hr />
+<h2 id="responsibility-statement">⚠️ Responsibility Statement</h2>
+<blockquote>
+<p>Cosmos does not attempt to "secure" things with signatures or crypto if the system using it is already untrusted. Cosmos does not enforce privilege isolation. It does not chroot, drop privileges, or namespace-isolate builds.</p>
+</blockquote>
+<p>This philosophy mirrors tools like Alpine and Suckless:</p>
+<ul>
+<li>Auditable, human-readable scripts</li>
+<li>Encourage system owners to vet their inputs</li>
+<li>Minimal system dependencies</li>
+<li>Full transparency over runtime behavior</li>
+<li>Let users opt into higher security layers (signed hashes, reproducible builds) without mandating them</li>
+</ul>
+<hr />
+<h2 id="future-ideas">🛡️ Future Ideas</h2>
+<ul>
+<li>Optional GPG-signed <code>meta.toml</code></li>
+<li>Signed <code>universe.lock.toml</code> for immutable system reproducibility</li>
+<li>Support for hash pinning and binary transparency (optional, not core)</li>
+</ul>
+<p>Cosmos aims to be secure by design, not by bureaucracy.</p>
 
 
 

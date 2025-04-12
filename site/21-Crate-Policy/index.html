@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.cosmos-pkg.org/10-Nova/">
+        <link rel="canonical" href="https://docs.cosmos-pkg.org/21-Crate-Policy/">
       
       
-        <link rel="prev" href="../09-Tooling/">
+        <link rel="prev" href="../20-Contribution-Guide-for-Maintainers/">
       
       
-        <link rel="next" href="../11-Transport/">
+        <link rel="next" href="../22-Bootstrapping/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>10 – Nova Scripting Engine - Cosmos Package Manager Documentation</title>
+        <title>21 – Crate Policy - Cosmos Package Manager Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-nova-scripting-engine" class="md-skip">
+        <a href="#21-crate-policy" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10 – Nova Scripting Engine
+              21 – Crate Policy
             
           </span>
         </div>
@@ -435,32 +435,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    10 – Nova Scripting Engine
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../10-Nova/" class="md-nav__link">
         
   
   
@@ -471,173 +449,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧑‍💻 Goals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Core Principles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Basic Script Layout
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      copy(from: string, to: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏠 Root Behavior
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤖 Error Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌐 Future Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -866,10 +677,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../21-Crate-Policy/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    21 – Crate Policy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -880,6 +713,146 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#build-target-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Build Target Philosophy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allowed-crate-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Allowed Crate Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cryptography-hashing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Cryptography &amp; Hashing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 Cryptography &amp; Hashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#approved" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Approved:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forbidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Forbidden:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression-archiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Compression &amp; Archiving
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Compression &amp; Archiving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Safe:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsafe" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Unsafe:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-flag-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 Feature Flag Rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crate-audit-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔬 Crate Audit Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#our-build-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧼 Our Build Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -955,101 +928,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
+  <a href="#build-target-philosophy" class="md-nav__link">
     <span class="md-ellipsis">
-      🧑‍💻 Goals
+      🧱 Build Target Philosophy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
+  <a href="#allowed-crate-behavior" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚖️ Core Principles
+      ✅ Allowed Crate Behavior
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
+  <a href="#cryptography-hashing" class="md-nav__link">
     <span class="md-ellipsis">
-      📄 Basic Script Layout
+      🔐 Cryptography &amp; Hashing
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
+    <nav class="md-nav" aria-label="🔐 Cryptography &amp; Hashing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
+  <a href="#approved" class="md-nav__link">
     <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
+      ✅ Approved:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
+  <a href="#forbidden" class="md-nav__link">
     <span class="md-ellipsis">
-      copy(from: string, to: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
+      ❌ Forbidden:
     </span>
   </a>
   
@@ -1059,6 +977,34 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#compression-archiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Compression &amp; Archiving
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Compression &amp; Archiving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Safe:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsafe" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Unsafe:
+    </span>
+  </a>
+  
+</li>
         
       </ul>
     </nav>
@@ -1066,36 +1012,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
+  <a href="#feature-flag-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      🏠 Root Behavior
+      🛠 Feature Flag Rules
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
+  <a href="#crate-audit-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      🤖 Error Handling
+      🔬 Crate Audit Tips
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
+  <a href="#our-build-environment" class="md-nav__link">
     <span class="md-ellipsis">
-      🌐 Future Features
+      🧼 Our Build Environment
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
+  <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
+      ✅ Summary
     </span>
   </a>
   
@@ -1117,93 +1063,127 @@
 
 
 
-<h1 id="10-nova-scripting-engine">10 – Nova Scripting Engine</h1>
-<p>Nova is the optional, portable scripting engine for Cosmos. It is designed to replace shell-based <code>install_script</code> fields in <code>star.toml</code> with a safe, cross-platform alternative powered by Lua.</p>
-<p>Nova provides a constrained API surface tailored for packaging use cases: building, copying, and linking files during installation.</p>
-<p>Nova scripts are not standalone. They are invoked by Cosmos during install, with the runtime context passed in (e.g. real root path).</p>
+<h1 id="21-crate-policy">21 – Crate Policy</h1>
+<p>Cosmos is built to run in minimal, musl-based, interpreter-free environments with zero dynamic linking. This document defines what crates are allowed and what constraints they must follow to be included in the Cosmos ecosystem.</p>
 <hr />
-<h2 id="goals">🧑‍💻 Goals</h2>
+<h2 id="build-target-philosophy">🧱 Build Target Philosophy</h2>
 <ul>
-<li>Replace raw shell scripts with safer, deterministic logic</li>
-<li>Avoid external interpreter dependencies (Nova is embedded)</li>
-<li>Allow packaging logic to be readable and portable</li>
-<li>Make error handling and file safety first-class citizens</li>
+<li><strong>musl-first</strong>, <strong>libc-agnostic</strong></li>
+<li>If Rust can target it, Cosmos should build on it</li>
+<li>All code must build with <strong>just <code>cargo build --release</code></strong></li>
+<li>No external build systems, no <code>make</code>, no <code>pkg-config</code>, no <code>cc</code> crates</li>
 </ul>
 <hr />
-<h2 id="core-principles">⚖️ Core Principles</h2>
+<h2 id="allowed-crate-behavior">✅ Allowed Crate Behavior</h2>
+<p>All crates must:</p>
 <ul>
-<li>Nova scripts are written in <strong>Lua 5.4+</strong></li>
-<li>They are run inside a sandboxed Cosmos environment</li>
-<li>They do not have access to arbitrary system utilities (no <code>os.execute</code>)</li>
-<li>All filesystem operations are relative to the <strong>real root</strong>, which is passed by Cosmos</li>
-<li>Nova never decides where files go—the package author does</li>
+<li>Compile statically (no dynamic linking)</li>
+<li>Be <strong>pure Rust</strong>, or optional FFI that can be disabled</li>
+<li>Avoid build scripts that invoke system tools</li>
+<li>Build with <strong>no extra linker args</strong> under musl or glibc</li>
 </ul>
 <hr />
-<h2 id="basic-script-layout">📄 Basic Script Layout</h2>
-<pre><code class="language-lua">function build()
-  run({&quot;make&quot;})
-end
-
-function install()
-  copy(&quot;bin/tool&quot;, &quot;/usr/bin/tool&quot;)
-  symlink(&quot;/usr/bin/tool&quot;, &quot;/usr/bin/t&quot;)
-end
+<h2 id="cryptography-hashing">🔐 Cryptography &amp; Hashing</h2>
+<p>Only <strong>pure Rust</strong> implementations allowed.</p>
+<h3 id="approved">✅ Approved:</h3>
+<ul>
+<li><code>sha2</code> (for SHA-256/SHA-512)</li>
+<li><code>blake3</code></li>
+<li><code>digest</code></li>
+<li><code>md-5</code></li>
+<li><code>hex</code></li>
+</ul>
+<h3 id="forbidden">❌ Forbidden:</h3>
+<ul>
+<li><code>ring</code> (requires C + custom asm)</li>
+<li><code>openssl</code> / <code>native-tls</code> (requires dynamic libs)</li>
+<li><code>libgit2</code>, <code>libz</code>, or anything with a <code>-sys</code> suffix</li>
+</ul>
+<hr />
+<h2 id="compression-archiving">📦 Compression &amp; Archiving</h2>
+<h3 id="safe">✅ Safe:</h3>
+<ul>
+<li><code>flate2</code> with <code>features = ["miniz_oxide"]</code> and <code>default-features = false</code></li>
+<li><code>tar</code></li>
+</ul>
+<h3 id="unsafe">❌ Unsafe:</h3>
+<ul>
+<li><code>flate2</code> with <code>zlib</code> feature</li>
+<li>Any crate that uses system-level compressors</li>
+</ul>
+<hr />
+<h2 id="feature-flag-rules">🛠 Feature Flag Rules</h2>
+<ul>
+<li>Optional features are great. Required features with native code are not.</li>
+<li>Default features must be <strong>fully statically linkable</strong></li>
+<li>All crates should have the ability to compile cleanly for:</li>
+<li><code>x86_64-unknown-linux-musl</code></li>
+<li><code>aarch64-unknown-linux-musl</code></li>
+<li><code>x86_64-unknown-linux-gnu</code></li>
+</ul>
+<hr />
+<h2 id="crate-audit-tips">🔬 Crate Audit Tips</h2>
+<p>Before adding a new crate:</p>
+<pre><code class="language-bash">cargo tree -e normal
 </code></pre>
-<hr />
-<h2 id="runtime-environment">⚖️ Runtime Environment</h2>
-<p>Cosmos executes Nova scripts inside a controlled environment.</p>
-<h3 id="functions-provided">Functions Provided:</h3>
-<h4 id="runcommand-array-of-strings"><code>run(command: array of strings)</code></h4>
-<p>Runs a system command in the current working directory.</p>
+<p>Check for:</p>
 <ul>
-<li>Inherits stdout/stderr</li>
-<li>Returns exit code</li>
-<li>Raises error if non-zero</li>
-</ul>
-<h4 id="copyfrom-string-to-string"><code>copy(from: string, to: string)</code></h4>
-<p>Copies a file from <code>from</code> (relative to working dir) to <code>to</code> (absolute path under real root).</p>
-<h4 id="symlinktarget-string-linkname-string"><code>symlink(target: string, linkname: string)</code></h4>
-<p>Creates a symlink from <code>linkname</code> to <code>target</code>, both rooted in the real root.</p>
-<h4 id="mkdirpath-string"><code>mkdir(path: string)</code></h4>
-<p>Creates a directory if it doesn't exist.</p>
-<h4 id="chmodpath-string-mode-number"><code>chmod(path: string, mode: number)</code></h4>
-<p>Sets file permissions (octal).</p>
-<h4 id="existspath-string"><code>exists(path: string)</code></h4>
-<p>Returns true if a file exists under real root.</p>
-<hr />
-<h2 id="root-behavior">🏠 Root Behavior</h2>
-<p>Cosmos will pass an install root path (e.g. <code>/</code>, or <code>/mnt/wombat-root</code>) to the Nova runtime. All file operations are resolved <strong>relative to this root</strong>, enforced internally.</p>
-<p>This enables:</p>
-<ul>
-<li>Real system installs</li>
-<li>Chroot builds</li>
-<li>Fake-root dry runs for package testing</li>
+<li><code>-sys</code> crates</li>
+<li>Dynamic linking</li>
+<li>Build scripts (<code>build.rs</code>) doing sketchy stuff</li>
+<li>Optional features that need to be disabled</li>
 </ul>
 <hr />
-<h2 id="error-handling">🤖 Error Handling</h2>
+<h2 id="our-build-environment">🧼 Our Build Environment</h2>
 <ul>
-<li>Any failure in <code>run</code>, <code>copy</code>, etc. halts the script</li>
-<li>Cosmos will abort the install and clean up temp dirs</li>
-<li>Future: line numbers and error tracing for better debugging</li>
+<li><code>cargo build --release</code> must be enough</li>
+<li>No external toolchains, no linker magic</li>
+<li>CI or local builds should always work under:
+  <code>bash
+  RUSTFLAGS="-C target-feature=+crt-static"</code></li>
 </ul>
 <hr />
-<h2 id="future-features">🌐 Future Features</h2>
-<ul>
-<li><code>env(key, value)</code>: set environment variables for future <code>run()</code> calls</li>
-<li><code>log()</code>: structured logging support</li>
-<li><code>filemap()</code>: declare expected outputs for validation</li>
-</ul>
-<p>Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.</p>
-<h2 id="trust-safety-warning">⚠️ Trust &amp; Safety Warning</h2>
-<blockquote>
-<p>Nova is sandboxed in spirit, not at the syscall level. It aims to provide a clean API and scoped file operations, but:</p>
-</blockquote>
-<ul>
-<li>run() executes real binaries on your system</li>
-<li>Nova does not chroot, isolate namespaces, or drop privileges</li>
-<li>Scripts can still execute destructive commands if written maliciously</li>
-<li><code>--safe</code> flag is an upcoming feature that disables <code>run()</code> and other unsafe operations</li>
-</ul>
+<h2 id="summary">✅ Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Policy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TLS Support</td>
+<td>❌ None (Cosmos does not do TLS)</td>
+</tr>
+<tr>
+<td>Dynamic Linking</td>
+<td>❌ Forbidden</td>
+</tr>
+<tr>
+<td>Shell Usage</td>
+<td>❌ Forbidden</td>
+</tr>
+<tr>
+<td>C Libraries</td>
+<td>❌ Forbidden unless <strong>optional</strong> and unused</td>
+</tr>
+<tr>
+<td>Cargo Build-Only</td>
+<td>✅ Required</td>
+</tr>
+<tr>
+<td>musl Compatibility</td>
+<td>✅ Required</td>
+</tr>
+<tr>
+<td>glibc Compatibility</td>
+<td>✅ Nice to have</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Cosmos should build anywhere Rust does, with <strong>nothing but <code>cargo build</code> and a dream</strong>.</p>
 
 
 

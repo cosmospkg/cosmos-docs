@@ -12,6 +12,8 @@ Cosmos is built as a modular, layered system with a clear separation of responsi
 +-----------------------------+
 |      cosmos-core            | ← Core logic: install, uninstall, deps
 +-----------------------------+
+|      cosmos-transport       | ← Remote fetch handling (HTTP core, HTTPS optional)
++-----------------------------+
 |      cosmos-universe        | ← Installed system state
 +-----------------------------+
 |      stellar (tooling)      | ← Maintainer tools for building packages
@@ -31,15 +33,30 @@ Cosmos is built as a modular, layered system with a clear separation of responsi
 
 - Accepts `Star` and `Galaxy` objects
 - Handles:
-    - Dependency resolution (with semver support)
-    - Downloading and extracting tarballs
-    - Running install scripts (or `nova` logic)
-    - Calling into the `cosmos-universe` API
+  - Dependency resolution (with semver support)
+  - Downloading and extracting tarballs
+    - **Delegates all URL fetching to `cosmos-transport`**
+    - **Still handles `file://` paths directly**
 - Exposes `install_star`, `uninstall_star`, `update_star` functions
 
 ---
 
-### 2. `cosmos-cli`
+### 2. `cosmos-transport`
+> A required subcrate responsible for all remote fetching (even if built with minimal features).
+
+- Used by `cosmos-core` to fetch Stars, Galaxies, and tarballs
+- Dispatches by protocol:
+  - `http://` → supported by default (via `ureq`)
+  - `https://` → **opt-in via `tls` feature**
+  - `file://` → *not* handled here (lives in `cosmos-core`)
+- Built by default with `http`, can be slimmed with:
+  ```toml
+  default-features = false
+  features = ["http"]
+
+---
+
+### 3. `cosmos-cli`
 > Terminal interface for users, using `clap`.
 
 Implements commands like:
@@ -54,7 +71,7 @@ The CLI **calls into `cosmos-core`** and reads config from a central TOML file.
 
 ---
 
-### 3. `cosmos-universe`
+### 4. `cosmos-universe`
 > A standalone crate for tracking system state.
 
 - Defines `universe.toml`
@@ -66,7 +83,7 @@ The CLI **calls into `cosmos-core`** and reads config from a central TOML file.
 
 ---
 
-### 4. `stellar`
+### 5. `stellar`
 > Maintainer-side tool for **creating and building packages**.
 
 Functions:
@@ -80,7 +97,7 @@ Future versions may integrate with `nova`.
 
 ---
 
-### 5. `nova` *(optional)*
+### 6. `nova` *(optional)*
 > Portable scripting engine using **Lua**.
 
 Designed to replace raw shell scripts with something safer and more portable.

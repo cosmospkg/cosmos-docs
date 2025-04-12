@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.cosmos-pkg.org/10-Nova/">
+        <link rel="canonical" href="https://docs.cosmos-pkg.org/13-Phase-3/">
       
       
-        <link rel="prev" href="../09-Tooling/">
+        <link rel="prev" href="../12-FFI/">
       
       
-        <link rel="next" href="../11-Transport/">
+        <link rel="next" href="../14-Design-Rationale/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>10 – Nova Scripting Engine - Cosmos Package Manager Documentation</title>
+        <title>13 – Phase 3 Features - Cosmos Package Manager Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-nova-scripting-engine" class="md-skip">
+        <a href="#13-phase-3-features" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10 – Nova Scripting Engine
+              13 – Phase 3 Features
             
           </span>
         </div>
@@ -435,32 +435,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    10 – Nova Scripting Engine
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../10-Nova/" class="md-nav__link">
         
   
   
@@ -471,173 +449,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧑‍💻 Goals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Core Principles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Basic Script Layout
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      copy(from: string, to: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏠 Root Behavior
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤖 Error Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌐 Future Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -690,10 +501,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../13-Phase-3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    13 – Phase 3 Features
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -704,6 +537,254 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#6-cosmosd-optional-daemon-later" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. cosmosd (optional daemon, later)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. cosmosd (optional daemon, later)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#potential-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potential Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-cosmos-ui-optional-tui-or-web-frontend-someday" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. cosmos-ui (optional TUI or web frontend, someday)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. cosmos-ui (optional TUI or web frontend, someday)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tui-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      TUI Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-ui-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web UI (future):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tech-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tech Options:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-cosmos-sdk-cosmos-utils-optional-shared-crate" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. cosmos-sdk / cosmos-utils (optional shared crate)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. cosmos-sdk / cosmos-utils (optional shared crate)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Modules:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-cosmos-init-cosmos-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. cosmos-init / cosmos-bootstrap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. cosmos-init / cosmos-bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Expansion:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-note-on-git-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 A Note on Git Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-cosmos-utils-minimal-core-command-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. cosmos-utils (minimal core command set)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. cosmos-utils (minimal core command set)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Goals:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Commands:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extras-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extras (Optional):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-expansion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Expansion:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -955,101 +1036,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
+  <a href="#6-cosmosd-optional-daemon-later" class="md-nav__link">
     <span class="md-ellipsis">
-      🧑‍💻 Goals
+      6. cosmosd (optional daemon, later)
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Core Principles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Basic Script Layout
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
+    <nav class="md-nav" aria-label="6. cosmosd (optional daemon, later)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
+      Purpose:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
+  <a href="#potential-features" class="md-nav__link">
     <span class="md-ellipsis">
-      copy(from: string, to: string)
+      Potential Features:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
+      Notes:
     </span>
   </a>
   
@@ -1059,6 +1076,43 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#7-cosmos-ui-optional-tui-or-web-frontend-someday" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. cosmos-ui (optional TUI or web frontend, someday)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. cosmos-ui (optional TUI or web frontend, someday)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tui-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      TUI Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-ui-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web UI (future):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tech-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tech Options:
+    </span>
+  </a>
+  
+</li>
         
       </ul>
     </nav>
@@ -1066,38 +1120,146 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
+  <a href="#8-cosmos-sdk-cosmos-utils-optional-shared-crate" class="md-nav__link">
     <span class="md-ellipsis">
-      🏠 Root Behavior
+      8. cosmos-sdk / cosmos-utils (optional shared crate)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. cosmos-sdk / cosmos-utils (optional shared crate)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#common-modules" class="md-nav__link">
     <span class="md-ellipsis">
-      🤖 Error Handling
+      Common Modules:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌐 Future Features
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
+  <a href="#9-cosmos-init-cosmos-bootstrap" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
+      9. cosmos-init / cosmos-bootstrap
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="9. cosmos-init / cosmos-bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Expansion:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-note-on-git-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 A Note on Git Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-cosmos-utils-minimal-core-command-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. cosmos-utils (minimal core command set)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. cosmos-utils (minimal core command set)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Goals:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Commands:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extras-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extras (Optional):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-expansion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Expansion:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1117,93 +1279,145 @@
 
 
 
-<h1 id="10-nova-scripting-engine">10 – Nova Scripting Engine</h1>
-<p>Nova is the optional, portable scripting engine for Cosmos. It is designed to replace shell-based <code>install_script</code> fields in <code>star.toml</code> with a safe, cross-platform alternative powered by Lua.</p>
-<p>Nova provides a constrained API surface tailored for packaging use cases: building, copying, and linking files during installation.</p>
-<p>Nova scripts are not standalone. They are invoked by Cosmos during install, with the runtime context passed in (e.g. real root path).</p>
+<h1 id="13-phase-3-features">13 – Phase 3 Features</h1>
+<p>This document outlines future enhancements and optional tools for Cosmos that go beyond the core system. These features are not required for the base install or use of Cosmos but are intended to expand its capabilities into a full OS ecosystem.</p>
 <hr />
-<h2 id="goals">🧑‍💻 Goals</h2>
-<ul>
-<li>Replace raw shell scripts with safer, deterministic logic</li>
-<li>Avoid external interpreter dependencies (Nova is embedded)</li>
-<li>Allow packaging logic to be readable and portable</li>
-<li>Make error handling and file safety first-class citizens</li>
-</ul>
-<hr />
-<h2 id="core-principles">⚖️ Core Principles</h2>
-<ul>
-<li>Nova scripts are written in <strong>Lua 5.4+</strong></li>
-<li>They are run inside a sandboxed Cosmos environment</li>
-<li>They do not have access to arbitrary system utilities (no <code>os.execute</code>)</li>
-<li>All filesystem operations are relative to the <strong>real root</strong>, which is passed by Cosmos</li>
-<li>Nova never decides where files go—the package author does</li>
-</ul>
-<hr />
-<h2 id="basic-script-layout">📄 Basic Script Layout</h2>
-<pre><code class="language-lua">function build()
-  run({&quot;make&quot;})
-end
-
-function install()
-  copy(&quot;bin/tool&quot;, &quot;/usr/bin/tool&quot;)
-  symlink(&quot;/usr/bin/tool&quot;, &quot;/usr/bin/t&quot;)
-end
-</code></pre>
-<hr />
-<h2 id="runtime-environment">⚖️ Runtime Environment</h2>
-<p>Cosmos executes Nova scripts inside a controlled environment.</p>
-<h3 id="functions-provided">Functions Provided:</h3>
-<h4 id="runcommand-array-of-strings"><code>run(command: array of strings)</code></h4>
-<p>Runs a system command in the current working directory.</p>
-<ul>
-<li>Inherits stdout/stderr</li>
-<li>Returns exit code</li>
-<li>Raises error if non-zero</li>
-</ul>
-<h4 id="copyfrom-string-to-string"><code>copy(from: string, to: string)</code></h4>
-<p>Copies a file from <code>from</code> (relative to working dir) to <code>to</code> (absolute path under real root).</p>
-<h4 id="symlinktarget-string-linkname-string"><code>symlink(target: string, linkname: string)</code></h4>
-<p>Creates a symlink from <code>linkname</code> to <code>target</code>, both rooted in the real root.</p>
-<h4 id="mkdirpath-string"><code>mkdir(path: string)</code></h4>
-<p>Creates a directory if it doesn't exist.</p>
-<h4 id="chmodpath-string-mode-number"><code>chmod(path: string, mode: number)</code></h4>
-<p>Sets file permissions (octal).</p>
-<h4 id="existspath-string"><code>exists(path: string)</code></h4>
-<p>Returns true if a file exists under real root.</p>
-<hr />
-<h2 id="root-behavior">🏠 Root Behavior</h2>
-<p>Cosmos will pass an install root path (e.g. <code>/</code>, or <code>/mnt/wombat-root</code>) to the Nova runtime. All file operations are resolved <strong>relative to this root</strong>, enforced internally.</p>
-<p>This enables:</p>
-<ul>
-<li>Real system installs</li>
-<li>Chroot builds</li>
-<li>Fake-root dry runs for package testing</li>
-</ul>
-<hr />
-<h2 id="error-handling">🤖 Error Handling</h2>
-<ul>
-<li>Any failure in <code>run</code>, <code>copy</code>, etc. halts the script</li>
-<li>Cosmos will abort the install and clean up temp dirs</li>
-<li>Future: line numbers and error tracing for better debugging</li>
-</ul>
-<hr />
-<h2 id="future-features">🌐 Future Features</h2>
-<ul>
-<li><code>env(key, value)</code>: set environment variables for future <code>run()</code> calls</li>
-<li><code>log()</code>: structured logging support</li>
-<li><code>filemap()</code>: declare expected outputs for validation</li>
-</ul>
-<p>Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.</p>
-<h2 id="trust-safety-warning">⚠️ Trust &amp; Safety Warning</h2>
+<h2 id="6-cosmosd-optional-daemon-later">6. <code>cosmosd</code> (optional daemon, later)</h2>
 <blockquote>
-<p>Nova is sandboxed in spirit, not at the syscall level. It aims to provide a clean API and scoped file operations, but:</p>
+<p>A lightweight, event-driven daemon for automation and system tasks.</p>
 </blockquote>
+<h3 id="purpose">Purpose:</h3>
 <ul>
-<li>run() executes real binaries on your system</li>
-<li>Nova does not chroot, isolate namespaces, or drop privileges</li>
-<li>Scripts can still execute destructive commands if written maliciously</li>
-<li><code>--safe</code> flag is an upcoming feature that disables <code>run()</code> and other unsafe operations</li>
+<li>Enable scheduled or triggered tasks without requiring a full init system</li>
+<li>Operate entirely opt-in and user-controlled</li>
 </ul>
+<h3 id="potential-features">Potential Features:</h3>
+<ul>
+<li>Auto-update checker</li>
+<li>Background Galaxy sync and prefetching</li>
+<li>Trigger hooks on install/uninstall</li>
+<li>Optional D-Bus or UNIX socket interface for inter-process APIs</li>
+</ul>
+<h3 id="notes">Notes:</h3>
+<ul>
+<li>Should never be required to use Cosmos</li>
+<li>Can run as a one-shot daemon or long-lived process depending on system</li>
+</ul>
+<hr />
+<h2 id="7-cosmos-ui-optional-tui-or-web-frontend-someday">7. <code>cosmos-ui</code> (optional TUI or web frontend, someday)</h2>
+<blockquote>
+<p>A terminal interface for browsing and interacting with Cosmos.</p>
+</blockquote>
+<h3 id="tui-features">TUI Features:</h3>
+<ul>
+<li>Package browser for installed Stars and synced Galaxies</li>
+<li>Show descriptions, versions, file lists</li>
+<li>Enable/disable installs, trigger updates, view diffs</li>
+<li>Keyboard-centric navigation</li>
+</ul>
+<h3 id="web-ui-future">Web UI (future):</h3>
+<ul>
+<li>Read-only status display for server environments</li>
+<li>Could integrate with <code>cosmosd</code> as backend</li>
+</ul>
+<h3 id="tech-options">Tech Options:</h3>
+<ul>
+<li>TUI: <code>ratatui</code> (Rust), <code>cursive</code></li>
+<li>Web: static export or minimal embedded HTTP server</li>
+</ul>
+<hr />
+<h2 id="8-cosmos-sdk-cosmos-utils-optional-shared-crate">8. <code>cosmos-sdk</code> / <code>cosmos-utils</code> (optional shared crate)</h2>
+<blockquote>
+<p>Shared functionality for Cosmos-related tooling.</p>
+</blockquote>
+<h3 id="purpose_1">Purpose:</h3>
+<ul>
+<li>Reduce duplicated code across CLI, Stellar, Nova</li>
+<li>Centralize logic that doesn't belong in <code>cosmos-core</code></li>
+</ul>
+<h3 id="common-modules">Common Modules:</h3>
+<ul>
+<li>Logging and pretty output</li>
+<li>Config loading and validation</li>
+<li>Common errors, types, and file path handling</li>
+<li>Optional feature flags for ultra-minimal builds</li>
+</ul>
+<hr />
+<h2 id="9-cosmos-init-cosmos-bootstrap">9. <code>cosmos-init</code> / <code>cosmos-bootstrap</code></h2>
+<blockquote>
+<p>A bootstrap tool for building minimal systems using Cosmos from scratch.</p>
+</blockquote>
+<h3 id="purpose_2">Purpose:</h3>
+<ul>
+<li>Install a working userland with only Cosmos and a base Galaxy</li>
+<li>Enable installation of Wombat Linux or similar musl-based systems</li>
+<li>Function inside an initramfs or rescue shell</li>
+</ul>
+<h3 id="features">Features:</h3>
+<ul>
+<li>Unpack base system tarballs</li>
+<li>Resolve and install base Galaxy from local/remote source</li>
+<li>Can work without <code>/usr</code>, <code>/var</code>, or network</li>
+</ul>
+<h3 id="future-expansion">Future Expansion:</h3>
+<ul>
+<li>Could become a full stage 0 → working userland bootstrapper</li>
+<li>Define full installation profiles for automated builds</li>
+</ul>
+<hr />
+<h3 id="a-note-on-git-integration">🔍 A Note on Git Integration</h3>
+<p>Cosmos will <strong>not</strong> use <code>libgit2</code>, shell out to <code>git</code>, or embed Git transport support.</p>
+<p>If you want to host Galaxies in Git:</p>
+<ul>
+<li>Clone them manually</li>
+<li>Serve them via raw HTTP or GitHub Pages</li>
+<li>Use Git to version content, but not to sync it</li>
+</ul>
+<p>Cosmos will <strong>not</strong> support <code>git://</code> as a protocol. You’re in charge of your own sync strategy. No magic.</p>
+<hr />
+<h2 id="10-cosmos-utils-minimal-core-command-set">10. <code>cosmos-utils</code> (minimal core command set)</h2>
+<blockquote>
+<p>A BusyBox-style bundle of essential CLI tools written in Rust, designed to be used inside minimal or recovery environments.</p>
+</blockquote>
+<h3 id="purpose_3">Purpose:</h3>
+<ul>
+<li>Provide basic utilities (<code>ls</code>, <code>cp</code>, <code>rm</code>, <code>echo</code>, <code>mkdir</code>, etc.) for systems without BusyBox or coreutils</li>
+<li>Act as a lightweight fallback for file ops, inspection, and manual recovery</li>
+<li>Fully static and shell-free — complements Cosmos/Nova usage in rescue shells or initramfs</li>
+<li>Centralize low-level commands for future Cosmos bootstrapping tools</li>
+</ul>
+<h3 id="design-goals">Design Goals:</h3>
+<ul>
+<li>Single binary with <code>argv[0]</code> dispatch (like BusyBox)</li>
+<li>Small, dependency-free Rust tools that mirror expected behavior</li>
+<li>Pretty, Cosmos-style output (errors, logs, confirmations)</li>
+<li>Built to integrate well with <code>nova</code> and <code>cosmos-bootstrap</code></li>
+</ul>
+<h3 id="example-commands">Example Commands:</h3>
+<ul>
+<li><code>cosmos-utils ls</code>  </li>
+<li><code>cosmos-utils cp</code>  </li>
+<li><code>cosmos-utils echo</code>  </li>
+<li><code>cosmos-utils rm</code>  </li>
+<li><code>cosmos-utils mkdir</code>  </li>
+<li>…or use via symlink: <code>ls -&gt; cosmos-utils</code>, <code>rm -&gt; cosmos-utils</code></li>
+</ul>
+<h3 id="extras-optional">Extras (Optional):</h3>
+<ul>
+<li>Dry-run mode for destructive ops (<code>--pretend</code>)</li>
+<li>Snarky or dry-humored warnings (if enabled)</li>
+<li>Nova helper integration (<code>nova shell</code>-safe)</li>
+</ul>
+<h3 id="future-expansion_1">Future Expansion:</h3>
+<ul>
+<li>Include in Galaxy presets for recovery shells</li>
+<li>Optionally bundled into static rescue tarballs</li>
+<li><code>--coreutils</code> Cargo feature flag to include or exclude utilities as needed</li>
+</ul>
+<p>Cosmos-utils allows for fully shell-less systems with just Cosmos, Stellar, and Nova. Combined with <code>cosmos-bootstrap</code>, it enables entirely scriptable installs using only Cosmos-native tools.</p>
+<hr />
+<p>These Phase 3 tools support extending Cosmos from a tool into a platform—one that is flexible enough for distros, embedded systems, recovery shells, or automation pipelines.</p>
+<p>Note: Nova is no longer a future feature. It is fully stable and integrated into Cosmos, with install scripts now defaulting to <code>install.lua</code> in most flows.</p>
 
 
 

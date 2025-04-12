@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.cosmos-pkg.org/10-Nova/">
+        <link rel="canonical" href="https://docs.cosmos-pkg.org/19-Cosmos-Contribution/">
       
       
-        <link rel="prev" href="../09-Tooling/">
+        <link rel="prev" href="../18-Versioning/">
       
       
-        <link rel="next" href="../11-Transport/">
+        <link rel="next" href="../20-Contribution-Guide-for-Maintainers/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>10 – Nova Scripting Engine - Cosmos Package Manager Documentation</title>
+        <title>19 – Contributing to Cosmos (Project Guidelines) - Cosmos Package Manager Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-nova-scripting-engine" class="md-skip">
+        <a href="#19-contributing-to-cosmos-project-guidelines" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10 – Nova Scripting Engine
+              19 – Contributing to Cosmos (Project Guidelines)
             
           </span>
         </div>
@@ -435,32 +435,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    10 – Nova Scripting Engine
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../10-Nova/" class="md-nav__link">
         
   
   
@@ -471,173 +449,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧑‍💻 Goals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Core Principles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Basic Script Layout
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      copy(from: string, to: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏠 Root Behavior
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤖 Error Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌐 Future Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -822,10 +633,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../19-Cosmos-Contribution/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    19 – Contributing to Cosmos (Project Guidelines)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -836,6 +669,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Project Philosophy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎓 Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔨 Code Guidelines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Pull Requests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Feature Flags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docs-and-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✏️ Docs and Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licensing-and-attribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Licensing and Attribution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 Where to Help
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -955,147 +880,72 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
+  <a href="#project-philosophy" class="md-nav__link">
     <span class="md-ellipsis">
-      🧑‍💻 Goals
+      🛠️ Project Philosophy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
+  <a href="#getting-started" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚖️ Core Principles
+      🎓 Getting Started
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
+  <a href="#code-guidelines" class="md-nav__link">
     <span class="md-ellipsis">
-      📄 Basic Script Layout
+      🔨 Code Guidelines
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
+  <a href="#pull-requests" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      copy(from: string, to: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏠 Root Behavior
+      🔄 Pull Requests
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
+  <a href="#feature-flags" class="md-nav__link">
     <span class="md-ellipsis">
-      🤖 Error Handling
+      📊 Feature Flags
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
+  <a href="#docs-and-comments" class="md-nav__link">
     <span class="md-ellipsis">
-      🌐 Future Features
+      ✏️ Docs and Comments
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
+  <a href="#licensing-and-attribution" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
+      🌐 Licensing and Attribution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟 Where to Help
     </span>
   </a>
   
@@ -1117,93 +967,77 @@
 
 
 
-<h1 id="10-nova-scripting-engine">10 – Nova Scripting Engine</h1>
-<p>Nova is the optional, portable scripting engine for Cosmos. It is designed to replace shell-based <code>install_script</code> fields in <code>star.toml</code> with a safe, cross-platform alternative powered by Lua.</p>
-<p>Nova provides a constrained API surface tailored for packaging use cases: building, copying, and linking files during installation.</p>
-<p>Nova scripts are not standalone. They are invoked by Cosmos during install, with the runtime context passed in (e.g. real root path).</p>
+<h1 id="19-contributing-to-cosmos-project-guidelines">19 – Contributing to Cosmos (Project Guidelines)</h1>
+<p>This guide is for contributors to the Cosmos codebase itself—including <code>cosmos-core</code>, <code>cosmos-cli</code>, <code>stellar</code>, <code>nova</code>, and related tooling.</p>
 <hr />
-<h2 id="goals">🧑‍💻 Goals</h2>
+<h2 id="project-philosophy">🛠️ Project Philosophy</h2>
 <ul>
-<li>Replace raw shell scripts with safer, deterministic logic</li>
-<li>Avoid external interpreter dependencies (Nova is embedded)</li>
-<li>Allow packaging logic to be readable and portable</li>
-<li>Make error handling and file safety first-class citizens</li>
+<li>Cosmos is modular, minimal, and predictable</li>
+<li>Contributions should avoid feature bloat or scope creep</li>
+<li>Every crate should do one thing well and be testable in isolation</li>
 </ul>
 <hr />
-<h2 id="core-principles">⚖️ Core Principles</h2>
+<h2 id="getting-started">🎓 Getting Started</h2>
+<ol>
+<li>Clone the repo</li>
+<li>Use the latest stable Rust (<code>rustup update</code>)</li>
+<li>Build the workspace:
+   <code>bash
+   cargo build --workspace</code></li>
+<li>Run all tests:
+   <code>bash
+   cargo test --workspace</code></li>
+<li>Optional: install <code>cargo-make</code> or <code>just</code> if you're using task runners</li>
+</ol>
+<hr />
+<h2 id="code-guidelines">🔨 Code Guidelines</h2>
 <ul>
-<li>Nova scripts are written in <strong>Lua 5.4+</strong></li>
-<li>They are run inside a sandboxed Cosmos environment</li>
-<li>They do not have access to arbitrary system utilities (no <code>os.execute</code>)</li>
-<li>All filesystem operations are relative to the <strong>real root</strong>, which is passed by Cosmos</li>
-<li>Nova never decides where files go—the package author does</li>
+<li>Follow Rust 2021 edition idioms</li>
+<li>Use <code>thiserror</code> for error enums</li>
+<li>Favor <code>Result&lt;T, CosmosError&gt;</code> over panics</li>
+<li>Don’t use <code>unwrap()</code> unless you <em>really</em> mean it</li>
+<li>All FFI functions must be <code>#[no_mangle]</code> and use C types</li>
 </ul>
 <hr />
-<h2 id="basic-script-layout">📄 Basic Script Layout</h2>
-<pre><code class="language-lua">function build()
-  run({&quot;make&quot;})
-end
-
-function install()
-  copy(&quot;bin/tool&quot;, &quot;/usr/bin/tool&quot;)
-  symlink(&quot;/usr/bin/tool&quot;, &quot;/usr/bin/t&quot;)
-end
-</code></pre>
-<hr />
-<h2 id="runtime-environment">⚖️ Runtime Environment</h2>
-<p>Cosmos executes Nova scripts inside a controlled environment.</p>
-<h3 id="functions-provided">Functions Provided:</h3>
-<h4 id="runcommand-array-of-strings"><code>run(command: array of strings)</code></h4>
-<p>Runs a system command in the current working directory.</p>
+<h2 id="pull-requests">🔄 Pull Requests</h2>
 <ul>
-<li>Inherits stdout/stderr</li>
-<li>Returns exit code</li>
-<li>Raises error if non-zero</li>
-</ul>
-<h4 id="copyfrom-string-to-string"><code>copy(from: string, to: string)</code></h4>
-<p>Copies a file from <code>from</code> (relative to working dir) to <code>to</code> (absolute path under real root).</p>
-<h4 id="symlinktarget-string-linkname-string"><code>symlink(target: string, linkname: string)</code></h4>
-<p>Creates a symlink from <code>linkname</code> to <code>target</code>, both rooted in the real root.</p>
-<h4 id="mkdirpath-string"><code>mkdir(path: string)</code></h4>
-<p>Creates a directory if it doesn't exist.</p>
-<h4 id="chmodpath-string-mode-number"><code>chmod(path: string, mode: number)</code></h4>
-<p>Sets file permissions (octal).</p>
-<h4 id="existspath-string"><code>exists(path: string)</code></h4>
-<p>Returns true if a file exists under real root.</p>
-<hr />
-<h2 id="root-behavior">🏠 Root Behavior</h2>
-<p>Cosmos will pass an install root path (e.g. <code>/</code>, or <code>/mnt/wombat-root</code>) to the Nova runtime. All file operations are resolved <strong>relative to this root</strong>, enforced internally.</p>
-<p>This enables:</p>
-<ul>
-<li>Real system installs</li>
-<li>Chroot builds</li>
-<li>Fake-root dry runs for package testing</li>
+<li>One logical change per PR</li>
+<li>PR title should summarize purpose</li>
+<li>Document new CLI commands, options, or config fields</li>
+<li>Include tests where applicable</li>
+<li>Update relevant markdown docs in <code>/docs</code></li>
 </ul>
 <hr />
-<h2 id="error-handling">🤖 Error Handling</h2>
+<h2 id="feature-flags">📊 Feature Flags</h2>
 <ul>
-<li>Any failure in <code>run</code>, <code>copy</code>, etc. halts the script</li>
-<li>Cosmos will abort the install and clean up temp dirs</li>
-<li>Future: line numbers and error tracing for better debugging</li>
+<li>Use <code>#[cfg(feature = "ffi")]</code> for optional components</li>
+<li>Don’t enable features by default unless essential</li>
 </ul>
 <hr />
-<h2 id="future-features">🌐 Future Features</h2>
+<h2 id="docs-and-comments">✏️ Docs and Comments</h2>
 <ul>
-<li><code>env(key, value)</code>: set environment variables for future <code>run()</code> calls</li>
-<li><code>log()</code>: structured logging support</li>
-<li><code>filemap()</code>: declare expected outputs for validation</li>
+<li>Public functions should have doc comments</li>
+<li>Internal helpers can use line comments for clarity</li>
+<li>Markdown docs should be updated when adding major features</li>
 </ul>
-<p>Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.</p>
-<h2 id="trust-safety-warning">⚠️ Trust &amp; Safety Warning</h2>
-<blockquote>
-<p>Nova is sandboxed in spirit, not at the syscall level. It aims to provide a clean API and scoped file operations, but:</p>
-</blockquote>
+<hr />
+<h2 id="licensing-and-attribution">🌐 Licensing and Attribution</h2>
 <ul>
-<li>run() executes real binaries on your system</li>
-<li>Nova does not chroot, isolate namespaces, or drop privileges</li>
-<li>Scripts can still execute destructive commands if written maliciously</li>
-<li><code>--safe</code> flag is an upcoming feature that disables <code>run()</code> and other unsafe operations</li>
+<li>All contributions are MIT licensed</li>
+<li>Add your name to the AUTHORS file if you wish</li>
+<li>Respect the project's tone: technical, clear, with dry humor allowed</li>
 </ul>
+<hr />
+<h2 id="where-to-help">🌟 Where to Help</h2>
+<ul>
+<li>Finish Nova runtime logic</li>
+<li>Improve dependency resolution logic</li>
+<li>Add <code>stellar lint</code> / <code>stellar test</code> features</li>
+<li>Write sample Stars for testing and examples</li>
+<li>Write CLI integration tests</li>
+</ul>
+<hr />
+<p>Cosmos is built for clarity and longevity. Contributions that make it more robust, understandable, and portable are always welcome.</p>
 
 
 

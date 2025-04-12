@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.cosmos-pkg.org/10-Nova/">
+        <link rel="canonical" href="https://docs.cosmos-pkg.org/18-Versioning/">
       
       
-        <link rel="prev" href="../09-Tooling/">
+        <link rel="prev" href="../17-Galaxies/">
       
       
-        <link rel="next" href="../11-Transport/">
+        <link rel="next" href="../19-Cosmos-Contribution/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>10 – Nova Scripting Engine - Cosmos Package Manager Documentation</title>
+        <title>18 – Versioning and Release Policy - Cosmos Package Manager Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-nova-scripting-engine" class="md-skip">
+        <a href="#18-versioning-and-release-policy" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10 – Nova Scripting Engine
+              18 – Versioning and Release Policy
             
           </span>
         </div>
@@ -435,32 +435,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    10 – Nova Scripting Engine
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../10-Nova/" class="md-nav__link">
         
   
   
@@ -471,173 +449,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧑‍💻 Goals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Core Principles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Basic Script Layout
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      copy(from: string, to: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏠 Root Behavior
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤖 Error Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌐 Future Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -800,10 +611,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../18-Versioning/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    18 – Versioning and Release Policy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -814,6 +647,119 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#versioning-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Versioning Philosophy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#star-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Star Versioning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#galaxy-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌌 Galaxy Versioning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌌 Galaxy Versioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#galaxy-archival-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Galaxy Archival (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constellation-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Constellation Stability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecation-and-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Deprecation and Removal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❌ Deprecation and Removal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stars:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#galaxies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Galaxies:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔖 Release Recommendations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -955,101 +901,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#goals" class="md-nav__link">
+  <a href="#versioning-philosophy" class="md-nav__link">
     <span class="md-ellipsis">
-      🧑‍💻 Goals
+      🔄 Versioning Philosophy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-principles" class="md-nav__link">
+  <a href="#star-versioning" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚖️ Core Principles
+      ✨ Star Versioning
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-script-layout" class="md-nav__link">
+  <a href="#galaxy-versioning" class="md-nav__link">
     <span class="md-ellipsis">
-      📄 Basic Script Layout
+      🌌 Galaxy Versioning
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#runtime-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚖️ Runtime Environment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚖️ Runtime Environment">
+    <nav class="md-nav" aria-label="🌌 Galaxy Versioning">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#functions-provided" class="md-nav__link">
+  <a href="#galaxy-archival-recommended" class="md-nav__link">
     <span class="md-ellipsis">
-      Functions Provided:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functions Provided:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runcommand-array-of-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      run(command: array of strings)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copyfrom-string-to-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      copy(from: string, to: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#symlinktarget-string-linkname-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      symlink(target: string, linkname: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdirpath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir(path: string)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chmodpath-string-mode-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      chmod(path: string, mode: number)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#existspath-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      exists(path: string)
+      🔄 Galaxy Archival (Recommended)
     </span>
   </a>
   
@@ -1059,6 +941,43 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#constellation-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Constellation Stability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecation-and-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Deprecation and Removal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❌ Deprecation and Removal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stars:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#galaxies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Galaxies:
+    </span>
+  </a>
+  
+</li>
         
       </ul>
     </nav>
@@ -1066,36 +985,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#root-behavior" class="md-nav__link">
+  <a href="#release-recommendations" class="md-nav__link">
     <span class="md-ellipsis">
-      🏠 Root Behavior
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤖 Error Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌐 Future Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trust-safety-warning" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚠️ Trust &amp; Safety Warning
+      🔖 Release Recommendations
     </span>
   </a>
   
@@ -1117,93 +1009,97 @@
 
 
 
-<h1 id="10-nova-scripting-engine">10 – Nova Scripting Engine</h1>
-<p>Nova is the optional, portable scripting engine for Cosmos. It is designed to replace shell-based <code>install_script</code> fields in <code>star.toml</code> with a safe, cross-platform alternative powered by Lua.</p>
-<p>Nova provides a constrained API surface tailored for packaging use cases: building, copying, and linking files during installation.</p>
-<p>Nova scripts are not standalone. They are invoked by Cosmos during install, with the runtime context passed in (e.g. real root path).</p>
+<h1 id="18-versioning-and-release-policy">18 – Versioning and Release Policy</h1>
+<p>This document defines the versioning strategy for Cosmos Stars, Galaxies, and the overall ecosystem. It also outlines how packages should be updated, deprecated, or removed.</p>
 <hr />
-<h2 id="goals">🧑‍💻 Goals</h2>
+<h2 id="versioning-philosophy">🔄 Versioning Philosophy</h2>
 <ul>
-<li>Replace raw shell scripts with safer, deterministic logic</li>
-<li>Avoid external interpreter dependencies (Nova is embedded)</li>
-<li>Allow packaging logic to be readable and portable</li>
-<li>Make error handling and file safety first-class citizens</li>
+<li><strong>Stars follow SemVer</strong> (<code>major.minor.patch</code>)</li>
+<li><strong>Galaxies are versioned by date</strong> (<code>YYYY.MM.DD</code>, e.g., <code>2024.04.17</code>)</li>
+<li><strong>Cosmos itself</strong> will follow SemVer but moves slowly</li>
 </ul>
+<p>Versioning exists for <strong>clarity and reproducibility</strong>, not hype. If nothing changed, the version doesn't change.</p>
 <hr />
-<h2 id="core-principles">⚖️ Core Principles</h2>
-<ul>
-<li>Nova scripts are written in <strong>Lua 5.4+</strong></li>
-<li>They are run inside a sandboxed Cosmos environment</li>
-<li>They do not have access to arbitrary system utilities (no <code>os.execute</code>)</li>
-<li>All filesystem operations are relative to the <strong>real root</strong>, which is passed by Cosmos</li>
-<li>Nova never decides where files go—the package author does</li>
-</ul>
-<hr />
-<h2 id="basic-script-layout">📄 Basic Script Layout</h2>
-<pre><code class="language-lua">function build()
-  run({&quot;make&quot;})
-end
-
-function install()
-  copy(&quot;bin/tool&quot;, &quot;/usr/bin/tool&quot;)
-  symlink(&quot;/usr/bin/tool&quot;, &quot;/usr/bin/t&quot;)
-end
+<h2 id="star-versioning">✨ Star Versioning</h2>
+<p>Every Star must define:</p>
+<pre><code class="language-toml">version = &quot;1.2.3&quot;
 </code></pre>
+<ul>
+<li>Stars are expected to follow SemVer</li>
+<li>Breaking changes to install logic = major bump</li>
+<li>Dependency changes = minor bump</li>
+<li>Tarball rebuild or checksum-only = patch bump</li>
+</ul>
+<p>New versions must be uploaded with updated filenames:</p>
+<pre><code>zlib-1.2.3.tar.gz
+</code></pre>
+<p>Old versions may be kept for compatibility.</p>
 <hr />
-<h2 id="runtime-environment">⚖️ Runtime Environment</h2>
-<p>Cosmos executes Nova scripts inside a controlled environment.</p>
-<h3 id="functions-provided">Functions Provided:</h3>
-<h4 id="runcommand-array-of-strings"><code>run(command: array of strings)</code></h4>
-<p>Runs a system command in the current working directory.</p>
+<h2 id="galaxy-versioning">🌌 Galaxy Versioning</h2>
+<p>Each Galaxy has a <code>meta.toml</code> with:</p>
+<pre><code class="language-toml">version = &quot;2024.04.17&quot;
+</code></pre>
+<p>This version is used for:</p>
 <ul>
-<li>Inherits stdout/stderr</li>
-<li>Returns exit code</li>
-<li>Raises error if non-zero</li>
+<li>Identifying sync points</li>
+<li>Snapshotting a full system state</li>
+<li>Reference in freeze/lockfile scenarios</li>
 </ul>
-<h4 id="copyfrom-string-to-string"><code>copy(from: string, to: string)</code></h4>
-<p>Copies a file from <code>from</code> (relative to working dir) to <code>to</code> (absolute path under real root).</p>
-<h4 id="symlinktarget-string-linkname-string"><code>symlink(target: string, linkname: string)</code></h4>
-<p>Creates a symlink from <code>linkname</code> to <code>target</code>, both rooted in the real root.</p>
-<h4 id="mkdirpath-string"><code>mkdir(path: string)</code></h4>
-<p>Creates a directory if it doesn't exist.</p>
-<h4 id="chmodpath-string-mode-number"><code>chmod(path: string, mode: number)</code></h4>
-<p>Sets file permissions (octal).</p>
-<h4 id="existspath-string"><code>exists(path: string)</code></h4>
-<p>Returns true if a file exists under real root.</p>
+<p><strong>Preferred format: <code>YYYY.MM.DD</code></strong> for clarity and traceability</p>
+<ul>
+<li>Easy to sort</li>
+<li>Helps with security updates or multiple changes in a month</li>
+</ul>
+<p>Galaxies <strong>must</strong> update <code>meta.toml</code> if any of the following change:</p>
+<ul>
+<li>New Star added</li>
+<li>Existing Star updated</li>
+<li>Any Star removed</li>
+</ul>
+<h3 id="galaxy-archival-recommended">🔄 Galaxy Archival (Recommended)</h3>
+<ul>
+<li>It is <strong>not required</strong> to archive every Galaxy version</li>
+<li>However, maintainers are <strong>strongly encouraged</strong> to retain the past 3–6 months of Galaxy snapshots</li>
+<li>For long-term reproducibility (e.g., distro builds), consider archiving stable versions <strong>annually</strong></li>
+<li>Rolling releases can prune aggressively, but should still tag known good versions</li>
+</ul>
+<p>Ultimately, archival policies are up to the maintainer. Cosmos recommends preserving history, but does not enforce it.</p>
 <hr />
-<h2 id="root-behavior">🏠 Root Behavior</h2>
-<p>Cosmos will pass an install root path (e.g. <code>/</code>, or <code>/mnt/wombat-root</code>) to the Nova runtime. All file operations are resolved <strong>relative to this root</strong>, enforced internally.</p>
-<p>This enables:</p>
+<h2 id="constellation-stability">🌍 Constellation Stability</h2>
+<p>Constellations are install presets. If a Constellation references Stars that change, that's fine—but users should be encouraged to:</p>
 <ul>
-<li>Real system installs</li>
-<li>Chroot builds</li>
-<li>Fake-root dry runs for package testing</li>
+<li>Pin Constellation files to Galaxy versions</li>
+<li>Create locked snapshots of their system after install</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-toml">members = [
+  &quot;core-utils@1.0.0&quot;,
+  &quot;busybox@1.36.0&quot;
+]
+</code></pre>
+<p>Version pinning is optional but strongly encouraged for reproducibility.</p>
+<hr />
+<h2 id="deprecation-and-removal">❌ Deprecation and Removal</h2>
+<h3 id="stars">Stars:</h3>
+<ul>
+<li>Deprecated Stars should remain in the Galaxy but clearly marked in <code>description</code></li>
+<li>Removed Stars must be deleted from <code>stars/</code> and <code>packages/</code> but remain listed in old Galaxy versions</li>
+</ul>
+<h3 id="galaxies">Galaxies:</h3>
+<ul>
+<li>Galaxies are never deleted, only archived with new versions (if the maintainer chooses to)</li>
+<li>The latest version is expected to be symlinked or aliased in mirrors</li>
 </ul>
 <hr />
-<h2 id="error-handling">🤖 Error Handling</h2>
+<h2 id="release-recommendations">🔖 Release Recommendations</h2>
 <ul>
-<li>Any failure in <code>run</code>, <code>copy</code>, etc. halts the script</li>
-<li>Cosmos will abort the install and clean up temp dirs</li>
-<li>Future: line numbers and error tracing for better debugging</li>
+<li>Use Git tags for Galaxy releases (<code>core-2024.04.17</code>)</li>
+<li>Use signed commits if hosting public Galaxies</li>
+<li>Tarballs should include version in filename</li>
+<li>Include changelogs if maintaining official sets</li>
 </ul>
 <hr />
-<h2 id="future-features">🌐 Future Features</h2>
-<ul>
-<li><code>env(key, value)</code>: set environment variables for future <code>run()</code> calls</li>
-<li><code>log()</code>: structured logging support</li>
-<li><code>filemap()</code>: declare expected outputs for validation</li>
-</ul>
-<p>Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.</p>
-<h2 id="trust-safety-warning">⚠️ Trust &amp; Safety Warning</h2>
-<blockquote>
-<p>Nova is sandboxed in spirit, not at the syscall level. It aims to provide a clean API and scoped file operations, but:</p>
-</blockquote>
-<ul>
-<li>run() executes real binaries on your system</li>
-<li>Nova does not chroot, isolate namespaces, or drop privileges</li>
-<li>Scripts can still execute destructive commands if written maliciously</li>
-<li><code>--safe</code> flag is an upcoming feature that disables <code>run()</code> and other unsafe operations</li>
-</ul>
+<p>Versioning is about trust and stability, not chasing numbers. Cosmos prefers boring, explicit, and stable packages over rapid churn.</p>
 
 
 

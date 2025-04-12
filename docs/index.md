@@ -2,7 +2,7 @@
 
 Welcome to the official documentation for **Cosmos** — a minimal, musl-first, static binary package management system for people who want their OS to survive without Bash, Python, or curl.
 
-This documentation is structured to cover everything from core concepts to philosophy, CLI usage, system bootstrapping, and how to maintain your own galaxies without summoning `libgit2`.
+This documentation covers core concepts, architecture, CLI usage, Nova scripting, system bootstrapping, and how to maintain your own galaxies—without summoning `libgit2`.
 
 ---
 
@@ -24,32 +24,34 @@ This documentation is structured to cover everything from core concepts to philo
 - [08 – CLI](./08-CLI.md)
 - [09 – Tooling (Stellar)](./09-Tooling.md)
 - [10 – Nova (Scripting)](./10-Nova.md)
-- [11 – FFI Integration](./11-FFI.md)
+- [11 – Transport Layer](./11-Transport.md)
+- [12 – FFI Integration](./12-FFI.md)
 
 ---
 
 ## 💭 Philosophy & Safety
 
-- [12 – Phase 3 Features](./12-Phase-3.md)
-- [13 – Design Rationale](./13-Design-Rationale.md)
-- [14 – Security Model](./14-Security.md)
-- [15 – Examples and Usage](./15-Examples.md)
+- [13 – Phase 3 Features](./13-Phase-3.md)
+- [14 – Design Rationale](./14-Design-Rationale.md)
+- [15 – Security Model](./15-Security.md)
+- [16 – Examples and Usage](./16-Examples.md)
+- [23 – FAQ](./23-FAQ.md)
 
 ---
 
 ## 🌌 Package & Galaxy Maintenance
 
-- [16 – Galaxies](./16-Galaxies.md)
-- [17 – Versioning and Releases](./17-Versioning.md)
-- [18 – Cosmos Contribution Guide](./18-Cosmos-Contribution.md)
-- [19 – Maintainer Guide for Galaxies & Stars](./19-Contribution-Guide-for-Maintainers.md)
-- [20 – Crate Policy](./20-Crate-Policy.md)
+- [17 – Galaxies](./17-Galaxies.md)
+- [18 – Versioning and Releases](./18-Versioning.md)
+- [19 – Cosmos Contribution Guide](./19-Cosmos-Contribution.md)
+- [20 – Maintainer Guide for Galaxies & Stars](./20-Contribution-Guide-for-Maintainers.md)
+- [21 – Crate Policy](./21-Crate-Policy.md)
 
 ---
 
 ## 🧱 System Building
 
-- [21 – Bootstrapping](./21-Bootstrapping.md)
+- [22 – Bootstrapping](./22-Bootstrapping.md)
 
 ---
 
