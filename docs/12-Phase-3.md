@@ -90,6 +90,43 @@ Cosmos will **not** support `git://` as a protocol. You’re in charge of your o
 
 ---
 
+## 10. `cosmos-utils` (minimal core command set)
+> A BusyBox-style bundle of essential CLI tools written in Rust, designed to be used inside minimal or recovery environments.
+
+### Purpose:
+- Provide basic utilities (`ls`, `cp`, `rm`, `echo`, `mkdir`, etc.) for systems without BusyBox or coreutils
+- Act as a lightweight fallback for file ops, inspection, and manual recovery
+- Fully static and shell-free — complements Cosmos/Nova usage in rescue shells or initramfs
+- Centralize low-level commands for future Cosmos bootstrapping tools
+
+### Design Goals:
+- Single binary with `argv[0]` dispatch (like BusyBox)
+- Small, dependency-free Rust tools that mirror expected behavior
+- Pretty, Cosmos-style output (errors, logs, confirmations)
+- Built to integrate well with `nova` and `cosmos-bootstrap`
+
+### Example Commands:
+- `cosmos-utils ls`  
+- `cosmos-utils cp`  
+- `cosmos-utils echo`  
+- `cosmos-utils rm`  
+- `cosmos-utils mkdir`  
+- …or use via symlink: `ls -> cosmos-utils`, `rm -> cosmos-utils`
+
+### Extras (Optional):
+- Dry-run mode for destructive ops (`--pretend`)
+- Snarky or dry-humored warnings (if enabled)
+- Nova helper integration (`nova shell`-safe)
+
+### Future Expansion:
+- Include in Galaxy presets for recovery shells
+- Optionally bundled into static rescue tarballs
+- `--coreutils` Cargo feature flag to include or exclude utilities as needed
+
+Cosmos-utils allows for fully shell-less systems with just Cosmos, Stellar, and Nova. Combined with `cosmos-bootstrap`, it enables entirely scriptable installs using only Cosmos-native tools.
+
+---
+
 These Phase 3 tools support extending Cosmos from a tool into a platform—one that is flexible enough for distros, embedded systems, recovery shells, or automation pipelines.
 
 Note: Nova is no longer a future feature. It is fully stable and integrated into Cosmos, with install scripts now defaulting to `install.lua` in most flows.
