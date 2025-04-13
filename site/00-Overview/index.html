@@ -666,7 +666,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    17 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -889,12 +889,13 @@
 <li><strong>Bootstrappable from nothing</strong> — only needs libc and a filesystem to operate</li>
 <li><strong>Human-readable package definitions</strong> — <code>star.toml</code>, <code>constellation.toml</code>, etc.</li>
 <li><strong>Multiple install sources</strong> — install packages from:</li>
-<li>HTTP (no TLS)</li>
+<li>HTTP (enabled by default)</li>
+<li>HTTPS (optional feature)</li>
 <li>Cached tarballs</li>
 <li>Local mirrors</li>
 <li>Mounted drives or USB sticks</li>
 <li><strong>No interpreters</strong> — Cosmos does not depend on Bash, Python, Perl, etc.</li>
-<li><strong>No TLS, OpenSSL, or runtime crypto stacks</strong> — Cosmos uses HTTP or file-based URIs</li>
+<li><strong>No TLS or crypto stacks required by default</strong> — optional transport features available via <code>cosmos-transport</code></li>
 <li><strong>Deterministic install flows</strong> — installs and uninstalls are traceable and safe</li>
 <li><strong>Nebula and Constellation support</strong> — virtual meta-packages and install presets</li>
 <li><strong>Self-contained system state</strong> — all installed packages tracked in <code>universe.toml</code></li>
@@ -913,7 +914,7 @@
 <h2 id="design-principles">🔍 Design Principles</h2>
 <ul>
 <li><strong>No shell required</strong>: Nova scripting allows safe, portable install logic</li>
-<li><strong>No TLS required</strong>: Supports plain HTTP and file-based installs</li>
+<li><strong>No TLS required by default</strong>: HTTP and file-based installs work out of the box; HTTPS is available as an optional feature</li>
 <li><strong>No interpreter required</strong>: Rust binary only; works even if <code>/usr</code> is broken</li>
 <li><strong>No central server required</strong>: everything can run from local or offline storage</li>
 </ul>

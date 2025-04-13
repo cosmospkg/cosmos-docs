@@ -54,7 +54,7 @@ Only **pure Rust** implementations allowed.
 
 ---
 
-## 🛠 Feature Flag Rules
+## 🛠️ Feature Flag Rules
 
 - Optional features are great. Required features with native code are not.
 - Default features must be **fully statically linkable**
@@ -93,15 +93,15 @@ Check for:
 
 ## ✅ Summary
 
-| Requirement           | Policy                              |
-|------------------------|--------------------------------------|
-| TLS Support            | ❌ None (Cosmos does not do TLS)     |
-| Dynamic Linking        | ❌ Forbidden                         |
-| Shell Usage            | ❌ Forbidden                         |
+| Requirement           | Policy                                     |
+|------------------------|---------------------------------------------|
+| TLS Support            | ❌ Optional only via `transport-https`   |
+| Dynamic Linking        | ❌ Forbidden                              |
+| Shell Usage            | ❌ Forbidden                              |
 | C Libraries            | ❌ Forbidden unless **optional** and unused |
-| Cargo Build-Only       | ✅ Required                          |
-| musl Compatibility     | ✅ Required                          |
-| glibc Compatibility    | ✅ Nice to have                      |
+| Cargo Build-Only       | ✅ Required                               |
+| musl Compatibility     | ✅ Required                               |
+| glibc Compatibility    | ✅ Nice to have                           |
 
 ---
 

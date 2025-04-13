@@ -597,7 +597,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    17 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -666,7 +666,7 @@
         <li class="md-nav__item">
   <a href="#example-metatoml" class="md-nav__link">
     <span class="md-ellipsis">
-      🖊️ Example meta.toml
+      � Example meta.toml
     </span>
   </a>
   
@@ -684,7 +684,7 @@
         <li class="md-nav__item">
   <a href="#rules-of-hosting-a-galaxy" class="md-nav__link">
     <span class="md-ellipsis">
-      🚫 Rules of Hosting a Galaxy
+      ❌ Rules of Hosting a Galaxy
     </span>
   </a>
   
@@ -870,7 +870,7 @@
         <li class="md-nav__item">
   <a href="#example-metatoml" class="md-nav__link">
     <span class="md-ellipsis">
-      🖊️ Example meta.toml
+      � Example meta.toml
     </span>
   </a>
   
@@ -888,7 +888,7 @@
         <li class="md-nav__item">
   <a href="#rules-of-hosting-a-galaxy" class="md-nav__link">
     <span class="md-ellipsis">
-      🚫 Rules of Hosting a Galaxy
+      ❌ Rules of Hosting a Galaxy
     </span>
   </a>
   
@@ -953,7 +953,7 @@
 </ul>
 <p>Galaxies are designed to be as dumb and static as possible—because the smartest systems are the ones that survive a power outage.</p>
 <hr />
-<h2 id="example-metatoml">🖊️ Example <code>meta.toml</code></h2>
+<h2 id="example-metatoml">� Example <code>meta.toml</code></h2>
 <pre><code class="language-toml">name = &quot;core&quot;
 description = &quot;Core packages for Cosmos systems&quot;
 version = &quot;2024.04.17&quot;
@@ -984,9 +984,10 @@ zlib = &quot;1.2.13&quot;
 <li>Your personal server</li>
 <li>A USB stick you found in a drawer from 2008</li>
 <li><strong>A Git repo you cloned manually</strong> (Cosmos will never do this for you)</li>
+<li>Any HTTP/HTTPS endpoint (HTTPS requires the optional transport feature)</li>
 </ul>
 <hr />
-<h2 id="rules-of-hosting-a-galaxy">🚫 Rules of Hosting a Galaxy</h2>
+<h2 id="rules-of-hosting-a-galaxy">❌ Rules of Hosting a Galaxy</h2>
 <p>Managing a Galaxy sounds cool until you realize it means:</p>
 <ul>
 <li><strong>Maintaining packages</strong> regularly</li>
@@ -1002,7 +1003,7 @@ zlib = &quot;1.2.13&quot;
 <p>If Cosmos ever gets an official Galaxy, it will probably be hosted on:</p>
 <ul>
 <li>S3 or a static file server</li>
-<li>With no TLS</li>
+<li><strong>With no TLS by default</strong></li>
 <li>With a massive readme warning you not to blindly trust it</li>
 </ul>
 <p>This is because Cosmos believes in:</p>
@@ -1011,6 +1012,7 @@ zlib = &quot;1.2.13&quot;
 <li>Reproducibility</li>
 <li>You being responsible for your own system</li>
 </ul>
+<p>(And yes, TLS can be enabled if you build with <code>transport-https</code>.)</p>
 <hr />
 <h2 id="final-notes">🌊 Final Notes</h2>
 <p>Galaxies are boring by design. That makes them reliable. If it can't be served over <code>python3 -m http.server</code>, it's probably too complicated.</p>

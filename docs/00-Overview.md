@@ -12,12 +12,13 @@
 - **Bootstrappable from nothing** — only needs libc and a filesystem to operate
 - **Human-readable package definitions** — `star.toml`, `constellation.toml`, etc.
 - **Multiple install sources** — install packages from:
-  - HTTP (no TLS)
+  - HTTP (enabled by default)
+  - HTTPS (optional feature)
   - Cached tarballs
   - Local mirrors
   - Mounted drives or USB sticks
 - **No interpreters** — Cosmos does not depend on Bash, Python, Perl, etc.
-- **No TLS, OpenSSL, or runtime crypto stacks** — Cosmos uses HTTP or file-based URIs
+- **No TLS or crypto stacks required by default** — optional transport features available via `cosmos-transport`
 - **Deterministic install flows** — installs and uninstalls are traceable and safe
 - **Nebula and Constellation support** — virtual meta-packages and install presets
 - **Self-contained system state** — all installed packages tracked in `universe.toml`
@@ -38,11 +39,10 @@
 ## 🔍 Design Principles
 
 - **No shell required**: Nova scripting allows safe, portable install logic
-- **No TLS required**: Supports plain HTTP and file-based installs
+- **No TLS required by default**: HTTP and file-based installs work out of the box; HTTPS is available as an optional feature
 - **No interpreter required**: Rust binary only; works even if `/usr` is broken
 - **No central server required**: everything can run from local or offline storage
 
 ---
 
 Cosmos is not just a package manager—it is a foundation for building, deploying, and repairing entire operating systems in minimalist or constrained environments.
-

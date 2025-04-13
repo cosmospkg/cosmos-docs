@@ -8,7 +8,8 @@ Cosmos is built around four core abstractions: **Stars**, **Constellations**, **
 
 A **Star** is a single package. It can contain software, configuration, or simply reference other Stars. Stars are defined by a `star.toml` file and optionally include a tarball and install logic.
 
-The `source` field supports both HTTP URLs and local file paths (e.g., `/mnt/usb/zlib.tar.gz`).  
+The `source` field supports both HTTP URLs and local file paths (e.g., `/mnt/usb/zlib.tar.gz`). HTTPS and other protocols may be supported if Cosmos was built with the appropriate transport features.
+
 Tarballs are extracted to a temporary directory before the install script runs.
 
 ### Key Fields:
@@ -28,6 +29,8 @@ musl = ">=1.2.0"
 - `normal`: A real package with files to extract and install
 - `nebula`: A virtual package that only contains dependencies (no source, no script)
 
+> If using Stellar, the `type` field is populated by the `stellar new-star` command.
+
 Nebulae can define system roles, such as:
 ```toml
 name = "dev-base"
@@ -43,7 +46,7 @@ gcc = "^13"
 
 ## 🌌 Galaxy
 
-A **Galaxy** is a collection of Stars—functionally a package repository. It may be hosted remotely over HTTP (no TLS), on a USB stick, in a local directory, or via Git.
+A **Galaxy** is a collection of Stars—functionally a package repository. It may be hosted remotely over HTTP (enabled by default), on a USB stick, in a local directory, or via Git. HTTPS and other protocols are supported if Cosmos was built with those transport features.
 
 ### Structure:
 ```
@@ -52,9 +55,9 @@ Galaxy-core/
 ├── packages/
 │   ├── zlib-1.2.13.tar.gz
 │   └── busybox-1.36.0.tar.gz
-├── stars/
-│   ├── zlib.toml
-│   └── busybox.toml
+└── stars/
+    ├── zlib.toml
+    └── busybox.toml
 ```
 
 ### meta.toml (example):
@@ -86,7 +89,7 @@ members = [
 
 Constellations can be installed with:
 ```
-cosmos install --Constellation desktop
+cosmos install --constellation desktop
 ```
 
 ---
@@ -121,6 +124,8 @@ files = [
 
 The Universe is updated automatically by Cosmos when Stars are installed or removed. It can be inspected, versioned, or backed up for reproducibility.
 
+> Cosmos uses file-level tracking to enable uninstall by deletion. It also answers the classic question: “What installed this file and why is it breaking my system?”
+
 ---
 
 ## ✨ Relationships Summary
@@ -134,4 +139,3 @@ The Universe is updated automatically by Cosmos when Stars are installed or remo
 | **Universe**      | Tracks what is installed + file lists       | Yes (by definition)         |
 
 Each of these concepts supports the Cosmos goal of minimal, reproducible, resilient system builds—from a live ISO to a hand-assembled rootfs.
-

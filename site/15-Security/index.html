@@ -607,9 +607,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#no-tls-required" class="md-nav__link">
+  <a href="#no-tls-required-but-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ No TLS Required
+      ❌ No TLS Required (But Optional)
     </span>
   </a>
   
@@ -618,7 +618,7 @@
         <li class="md-nav__item">
   <a href="#integrity" class="md-nav__link">
     <span class="md-ellipsis">
-      🔢 Integrity
+      � Integrity
     </span>
   </a>
   
@@ -693,7 +693,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    17 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -871,9 +871,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#no-tls-required" class="md-nav__link">
+  <a href="#no-tls-required-but-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      ❌ No TLS Required
+      ❌ No TLS Required (But Optional)
     </span>
   </a>
   
@@ -882,7 +882,7 @@
         <li class="md-nav__item">
   <a href="#integrity" class="md-nav__link">
     <span class="md-ellipsis">
-      🔢 Integrity
+      � Integrity
     </span>
   </a>
   
@@ -936,10 +936,9 @@
 <hr />
 <p>Let’s get something out of the way:</p>
 <blockquote>
-<p>If you’re mad there's no TLS, no GPG, and no certificate pinning, you might be looking for the wrong package manager.</p>
+<p>If you’re mad there's no required TLS, no GPG, and no certificate pinning, you might be looking for the wrong package manager.</p>
 </blockquote>
-<p>Cosmos is built for systems that are already trusted, constrained, or purpose-built. If you're bootstrapping from 
-nothing or managing an offline system, TLS and GPG are often just extra ways for things to break.</p>
+<p>Cosmos is built for systems that are already trusted, constrained, or purpose-built. If you're bootstrapping from nothing or managing an offline system, TLS and GPG are often just extra ways for things to break.</p>
 <p>Instead, Cosmos gives you:</p>
 <ul>
 <li>Plain files</li>
@@ -955,23 +954,24 @@ nothing or managing an offline system, TLS and GPG are often just extra ways for
 <li>There is <strong>no central verification authority</strong></li>
 </ul>
 <hr />
-<h2 id="no-tls-required">❌ No TLS Required</h2>
+<h2 id="no-tls-required-but-optional">❌ No TLS Required (But Optional)</h2>
 <ul>
 <li>Cosmos intentionally does <strong>not require HTTPS</strong> or OpenSSL</li>
 <li>This removes runtime SSL dependencies (libssl, cert bundles, etc.)</li>
 <li>Galaxies can be served from:</li>
-<li>Plain HTTP</li>
+<li>Plain HTTP (default transport)</li>
 <li>USB drives</li>
 <li>File paths</li>
-<li>IPFS or Git</li>
+<li>IPFS or Git (via optional transport features)</li>
+<li>HTTPS (if compiled with <code>transport-https</code> feature)</li>
 </ul>
 <blockquote>
-<p>If you want encrypted transport, you can use <code>scp</code>, <code>rsync</code>, <code>tailscale</code>, or just unplug your machine.</p>
+<p>If you want encrypted transport, you can use <code>scp</code>, <code>rsync</code>, <code>tailscale</code>, or enable TLS via the Cosmos transport layer.</p>
 <p>If you don’t trust your Galaxy source, you have no security.</p>
 </blockquote>
 <p>You are responsible for trusting the transport medium.</p>
 <hr />
-<h2 id="integrity">🔢 Integrity</h2>
+<h2 id="integrity">� Integrity</h2>
 <ul>
 <li>Future: hashes of downloaded Star tarballs can be included in <code>star.toml</code></li>
 <li>Future: <code>cosmos verify</code> command will compare installed files to original tarball</li>
@@ -982,7 +982,7 @@ nothing or managing an offline system, TLS and GPG are often just extra ways for
 <ul>
 <li>Nova is a restricted Lua runtime designed to provide a safe API surface for install scripts. However, Nova does not prevent host escape if malicious scripts are written. It is sandboxed in spirit, not in syscall.</li>
 <li>All file ops go through Cosmos' internal API (e.g. <code>copy</code>, <code>run</code>, <code>symlink</code>)</li>
-<li>But run() executes real binaries on the real system</li>
+<li>But <code>run()</code> executes real binaries on the real system</li>
 <li>All paths are forced under a real root prefix passed in by Cosmos</li>
 <li>If your script runs <code>rm -rf /</code>, that’s on you</li>
 <li><code>--safe</code> flag is an upcoming feature that disables <code>run()</code> and other unsafe operations</li>

@@ -2,6 +2,11 @@
 
 This guide walks through how to build a working root filesystem using Cosmos alone. It assumes you have a Cosmos binary, a Galaxy source (HTTP, file, or USB), and a directory to install into.
 
+> This process works from live ISOs, recovery images, or even inside minimalist containers. If you can run the Cosmos binary, you can build a system.
+
+**TL;DR**
+Use this guide to go from zero to rootfs using Cosmos and a local Galaxy—no shell, no dynamic linking, no nonsense.
+
 ---
 
 ## 🌜 What Is Bootstrapping?
@@ -43,6 +48,10 @@ cp -r /etc/skel /mnt/wombat/etc/
 
 # Chroot in
 chroot /mnt/wombat /bin/sh
+
+# Optional: validate install
+which sh
+ls /
 ```
 
 ---
@@ -54,7 +63,20 @@ cosmos install net-tools
 cosmos install busybox
 ```
 
+> `core-stack` is a placeholder for your base system. It can be a Nebula (metapackage). The goal is to get a minimal system up and running.
+
 A full Constellation file (e.g. `bootstrap.toml`) can define this list.
+
+```toml
+name = "bootstrap"
+description = "Minimal system bootstrap"
+
+members = [
+  "core-stack",
+  "net-tools",
+  "busybox",
+]
+```
 
 ---
 

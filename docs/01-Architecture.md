@@ -12,7 +12,7 @@ Cosmos is built as a modular, layered system with a clear separation of responsi
 +-----------------------------+
 |      cosmos-core            | ← Core logic: install, uninstall, deps
 +-----------------------------+
-|      cosmos-transport       | ← Remote fetch handling (HTTP core, HTTPS optional)
+|      cosmos-transport       | ← Remote fetch handling (HTTP required, HTTPS optional)
 +-----------------------------+
 |      cosmos-universe        | ← Installed system state
 +-----------------------------+
@@ -35,25 +35,28 @@ Cosmos is built as a modular, layered system with a clear separation of responsi
 - Handles:
   - Dependency resolution (with semver support)
   - Downloading and extracting tarballs
-    - **Delegates all URL fetching to `cosmos-transport`**
-    - **Still handles `file://` paths directly**
+    - **Delegates all remote fetching to `cosmos-transport`**
+    - **Handles `file://` paths directly**
 - Exposes `install_star`, `uninstall_star`, `update_star` functions
 
 ---
 
 ### 2. `cosmos-transport`
-> A required subcrate responsible for all remote fetching (even if built with minimal features).
+> A required subcrate responsible for all non-`file://` fetches.
 
 - Used by `cosmos-core` to fetch Stars, Galaxies, and tarballs
 - Dispatches by protocol:
   - `http://` → supported by default (via `ureq`)
-  - `https://` → **opt-in via `https` feature**
-  - `file://` → *not* handled here (lives in `cosmos-core`)
-- Built by default with `http`, can be slimmed with:
-  ```toml
-  default-features = false
-  features = ["http"]
-  ```
+  - `https://` → **opt-in via `https` feature or `transport-https` feature in `comos-core`**
+  - `ipfs://`, `ftp://`, etc. → available via additional features
+  - `file://` → *not* handled here (native to `cosmos-core`)
+- Built by default with `http`. Custom builds can slim it down:
+
+```toml
+default-features = false
+features = ["http"]
+```
+
 ---
 
 ### 3. `cosmos-cli`
@@ -105,13 +108,14 @@ Designed to replace raw shell scripts with something safer and more portable.
 - Runs inside install contexts
 - Exposes helper functions like `run("make")`, `copy()`, etc.
 - Optional and pluggable: not required for stars to function
-- 
+
 ---
 
 ## 📂 Filesystem Expectations
 
 - Cosmos **can install packages from**:
-    - HTTP endpoints (no TLS)
+    - HTTP endpoints (enabled by default)
+    - HTTPS (optional via feature)
     - Local file paths (cache/mounted disk/USB)
 - Cosmos uses a cache directory for all downloaded packages
 - Install directory is fully configurable

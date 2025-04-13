@@ -595,7 +595,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    17 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -949,6 +949,11 @@
 
 <h1 id="23-bootstrapping-a-system-with-cosmos">23 – Bootstrapping a System with Cosmos</h1>
 <p>This guide walks through how to build a working root filesystem using Cosmos alone. It assumes you have a Cosmos binary, a Galaxy source (HTTP, file, or USB), and a directory to install into.</p>
+<blockquote>
+<p>This process works from live ISOs, recovery images, or even inside minimalist containers. If you can run the Cosmos binary, you can build a system.</p>
+</blockquote>
+<p><strong>TL;DR</strong>
+Use this guide to go from zero to rootfs using Cosmos and a local Galaxy—no shell, no dynamic linking, no nonsense.</p>
 <hr />
 <h2 id="what-is-bootstrapping">🌜 What Is Bootstrapping?</h2>
 <p>Bootstrapping is the act of building a usable system from near-zero. With Cosmos, this means:</p>
@@ -986,6 +991,10 @@ cp -r /etc/skel /mnt/wombat/etc/
 
 # Chroot in
 chroot /mnt/wombat /bin/sh
+
+# Optional: validate install
+which sh
+ls /
 </code></pre>
 <hr />
 <h2 id="what-to-install-first">🔄 What to Install First</h2>
@@ -993,7 +1002,19 @@ chroot /mnt/wombat /bin/sh
 cosmos install net-tools
 cosmos install busybox
 </code></pre>
+<blockquote>
+<p><code>core-stack</code> is a placeholder for your base system. It can be a Nebula (metapackage). The goal is to get a minimal system up and running.</p>
+</blockquote>
 <p>A full Constellation file (e.g. <code>bootstrap.toml</code>) can define this list.</p>
+<pre><code class="language-toml">name = &quot;bootstrap&quot;
+description = &quot;Minimal system bootstrap&quot;
+
+members = [
+  &quot;core-stack&quot;,
+  &quot;net-tools&quot;,
+  &quot;busybox&quot;,
+]
+</code></pre>
 <hr />
 <h2 id="use-cases">🌐 Use Cases</h2>
 <ul>

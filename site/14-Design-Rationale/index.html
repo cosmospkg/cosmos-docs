@@ -641,7 +641,7 @@
         <li class="md-nav__item">
   <a href="#why-not-make-it-easier" class="md-nav__link">
     <span class="md-ellipsis">
-      🚫 Why not make it easier?
+      ❌ Why not make it easier?
     </span>
   </a>
   
@@ -711,7 +711,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    17 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -945,7 +945,7 @@
         <li class="md-nav__item">
   <a href="#why-not-make-it-easier" class="md-nav__link">
     <span class="md-ellipsis">
-      🚫 Why not make it easier?
+      ❌ Why not make it easier?
     </span>
   </a>
   
@@ -969,6 +969,9 @@
 
 <h1 id="14-design-rationale-and-philosophy">14 – Design Rationale and Philosophy</h1>
 <p>This document explains the "why" behind key design decisions in Cosmos. It exists to clarify intentional tradeoffs and to serve as a personal or public reference when people ask, "why didn't you just use X?"</p>
+<p><strong>TL;DR:</strong><br />
+Cosmos is a Rust-based, static, musl-first package manager designed to work when everything else breaks.<br />
+No Python. No Bash. No TLS <em>required</em>. If you can untar it, you can install it.</p>
 <hr />
 <p>Cosmos was built by someone who stared at a broken Linux install one too many times and thought:</p>
 <blockquote>
@@ -982,6 +985,9 @@
 <p>If yes, you win. If not, you probably ran something written in Python.</p>
 <hr />
 <h2 id="why-not-apt-pacman-dnf-etc">🌌 Why not APT, Pacman, DNF, etc?</h2>
+<blockquote>
+<p>These are built for desktops. Cosmos is built for bare metal and broken installs.</p>
+</blockquote>
 <p>Because those are built for general-purpose desktop Linux distributions. Cosmos is built for:</p>
 <ul>
 <li>Custom distros</li>
@@ -995,7 +1001,7 @@
 <li>Python</li>
 <li>Bash</li>
 <li>D-Bus</li>
-<li>TLS</li>
+<li>TLS (and certificate chains)</li>
 <li>Dynamic linking</li>
 </ul>
 <p>Cosmos relies on:</p>
@@ -1004,6 +1010,9 @@
 </ul>
 <hr />
 <h2 id="why-not-shell-scripts">🦄 Why not shell scripts?</h2>
+<blockquote>
+<p>Because shell scripts are quote mines and hell on wheels.</p>
+</blockquote>
 <p>Shell is powerful, but:</p>
 <ul>
 <li>Unsafe (every space or quote is a landmine)</li>
@@ -1018,6 +1027,9 @@
 </ul>
 <hr />
 <h2 id="why-rust">🚀 Why Rust?</h2>
+<blockquote>
+<p>Because C is a land of undefined behavior and segfaults.</p>
+</blockquote>
 <ul>
 <li>No runtime</li>
 <li>No interpreter</li>
@@ -1028,19 +1040,26 @@
 <p>Rust is a means to an end: predictable binaries that don't break when the system does.</p>
 <hr />
 <h2 id="why-no-https">❌ Why no HTTPS?</h2>
+<blockquote>
+<p>Because sometimes you just want to install a file without bringing half of OpenSSL with it.</p>
+</blockquote>
 <ul>
 <li>TLS requires runtime libs (OpenSSL, etc.)</li>
 <li>Certificates expire</li>
 <li>Embedded systems don’t need encrypted package downloads</li>
 </ul>
-<p>You can:</p>
+<p>Cosmos uses <code>http://</code> and <code>file://</code> by default. If you want HTTPS:</p>
 <ul>
-<li>Use HTTP over trusted networks</li>
-<li>Mirror to USB, S3, or local filesystems</li>
-<li>Add your own transport security if needed</li>
+<li>Enable the <code>transport-https</code> feature in your build</li>
+<li>Use <code>cosmos-transport</code> to extend supported protocols</li>
+<li>Or mirror to USB, S3, or local filesystems</li>
 </ul>
+<p>This keeps the base lean while giving you control over the security model.</p>
 <hr />
 <h2 id="why-not-nix">⚡ Why not Nix?</h2>
+<blockquote>
+<p>Because Nix is a black hole of complexity.</p>
+</blockquote>
 <p>Nix is brilliant, but also:</p>
 <ul>
 <li>Complex</li>
@@ -1050,22 +1069,31 @@
 <p>Cosmos is not trying to do everything. It's trying to do <em>the right thing</em> at the right time.</p>
 <hr />
 <h2 id="why-toml">💡 Why TOML?</h2>
+<blockquote>
+<p>It parses predictably, it reads clean, and it won’t gaslight you like YAML.</p>
+</blockquote>
 <ul>
 <li>Human-readable</li>
 <li>Easy to parse</li>
 <li>Less brittle than YAML</li>
 <li>More structured than JSON</li>
+<li>YAML is great for writing configs that never parse the same way twice.</li>
 </ul>
 <hr />
 <h2 id="why-modular-crates">✅ Why modular crates?</h2>
+<blockquote>
+<p>So you can rip Cosmos apart and use it wherever you want.</p>
+</blockquote>
 <ul>
 <li>So you can embed Cosmos into anything</li>
 <li>So you can build your own TUI, API, init tool, or distro installer</li>
 <li>So Stellar, Nova, and the CLI don’t step on each other</li>
 </ul>
 <hr />
-<h2 id="why-not-make-it-easier">🚫 Why not make it easier?</h2>
-<p>Cosmos is not trying to be the easiest tool. It's trying to be the one that works <em>when everything else breaks</em>.</p>
+<h2 id="why-not-make-it-easier">❌ Why not make it easier?</h2>
+<blockquote>
+<p>Because this isn't for everyone—it's for the ones left fixing systems at 3AM with nothing but tar and despair.</p>
+</blockquote>
 <p>It’s not built for everyone. It’s built for:</p>
 <ul>
 <li>Developers</li>
@@ -1073,6 +1101,7 @@
 <li>Custom OS builders</li>
 <li>People who need to fix a system with nothing but a tarball and a dream</li>
 </ul>
+<p>Cosmos is not trying to be the easiest tool. It's trying to be the one that works <em>when everything else breaks</em>.</p>
 
 
 

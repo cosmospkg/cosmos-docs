@@ -759,7 +759,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    17 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -1072,7 +1072,7 @@
 +-----------------------------+
 |      cosmos-core            | ← Core logic: install, uninstall, deps
 +-----------------------------+
-|      cosmos-transport       | ← Remote fetch handling (HTTP core, HTTPS optional)
+|      cosmos-transport       | ← Remote fetch handling (HTTP required, HTTPS optional)
 +-----------------------------+
 |      cosmos-universe        | ← Installed system state
 +-----------------------------+
@@ -1094,8 +1094,8 @@
 <li>Handles:</li>
 <li>Dependency resolution (with semver support)</li>
 <li>Downloading and extracting tarballs<ul>
-<li><strong>Delegates all URL fetching to <code>cosmos-transport</code></strong></li>
-<li><strong>Still handles <code>file://</code> paths directly</strong></li>
+<li><strong>Delegates all remote fetching to <code>cosmos-transport</code></strong></li>
+<li><strong>Handles <code>file://</code> paths directly</strong></li>
 </ul>
 </li>
 <li>Exposes <code>install_star</code>, <code>uninstall_star</code>, <code>update_star</code> functions</li>
@@ -1103,19 +1103,20 @@
 <hr />
 <h3 id="2-cosmos-transport">2. <code>cosmos-transport</code></h3>
 <blockquote>
-<p>A required subcrate responsible for all remote fetching (even if built with minimal features).</p>
+<p>A required subcrate responsible for all non-<code>file://</code> fetches.</p>
 </blockquote>
 <ul>
 <li>Used by <code>cosmos-core</code> to fetch Stars, Galaxies, and tarballs</li>
 <li>Dispatches by protocol:</li>
 <li><code>http://</code> → supported by default (via <code>ureq</code>)</li>
-<li><code>https://</code> → <strong>opt-in via <code>https</code> feature</strong></li>
-<li><code>file://</code> → <em>not</em> handled here (lives in <code>cosmos-core</code>)</li>
-<li>Built by default with <code>http</code>, can be slimmed with:
-  <code>toml
-  default-features = false
-  features = ["http"]</code></li>
+<li><code>https://</code> → <strong>opt-in via <code>https</code> feature or <code>transport-https</code> feature in <code>comos-core</code></strong></li>
+<li><code>ipfs://</code>, <code>ftp://</code>, etc. → available via additional features</li>
+<li><code>file://</code> → <em>not</em> handled here (native to <code>cosmos-core</code>)</li>
+<li>Built by default with <code>http</code>. Custom builds can slim it down:</li>
 </ul>
+<pre><code class="language-toml">default-features = false
+features = [&quot;http&quot;]
+</code></pre>
 <hr />
 <h3 id="3-cosmos-cli">3. <code>cosmos-cli</code></h3>
 <blockquote>
@@ -1168,13 +1169,13 @@
 <li>Runs inside install contexts</li>
 <li>Exposes helper functions like <code>run("make")</code>, <code>copy()</code>, etc.</li>
 <li>Optional and pluggable: not required for stars to function</li>
-<li></li>
 </ul>
 <hr />
 <h2 id="filesystem-expectations">📂 Filesystem Expectations</h2>
 <ul>
 <li>Cosmos <strong>can install packages from</strong>:<ul>
-<li>HTTP endpoints (no TLS)</li>
+<li>HTTP endpoints (enabled by default)</li>
+<li>HTTPS (optional via feature)</li>
 <li>Local file paths (cache/mounted disk/USB)</li>
 </ul>
 </li>

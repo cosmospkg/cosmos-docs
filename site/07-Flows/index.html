@@ -834,7 +834,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    17 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -1244,7 +1244,9 @@
 <h3 id="local-vs-remote-galaxies">🚜 Local vs Remote Galaxies</h3>
 <ul>
 <li><strong>Local Galaxies</strong> (e.g. <code>file:///</code> or mounted path): read directly from disk</li>
-<li><strong>Remote Galaxies</strong>: read from cache or fetch from <code>url</code> as needed</li>
+<li><strong>Remote Galaxies</strong>:</li>
+<li>By default, use <code>http://</code></li>
+<li>Additional protocols like <code>https://</code>, <code>ipfs://</code> require enabling optional features in the transport layer</li>
 </ul>
 <hr />
 <h3 id="dependency-resolution">🔍 Dependency Resolution</h3>
@@ -1309,17 +1311,18 @@
 <li>Load <code>config.toml</code> and extract the <code>[galaxies]</code> table</li>
 <li>For each Galaxy:</li>
 <li>If the URL is local (<code>file://</code>, relative, or <code>/</code>) → skip</li>
-<li>If the URL is HTTPS → abort (not supported)</li>
-<li>Otherwise download <code>meta.toml</code></li>
+<li>If the URL is <code>https://</code> → abort unless Cosmos was built with TLS support</li>
+<li>Otherwise, download <code>meta.toml</code></li>
 <li>Depending on sync level:</li>
 <li><code>--stars</code>: download each listed <code>star.toml</code></li>
-<li><code>--full</code>: also download each tarball listed in its <code>source</code> field (if HTTP)</li>
+<li><code>--full</code>: also download each tarball listed in its <code>source</code> field (if protocol supported)</li>
 <li>Store all results in <code>{cache_dir}/galaxies/&lt;name&gt;/</code></li>
 </ol>
 <h3 id="notes_3">Notes:</h3>
 <ul>
 <li>Cosmos does <strong>not</strong> sync local/mounted Galaxies—they are read directly</li>
-<li>TLS is not supported—HTTP only</li>
+<li>TLS is <strong>not enabled by default</strong>; HTTP is supported out of the box</li>
+<li>Additional protocols are opt-in via the transport feature system</li>
 <li><code>meta.toml</code> must include a <code>[stars]</code> table with version strings</li>
 <li>Sync is one-shot and explicit—no background updates, no auto-indexing</li>
 </ul>

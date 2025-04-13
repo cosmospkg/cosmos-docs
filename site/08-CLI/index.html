@@ -455,11 +455,11 @@
         <li class="md-nav__item">
   <a href="#command-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      🧭 Command Overview
+      � Command Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧭 Command Overview">
+    <nav class="md-nav" aria-label="� Command Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -533,7 +533,7 @@
         <li class="md-nav__item">
   <a href="#flags" class="md-nav__link">
     <span class="md-ellipsis">
-      🧱 Flags
+      � Flags
     </span>
   </a>
   
@@ -542,7 +542,7 @@
         <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
-      📎 Examples
+      � Examples
     </span>
   </a>
   
@@ -753,7 +753,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    17 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -933,11 +933,11 @@
         <li class="md-nav__item">
   <a href="#command-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      🧭 Command Overview
+      � Command Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧭 Command Overview">
+    <nav class="md-nav" aria-label="� Command Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1011,7 +1011,7 @@
         <li class="md-nav__item">
   <a href="#flags" class="md-nav__link">
     <span class="md-ellipsis">
-      🧱 Flags
+      � Flags
     </span>
   </a>
   
@@ -1020,7 +1020,7 @@
         <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
-      📎 Examples
+      � Examples
     </span>
   </a>
   
@@ -1058,11 +1058,11 @@
 <ul>
 <li>Every command does one thing well</li>
 <li>No auto-updates or background syncs</li>
-<li>No TLS, no dynamic linking</li>
+<li>No dynamic linking, no TLS required by default</li>
 <li>Install flows are deterministic and offline-capable</li>
 </ul>
 <hr />
-<h2 id="command-overview">🧭 Command Overview</h2>
+<h2 id="command-overview">� Command Overview</h2>
 <h3 id="cosmos-install-star-offline-root-path"><code>cosmos install &lt;star&gt; [--offline] [--root &lt;path&gt;]</code></h3>
 <p>Installs a Star and its dependencies.</p>
 <ul>
@@ -1102,6 +1102,7 @@
 <li><code>--stars</code>: also fetches all <code>star.toml</code> files</li>
 <li><code>--full</code>: also fetches <code>.tar.gz</code> packages</li>
 <li>Skips local galaxies automatically</li>
+<li>HTTPS and other protocols require enabling transport features</li>
 </ul>
 <hr />
 <h3 id="cosmos-show-star"><code>cosmos show &lt;star&gt;</code></h3>
@@ -1118,7 +1119,7 @@
 <li>Returns matching Star names</li>
 </ul>
 <hr />
-<h2 id="flags">🧱 Flags</h2>
+<h2 id="flags">� Flags</h2>
 <ul>
 <li><code>--offline</code>: Disables any network calls or on-demand fetches</li>
 <li><code>--constellation &lt;file&gt;</code>: Install using a constellation file</li>
@@ -1126,7 +1127,7 @@
 <li><code>--stars</code>, <code>--full</code>: Optional flags for <code>sync</code></li>
 </ul>
 <hr />
-<h2 id="examples">📎 Examples</h2>
+<h2 id="examples">� Examples</h2>
 <pre><code class="language-bash">cosmos install zlib
 cosmos install --constellation ./presets/desktop.toml
 cosmos uninstall zlib

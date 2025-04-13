@@ -8,12 +8,12 @@ This document outlines the structure and design of the `cosmos` command-line int
 
 - Every command does one thing well
 - No auto-updates or background syncs
-- No TLS, no dynamic linking
+- No dynamic linking, no TLS required by default
 - Install flows are deterministic and offline-capable
 
 ---
 
-## 🧭 Command Overview
+## � Command Overview
 
 ### `cosmos install <star> [--offline] [--root <path>]`
 Installs a Star and its dependencies.
@@ -58,6 +58,7 @@ Downloads Galaxy metadata, Stars, and optional packages.
 - `--stars`: also fetches all `star.toml` files
 - `--full`: also fetches `.tar.gz` packages
 - Skips local galaxies automatically
+- HTTPS and other protocols require enabling transport features
 
 ---
 
@@ -77,7 +78,7 @@ Searches across all loaded Galaxies.
 
 ---
 
-## 🧱 Flags
+## � Flags
 
 - `--offline`: Disables any network calls or on-demand fetches
 - `--constellation <file>`: Install using a constellation file
@@ -86,7 +87,7 @@ Searches across all loaded Galaxies.
 
 ---
 
-## 📎 Examples
+## � Examples
 
 ```bash
 cosmos install zlib

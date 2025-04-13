@@ -762,7 +762,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    17 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -1074,8 +1074,8 @@
 <hr />
 <h2 id="star">✨ Star</h2>
 <p>A <strong>Star</strong> is a single package. It can contain software, configuration, or simply reference other Stars. Stars are defined by a <code>star.toml</code> file and optionally include a tarball and install logic.</p>
-<p>The <code>source</code> field supports both HTTP URLs and local file paths (e.g., <code>/mnt/usb/zlib.tar.gz</code>).<br />
-Tarballs are extracted to a temporary directory before the install script runs.</p>
+<p>The <code>source</code> field supports both HTTP URLs and local file paths (e.g., <code>/mnt/usb/zlib.tar.gz</code>). HTTPS and other protocols may be supported if Cosmos was built with the appropriate transport features.</p>
+<p>Tarballs are extracted to a temporary directory before the install script runs.</p>
 <h3 id="key-fields">Key Fields:</h3>
 <pre><code class="language-toml">name = &quot;zlib&quot;
 version = &quot;1.2.13&quot;
@@ -1092,6 +1092,9 @@ musl = &quot;&gt;=1.2.0&quot;
 <li><code>normal</code>: A real package with files to extract and install</li>
 <li><code>nebula</code>: A virtual package that only contains dependencies (no source, no script)</li>
 </ul>
+<blockquote>
+<p>If using Stellar, the <code>type</code> field is populated by the <code>stellar new-star</code> command.</p>
+</blockquote>
 <p>Nebulae can define system roles, such as:</p>
 <pre><code class="language-toml">name = &quot;dev-base&quot;
 type = &quot;nebula&quot;
@@ -1103,16 +1106,16 @@ gcc = &quot;^13&quot;
 </code></pre>
 <hr />
 <h2 id="galaxy">🌌 Galaxy</h2>
-<p>A <strong>Galaxy</strong> is a collection of Stars—functionally a package repository. It may be hosted remotely over HTTP (no TLS), on a USB stick, in a local directory, or via Git.</p>
+<p>A <strong>Galaxy</strong> is a collection of Stars—functionally a package repository. It may be hosted remotely over HTTP (enabled by default), on a USB stick, in a local directory, or via Git. HTTPS and other protocols are supported if Cosmos was built with those transport features.</p>
 <h3 id="structure">Structure:</h3>
 <pre><code>Galaxy-core/
 ├── meta.toml
 ├── packages/
 │   ├── zlib-1.2.13.tar.gz
 │   └── busybox-1.36.0.tar.gz
-├── stars/
-│   ├── zlib.toml
-│   └── busybox.toml
+└── stars/
+    ├── zlib.toml
+    └── busybox.toml
 </code></pre>
 <h3 id="metatoml-example">meta.toml (example):</h3>
 <pre><code class="language-toml">name = &quot;core&quot;
@@ -1134,7 +1137,7 @@ members = [
 ]
 </code></pre>
 <p>Constellations can be installed with:</p>
-<pre><code>cosmos install --Constellation desktop
+<pre><code>cosmos install --constellation desktop
 </code></pre>
 <hr />
 <h2 id="universe">👩‍💻 Universe</h2>
@@ -1163,6 +1166,9 @@ files = [
 ]
 </code></pre>
 <p>The Universe is updated automatically by Cosmos when Stars are installed or removed. It can be inspected, versioned, or backed up for reproducibility.</p>
+<blockquote>
+<p>Cosmos uses file-level tracking to enable uninstall by deletion. It also answers the classic question: “What installed this file and why is it breaking my system?”</p>
+</blockquote>
 <hr />
 <h2 id="relationships-summary">✨ Relationships Summary</h2>
 <table>

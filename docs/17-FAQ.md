@@ -1,4 +1,4 @@
-# 23 - Frequently Asked Questions (FAQ)
+# 17 - Frequently Asked Questions (FAQ)
 
 ---
 
@@ -49,7 +49,7 @@ strip ./target/release/cosmos-cli
 
 ---
 
-## 🛰️ How small can the binary get?
+## � How small can the binary get?
 
 With a musl static build + stripping, Cosmos CLI can be **under 4 MB**, even with Nova embedded. Most installs will work offline and fit in a bootable initramfs.
 
@@ -57,17 +57,21 @@ With a musl static build + stripping, Cosmos CLI can be **under 4 MB**, even wit
 
 ## 🧪 Why not use TLS or GPG?
 
-Cosmos does not ship with TLS, GPG, or any central trust mechanism. You’re expected to:
+Cosmos does not **require** TLS, GPG, or any central trust mechanism.
+
+Instead, you’re expected to:
 
 - Host Galaxies from trusted sources (USB, internal HTTP, S3)
 - Manually verify what you install
 - Use `cosmos freeze` (coming soon) for lockfile verification
 
+TLS **can** be enabled via the `transport-https` feature. By default, only `http://` and `file://` are supported.
+
 See the [Security Model](./15-Security.md) for full rationale.
 
 ---
 
-## 🪐 Why is everything named after space stuff?
+## 💭 Why is everything named after space stuff?
 
 Because it’s internally consistent, poetic, and structurally accurate:
 

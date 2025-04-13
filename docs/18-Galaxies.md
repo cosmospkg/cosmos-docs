@@ -11,7 +11,7 @@ Galaxies are designed to be as dumb and static as possible—because the smartes
 
 ---
 
-## 🖊️ Example `meta.toml`
+## � Example `meta.toml`
 ```toml
 name = "core"
 description = "Core packages for Cosmos systems"
@@ -48,10 +48,11 @@ This can be served from:
 - Your personal server
 - A USB stick you found in a drawer from 2008
 - **A Git repo you cloned manually** (Cosmos will never do this for you)
+- Any HTTP/HTTPS endpoint (HTTPS requires the optional transport feature)
 
 ---
 
-## 🚫 Rules of Hosting a Galaxy
+## ❌ Rules of Hosting a Galaxy
 Managing a Galaxy sounds cool until you realize it means:
 
 - **Maintaining packages** regularly
@@ -70,7 +71,7 @@ If you're not ready to maintain your own galaxy, don't. Use someone else's. Fork
 If Cosmos ever gets an official Galaxy, it will probably be hosted on:
 
 - S3 or a static file server
-- With no TLS
+- **With no TLS by default**
 - With a massive readme warning you not to blindly trust it
 
 This is because Cosmos believes in:
@@ -78,6 +79,8 @@ This is because Cosmos believes in:
 - Simplicity
 - Reproducibility
 - You being responsible for your own system
+
+(And yes, TLS can be enabled if you build with `transport-https`.)
 
 ---
 

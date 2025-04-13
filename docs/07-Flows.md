@@ -33,7 +33,9 @@ Install a Star and its dependencies, supporting local or remote Galaxies, with o
 
 ### 🚜 Local vs Remote Galaxies
 - **Local Galaxies** (e.g. `file:///` or mounted path): read directly from disk
-- **Remote Galaxies**: read from cache or fetch from `url` as needed
+- **Remote Galaxies**:
+  - By default, use `http://`
+  - Additional protocols like `https://`, `ipfs://` require enabling optional features in the transport layer
 
 ---
 
@@ -101,21 +103,21 @@ Download Galaxy metadata, Stars, and (optionally) packages to prepare for instal
 1. Load `config.toml` and extract the `[galaxies]` table
 2. For each Galaxy:
    - If the URL is local (`file://`, relative, or `/`) → skip
-   - If the URL is HTTPS → abort (not supported)
-   - Otherwise download `meta.toml`
+   - If the URL is `https://` → abort unless Cosmos was built with TLS support
+   - Otherwise, download `meta.toml`
 3. Depending on sync level:
    - `--stars`: download each listed `star.toml`
-   - `--full`: also download each tarball listed in its `source` field (if HTTP)
+   - `--full`: also download each tarball listed in its `source` field (if protocol supported)
 4. Store all results in `{cache_dir}/galaxies/<name>/`
 
 ### Notes:
 - Cosmos does **not** sync local/mounted Galaxies—they are read directly
-- TLS is not supported—HTTP only
+- TLS is **not enabled by default**; HTTP is supported out of the box
+- Additional protocols are opt-in via the transport feature system
 - `meta.toml` must include a `[stars]` table with version strings
 - Sync is one-shot and explicit—no background updates, no auto-indexing
 
 ---
-
 
 These flows define the fundamental operations of Cosmos, emphasizing transparency, reproducibility, and total independence from external system dependencies.
 

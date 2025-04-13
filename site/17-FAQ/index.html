@@ -22,7 +22,7 @@
     
     
       
-        <title>23 - Frequently Asked Questions (FAQ) - Cosmos Package Manager Documentation</title>
+        <title>17 - Frequently Asked Questions (FAQ) - Cosmos Package Manager Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#23-frequently-asked-questions-faq" class="md-skip">
+        <a href="#17-frequently-asked-questions-faq" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              23 - Frequently Asked Questions (FAQ)
+              17 - Frequently Asked Questions (FAQ)
             
           </span>
         </div>
@@ -606,7 +606,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    17 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -619,7 +619,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    17 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -686,7 +686,7 @@
         <li class="md-nav__item">
   <a href="#how-small-can-the-binary-get" class="md-nav__link">
     <span class="md-ellipsis">
-      🛰️ How small can the binary get?
+      � How small can the binary get?
     </span>
   </a>
   
@@ -704,7 +704,7 @@
         <li class="md-nav__item">
   <a href="#why-is-everything-named-after-space-stuff" class="md-nav__link">
     <span class="md-ellipsis">
-      🪐 Why is everything named after space stuff?
+      💭 Why is everything named after space stuff?
     </span>
   </a>
   
@@ -966,7 +966,7 @@
         <li class="md-nav__item">
   <a href="#how-small-can-the-binary-get" class="md-nav__link">
     <span class="md-ellipsis">
-      🛰️ How small can the binary get?
+      � How small can the binary get?
     </span>
   </a>
   
@@ -984,7 +984,7 @@
         <li class="md-nav__item">
   <a href="#why-is-everything-named-after-space-stuff" class="md-nav__link">
     <span class="md-ellipsis">
-      🪐 Why is everything named after space stuff?
+      💭 Why is everything named after space stuff?
     </span>
   </a>
   
@@ -1051,7 +1051,7 @@
 
 
 
-<h1 id="23-frequently-asked-questions-faq">23 - Frequently Asked Questions (FAQ)</h1>
+<h1 id="17-frequently-asked-questions-faq">17 - Frequently Asked Questions (FAQ)</h1>
 <hr />
 <h2 id="why-does-cosmos-link-to-libmso6-on-glibc">🤔 Why does Cosmos link to <code>libm.so.6</code> on glibc?</h2>
 <p>This is normal and expected.</p>
@@ -1081,19 +1081,21 @@ Use <code>strip</code> to remove debug symbols and reduce size:</p>
 <pre><code class="language-bash">strip ./target/release/cosmos-cli
 </code></pre>
 <hr />
-<h2 id="how-small-can-the-binary-get">🛰️ How small can the binary get?</h2>
+<h2 id="how-small-can-the-binary-get">� How small can the binary get?</h2>
 <p>With a musl static build + stripping, Cosmos CLI can be <strong>under 4 MB</strong>, even with Nova embedded. Most installs will work offline and fit in a bootable initramfs.</p>
 <hr />
 <h2 id="why-not-use-tls-or-gpg">🧪 Why not use TLS or GPG?</h2>
-<p>Cosmos does not ship with TLS, GPG, or any central trust mechanism. You’re expected to:</p>
+<p>Cosmos does not <strong>require</strong> TLS, GPG, or any central trust mechanism.</p>
+<p>Instead, you’re expected to:</p>
 <ul>
 <li>Host Galaxies from trusted sources (USB, internal HTTP, S3)</li>
 <li>Manually verify what you install</li>
 <li>Use <code>cosmos freeze</code> (coming soon) for lockfile verification</li>
 </ul>
+<p>TLS <strong>can</strong> be enabled via the <code>transport-https</code> feature. By default, only <code>http://</code> and <code>file://</code> are supported.</p>
 <p>See the <a href="../15-Security/">Security Model</a> for full rationale.</p>
 <hr />
-<h2 id="why-is-everything-named-after-space-stuff">🪐 Why is everything named after space stuff?</h2>
+<h2 id="why-is-everything-named-after-space-stuff">💭 Why is everything named after space stuff?</h2>
 <p>Because it’s internally consistent, poetic, and structurally accurate:</p>
 <ul>
 <li>Cosmos = the full system</li>

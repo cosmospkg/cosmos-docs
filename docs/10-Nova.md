@@ -1,6 +1,10 @@
 # 10 – Nova Scripting Engine
 
+> Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.”
+
 Nova is the optional, portable scripting engine for Cosmos. It is designed to replace shell-based `install_script` fields in `star.toml` with a safe, cross-platform alternative powered by Lua.
+
+Nova scripts should live within the tarball root directory and follow the standard install.lua + optional build() and install() functions format. Extra helpers are allowed, but all logic must be self-contained.
 
 Nova provides a constrained API surface tailored for packaging use cases: building, copying, and linking files during installation.
 
@@ -37,6 +41,14 @@ function install()
 end
 ```
 
+## Hello World Example
+```lua
+function install()
+  mkdir("/usr/share/hello")
+  copy("hello.txt", "/usr/share/hello/hello.txt")
+end
+```
+
 ---
 
 ## ⚖️ Runtime Environment
@@ -50,6 +62,9 @@ Runs a system command in the current working directory.
 - Inherits stdout/stderr
 - Returns exit code
 - Raises error if non-zero
+- Synchronous and blocks until completion
+
+> Note: run() is powerful but unsafe. Use only for trusted build steps—never run arbitrary commands from star input. `--safe` is an upcoming feature to disable the `run()` function.
 
 #### `copy(from: string, to: string)`
 Copies a file from `from` (relative to working dir) to `to` (absolute path under real root).

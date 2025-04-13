@@ -515,6 +515,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hello-world-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hello World Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#runtime-environment" class="md-nav__link">
     <span class="md-ellipsis">
       ⚖️ Runtime Environment
@@ -786,7 +795,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    17 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -982,6 +991,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#hello-world-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hello World Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#runtime-environment" class="md-nav__link">
     <span class="md-ellipsis">
       ⚖️ Runtime Environment
@@ -1118,7 +1136,11 @@
 
 
 <h1 id="10-nova-scripting-engine">10 – Nova Scripting Engine</h1>
+<blockquote>
+<p>Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.”</p>
+</blockquote>
 <p>Nova is the optional, portable scripting engine for Cosmos. It is designed to replace shell-based <code>install_script</code> fields in <code>star.toml</code> with a safe, cross-platform alternative powered by Lua.</p>
+<p>Nova scripts should live within the tarball root directory and follow the standard install.lua + optional build() and install() functions format. Extra helpers are allowed, but all logic must be self-contained.</p>
 <p>Nova provides a constrained API surface tailored for packaging use cases: building, copying, and linking files during installation.</p>
 <p>Nova scripts are not standalone. They are invoked by Cosmos during install, with the runtime context passed in (e.g. real root path).</p>
 <hr />
@@ -1149,6 +1171,12 @@ function install()
   symlink(&quot;/usr/bin/tool&quot;, &quot;/usr/bin/t&quot;)
 end
 </code></pre>
+<h2 id="hello-world-example">Hello World Example</h2>
+<pre><code class="language-lua">function install()
+  mkdir(&quot;/usr/share/hello&quot;)
+  copy(&quot;hello.txt&quot;, &quot;/usr/share/hello/hello.txt&quot;)
+end
+</code></pre>
 <hr />
 <h2 id="runtime-environment">⚖️ Runtime Environment</h2>
 <p>Cosmos executes Nova scripts inside a controlled environment.</p>
@@ -1159,7 +1187,11 @@ end
 <li>Inherits stdout/stderr</li>
 <li>Returns exit code</li>
 <li>Raises error if non-zero</li>
+<li>Synchronous and blocks until completion</li>
 </ul>
+<blockquote>
+<p>Note: run() is powerful but unsafe. Use only for trusted build steps—never run arbitrary commands from star input. <code>--safe</code> is an upcoming feature to disable the <code>run()</code> function.</p>
+</blockquote>
 <h4 id="copyfrom-string-to-string"><code>copy(from: string, to: string)</code></h4>
 <p>Copies a file from <code>from</code> (relative to working dir) to <code>to</code> (absolute path under real root).</p>
 <h4 id="symlinktarget-string-linkname-string"><code>symlink(target: string, linkname: string)</code></h4>

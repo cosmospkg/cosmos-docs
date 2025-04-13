@@ -699,7 +699,7 @@
   
   
   <span class="md-ellipsis">
-    23 - Frequently Asked Questions (FAQ)
+    17 - Frequently Asked Questions (FAQ)
     
   </span>
   
@@ -954,16 +954,17 @@
 <ul>
 <li>Downloading <code>.tar.gz</code> files during install</li>
 <li>Syncing Galaxy metadata over HTTP</li>
-<li>(Eventually) supporting alternative transports like HTTPS, FTP, or others</li>
+<li>Optionally supporting alternative transports like HTTPS, FTP, or IPFS</li>
 </ul>
-<p>By isolating this logic, Cosmos remains modular and auditable.</p>
+<p>By isolating this logic, Cosmos remains modular, auditable, and easy to reason about.</p>
 <hr />
 <h2 id="core-philosophy">✅ Core Philosophy</h2>
 <ul>
 <li>Transport is <strong>pluggable</strong>, not assumed</li>
 <li><code>cosmos-core</code> should not link any HTTP libraries directly</li>
 <li><code>cosmos-transport</code> is always compiled, but only minimal features are enabled by default</li>
-<li>No TLS or HTTPS unless explicitly enabled</li>
+<li><strong>HTTP is required</strong> and included by default</li>
+<li><strong>HTTPS and TLS are optional features</strong></li>
 <li>No background syncs, retries, or hidden redirects</li>
 </ul>
 <hr />
@@ -973,8 +974,8 @@
 <li><code>fetch_bytes(url: &amp;str) -&gt; Result&lt;Vec&lt;u8&gt;, TransportError&gt;</code></li>
 </ul>
 <p>Supports:
-- <code>http://</code> via <code>ureq</code>
-- TLS is <strong>not</strong> enabled by default</p>
+- <code>http://</code> via <code>ureq</code> (enabled by default)
+- <code>https://</code> via <code>ureq/tls</code> (optional via feature flag)</p>
 <h3 id="not-included">❌ Not included:</h3>
 <ul>
 <li><code>file://</code> logic – handled in <code>cosmos-core</code></li>
@@ -994,7 +995,7 @@ tls = [&quot;ureq/tls&quot;]
 <li>The <code>https</code> capability must be enabled manually via the <code>transport-https</code> feature flag in <code>cosmos-core</code></li>
 </ul>
 <hr />
-<p>This design allows Cosmos to support remote access in constrained systems without forcing TLS, shared libraries, or network stack assumptions. Future protocols can be implemented behind flags without changing the trust, performance, or predictability of the core system.</p>
+<p>This design allows Cosmos to support remote access in constrained systems <strong>without requiring TLS, shared libraries, or complex network stacks</strong>. Future protocols can be implemented behind feature flags without affecting the trust model, performance, or predictability of the core system.</p>
 
 
 

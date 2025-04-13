@@ -12,9 +12,9 @@ This document defines the purpose and structure of the `cosmos-transport` crate,
 
 - Downloading `.tar.gz` files during install
 - Syncing Galaxy metadata over HTTP
-- (Eventually) supporting alternative transports like HTTPS, FTP, or others
+- Optionally supporting alternative transports like HTTPS, FTP, or IPFS
 
-By isolating this logic, Cosmos remains modular and auditable.
+By isolating this logic, Cosmos remains modular, auditable, and easy to reason about.
 
 ---
 
@@ -23,7 +23,8 @@ By isolating this logic, Cosmos remains modular and auditable.
 - Transport is **pluggable**, not assumed
 - `cosmos-core` should not link any HTTP libraries directly
 - `cosmos-transport` is always compiled, but only minimal features are enabled by default
-- No TLS or HTTPS unless explicitly enabled
+- **HTTP is required** and included by default
+- **HTTPS and TLS are optional features**
 - No background syncs, retries, or hidden redirects
 
 ---
@@ -34,8 +35,8 @@ By isolating this logic, Cosmos remains modular and auditable.
 - `fetch_bytes(url: &str) -> Result<Vec<u8>, TransportError>`
 
 Supports:
-- `http://` via `ureq`
-- TLS is **not** enabled by default
+- `http://` via `ureq` (enabled by default)
+- `https://` via `ureq/tls` (optional via feature flag)
 
 ### ❌ Not included:
 - `file://` logic – handled in `cosmos-core`
@@ -59,5 +60,5 @@ tls = ["ureq/tls"]
 
 ---
 
-This design allows Cosmos to support remote access in constrained systems without forcing TLS, shared libraries, or network stack assumptions. Future protocols can be implemented behind flags without changing the trust, performance, or predictability of the core system.
+This design allows Cosmos to support remote access in constrained systems **without requiring TLS, shared libraries, or complex network stacks**. Future protocols can be implemented behind feature flags without affecting the trust model, performance, or predictability of the core system.
 
