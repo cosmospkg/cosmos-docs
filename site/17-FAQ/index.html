@@ -642,19 +642,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-does-cosmos-link-to-libmso6-on-glibc" class="md-nav__link">
+  <a href="#why-does-cosmos-link-to-libmso6-and-libgcc_sso1-on-glibc" class="md-nav__link">
     <span class="md-ellipsis">
-      🤔 Why does Cosmos link to libm.so.6 on glibc?
+      🤔 Why does Cosmos link to libm.so.6 and libgcc_s.so.1 on glibc?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🤔 Why does Cosmos link to libm.so.6 on glibc?">
+    <nav class="md-nav" aria-label="🤔 Why does Cosmos link to libm.so.6 and libgcc_s.so.1 on glibc?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#why-is-libm-needed" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary:
+      🔧 Why is libm needed?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-libgcc_sso1-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌌 Why is libgcc_s.so.1 required?
     </span>
   </a>
   
@@ -666,11 +675,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#isnt-this-a-security-concern" class="md-nav__link">
+  <a href="#what-about-musl-builds" class="md-nav__link">
     <span class="md-ellipsis">
-      💥 Isn’t this a security concern?
+      🚀 What about musl builds?
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isnt-this-a-security-concern" class="md-nav__link">
+    <span class="md-ellipsis">
+      💥 Isn't this a security concern?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💥 Isn&#39;t this a security concern?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -922,19 +955,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-does-cosmos-link-to-libmso6-on-glibc" class="md-nav__link">
+  <a href="#why-does-cosmos-link-to-libmso6-and-libgcc_sso1-on-glibc" class="md-nav__link">
     <span class="md-ellipsis">
-      🤔 Why does Cosmos link to libm.so.6 on glibc?
+      🤔 Why does Cosmos link to libm.so.6 and libgcc_s.so.1 on glibc?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🤔 Why does Cosmos link to libm.so.6 on glibc?">
+    <nav class="md-nav" aria-label="🤔 Why does Cosmos link to libm.so.6 and libgcc_s.so.1 on glibc?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#why-is-libm-needed" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary:
+      🔧 Why is libm needed?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-libgcc_sso1-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌌 Why is libgcc_s.so.1 required?
     </span>
   </a>
   
@@ -946,11 +988,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#isnt-this-a-security-concern" class="md-nav__link">
+  <a href="#what-about-musl-builds" class="md-nav__link">
     <span class="md-ellipsis">
-      💥 Isn’t this a security concern?
+      🚀 What about musl builds?
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isnt-this-a-security-concern" class="md-nav__link">
+    <span class="md-ellipsis">
+      💥 Isn't this a security concern?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💥 Isn&#39;t this a security concern?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1053,23 +1119,67 @@
 
 <h1 id="17-frequently-asked-questions-faq">17 - Frequently Asked Questions (FAQ)</h1>
 <hr />
-<h2 id="why-does-cosmos-link-to-libmso6-on-glibc">🤔 Why does Cosmos link to <code>libm.so.6</code> on glibc?</h2>
-<p>This is normal and expected.</p>
-<p>Cosmos uses <code>flate2</code> for handling <code>.tar.gz</code> packages. That crate performs simple math operations, and due to how <strong>glibc</strong> handles math internally, some functions are dynamically linked to <code>libm.so.6</code>.</p>
-<p>This only affects <strong>glibc builds</strong>. If you build Cosmos for <strong>musl</strong> (<code>x86_64-unknown-linux-musl</code>), it will be <strong>fully static</strong> and contain no dynamic dependencies.</p>
-<h3 id="summary">Summary:</h3>
+<h2 id="why-does-cosmos-link-to-libmso6-and-libgcc_sso1-on-glibc">🤔 Why does Cosmos link to <code>libm.so.6</code> and <code>libgcc_s.so.1</code> on glibc?</h2>
+<p>This is normal and expected behavior on <strong>glibc-based systems</strong>.</p>
+<p>Cosmos is designed to be as lightweight and portable as possible. When compiled for glibc, it dynamically links to:</p>
 <ul>
-<li><strong>glibc builds:</strong> dynamically link <code>libc.so.6</code> and <code>libm.so.6</code> (expected)</li>
-<li><strong>musl builds:</strong> fully static, <code>ldd</code> returns "not a dynamic executable"</li>
+<li><code>libc.so.6</code>: the GNU C library (standard)</li>
+<li><code>libm.so.6</code>: the math library</li>
+<li><code>libgcc_s.so.1</code>: GCC support library</li>
 </ul>
+<p>These are all part of a standard glibc runtime environment and are available on <strong>every major Linux distribution</strong>.</p>
 <hr />
-<h2 id="isnt-this-a-security-concern">💥 Isn’t this a security concern?</h2>
-<p>Only if your threat model includes trigonometry.</p>
-<p>Linking <code>libm</code> doesn't affect the stability, reproducibility, or offline usage of Cosmos. It’s the same math library that ships with every glibc-based system.</p>
-<p>If you need a <strong>truly static</strong> binary for initramfs, recovery, or embedded environments, we recommend using the <code>musl</code> target.</p>
+<h3 id="why-is-libm-needed">🔧 Why is <code>libm</code> needed?</h3>
+<p>Cosmos uses the <code>flate2</code> crate to handle <code>.tar.gz</code> package extraction. Internally, this crate (or one of its dependencies) performs basic math operations like floating-point multiplication. On glibc, these are handled by <code>libm</code> instead of inlining or statically linking them.</p>
+<hr />
+<h3 id="why-is-libgcc_sso1-required">🌌 Why is <code>libgcc_s.so.1</code> required?</h3>
+<p>This comes from the Rust compiler toolchain, which depends on certain runtime support features provided by GCC's libgcc. This includes things like stack unwinding and low-level math operations.</p>
+<p>Unless you're using a custom toolchain, <strong>libgcc is already included</strong> on all glibc-based systems.</p>
+<hr />
+<h2 id="what-about-musl-builds">🚀 What about musl builds?</h2>
+<p>If you build Cosmos using the <strong>musl target</strong>, the result is a:</p>
+<ul>
+<li><strong>Fully static binary</strong></li>
+<li>No dynamic dependencies</li>
+<li>Compatible with initramfs, containers, and minimalist distros</li>
+</ul>
+<p>You can build it like this:</p>
 <pre><code class="language-bash">rustup target add x86_64-unknown-linux-musl
 cargo build --release --target x86_64-unknown-linux-musl
 </code></pre>
+<p>Then run <code>ldd</code> on the result:</p>
+<pre><code class="language-bash">$ ldd cosmos
+    not a dynamic executable
+</code></pre>
+<hr />
+<h2 id="isnt-this-a-security-concern">💥 Isn't this a security concern?</h2>
+<p>Only if your threat model includes <strong>floating-point arithmetic and basic division</strong>.</p>
+<p>Linking to <code>libm</code> and <code>libgcc</code> is completely standard for glibc builds. If you require complete static linking for security, reproducibility, or environment constraints, we recommend using the musl build.</p>
+<hr />
+<h3 id="summary">✅ Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Static?</th>
+<th>Linked Libraries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>glibc</code></td>
+<td>No</td>
+<td><code>libc</code>, <code>libm</code>, <code>libgcc</code></td>
+</tr>
+<tr>
+<td><code>musl</code></td>
+<td>Yes</td>
+<td>None (fully static)</td>
+</tr>
+</tbody>
+</table>
+<p>Cosmos is built <strong>offline-first</strong> and is functional in both environments. Your math still works. Your packages still install. Your system is still safe.</p>
+<p><strong>You're fine.</strong></p>
 <hr />
 <h2 id="what-if-i-want-to-strip-cosmos-down-even-more">🧱 What if I want to strip Cosmos down even more?</h2>
 <p>Set this in <code>.cargo/config.toml</code>:</p>
