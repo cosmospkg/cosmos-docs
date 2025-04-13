@@ -47,13 +47,13 @@ Cosmos is built as a modular, layered system with a clear separation of responsi
 - Used by `cosmos-core` to fetch Stars, Galaxies, and tarballs
 - Dispatches by protocol:
   - `http://` → supported by default (via `ureq`)
-  - `https://` → **opt-in via `tls` feature**
+  - `https://` → **opt-in via `https` feature**
   - `file://` → *not* handled here (lives in `cosmos-core`)
 - Built by default with `http`, can be slimmed with:
   ```toml
   default-features = false
   features = ["http"]
-
+  ```
 ---
 
 ### 3. `cosmos-cli`
