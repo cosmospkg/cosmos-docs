@@ -2,32 +2,76 @@
 
 ---
 
-## 🤔 Why does Cosmos link to `libm.so.6` on glibc?
+## 🤔 Why does Cosmos link to `libm.so.6` and `libgcc_s.so.1` on glibc?
 
-This is normal and expected.
+This is normal and expected behavior on **glibc-based systems**.
 
-Cosmos uses `flate2` for handling `.tar.gz` packages. That crate performs simple math operations, and due to how **glibc** handles math internally, some functions are dynamically linked to `libm.so.6`.
+Cosmos is designed to be as lightweight and portable as possible. When compiled for glibc, it dynamically links to:
 
-This only affects **glibc builds**. If you build Cosmos for **musl** (`x86_64-unknown-linux-musl`), it will be **fully static** and contain no dynamic dependencies.
+- `libc.so.6`: the GNU C library (standard)
+- `libm.so.6`: the math library
+- `libgcc_s.so.1`: GCC support library
 
-### Summary:
-- **glibc builds:** dynamically link `libc.so.6` and `libm.so.6` (expected)
-- **musl builds:** fully static, `ldd` returns "not a dynamic executable"
+These are all part of a standard glibc runtime environment and are available on **every major Linux distribution**.
 
 ---
 
-## 💥 Isn’t this a security concern?
+### 🔧 Why is `libm` needed?
 
-Only if your threat model includes trigonometry.
+Cosmos uses the `flate2` crate to handle `.tar.gz` package extraction. Internally, this crate (or one of its dependencies) performs basic math operations like floating-point multiplication. On glibc, these are handled by `libm` instead of inlining or statically linking them.
 
-Linking `libm` doesn't affect the stability, reproducibility, or offline usage of Cosmos. It’s the same math library that ships with every glibc-based system.
+---
 
-If you need a **truly static** binary for initramfs, recovery, or embedded environments, we recommend using the `musl` target.
+### 🌌 Why is `libgcc_s.so.1` required?
+
+This comes from the Rust compiler toolchain, which depends on certain runtime support features provided by GCC's libgcc. This includes things like stack unwinding and low-level math operations.
+
+Unless you're using a custom toolchain, **libgcc is already included** on all glibc-based systems.
+
+---
+
+## 🚀 What about musl builds?
+
+If you build Cosmos using the **musl target**, the result is a:
+
+- **Fully static binary**
+- No dynamic dependencies
+- Compatible with initramfs, containers, and minimalist distros
+
+You can build it like this:
 
 ```bash
 rustup target add x86_64-unknown-linux-musl
 cargo build --release --target x86_64-unknown-linux-musl
 ```
+
+Then run `ldd` on the result:
+
+```bash
+$ ldd cosmos
+    not a dynamic executable
+```
+
+---
+
+## 💥 Isn't this a security concern?
+
+Only if your threat model includes **floating-point arithmetic and basic division**.
+
+Linking to `libm` and `libgcc` is completely standard for glibc builds. If you require complete static linking for security, reproducibility, or environment constraints, we recommend using the musl build.
+
+---
+
+### ✅ Summary
+
+| Target | Static? | Linked Libraries |
+|--------|---------|------------------|
+| `glibc` | No      | `libc`, `libm`, `libgcc` |
+| `musl`  | Yes     | None (fully static)        |
+
+Cosmos is built **offline-first** and is functional in both environments. Your math still works. Your packages still install. Your system is still safe.
+
+**You're fine.**
 
 ---
 
