@@ -946,7 +946,7 @@
 <h1 id="11-transport-layer-cosmos-transport">11 – Transport Layer (cosmos-transport)</h1>
 <p>This document defines the purpose and structure of the <code>cosmos-transport</code> crate, which handles remote content fetching in a clean, modular, and Cosmos-aligned way.</p>
 <blockquote>
-<p>cosmos-transport exists to provide network functionality without changing the trust model of Cosmos. All downloads are assumed to come from already-trusted sources.</p>
+<p><code>cosmos-transport</code> exists to provide network functionality <strong>without changing the trust model</strong> of Cosmos. All downloads are assumed to come from already-trusted sources.</p>
 </blockquote>
 <hr />
 <h2 id="what-is-cosmos-transport">🌐 What is cosmos-transport?</h2>
@@ -962,6 +962,7 @@
 <ul>
 <li>Transport is <strong>pluggable</strong>, not assumed</li>
 <li><code>cosmos-core</code> should not link any HTTP libraries directly</li>
+<li><code>cosmos-transport</code> is always compiled, but only minimal features are enabled by default</li>
 <li>No TLS or HTTPS unless explicitly enabled</li>
 <li>No background syncs, retries, or hidden redirects</li>
 </ul>
@@ -973,7 +974,7 @@
 </ul>
 <p>Supports:
 - <code>http://</code> via <code>ureq</code>
-- TLS is NOT enabled by defaults</p>
+- TLS is <strong>not</strong> enabled by default</p>
 <h3 id="not-included">❌ Not included:</h3>
 <ul>
 <li><code>file://</code> logic – handled in <code>cosmos-core</code></li>
@@ -987,6 +988,13 @@ default = [&quot;http&quot;]
 http = [&quot;ureq&quot;]
 tls = [&quot;ureq/tls&quot;]
 </code></pre>
+<ul>
+<li><code>cosmos-transport</code> is always used by <code>cosmos-core</code></li>
+<li>Only the <code>http</code> feature is included by default</li>
+<li>The <code>https</code> capability must be enabled manually via the <code>transport-https</code> feature flag in <code>cosmos-core</code></li>
+</ul>
+<hr />
+<p>This design allows Cosmos to support remote access in constrained systems without forcing TLS, shared libraries, or network stack assumptions. Future protocols can be implemented behind flags without changing the trust, performance, or predictability of the core system.</p>
 
 
 
