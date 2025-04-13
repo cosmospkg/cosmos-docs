@@ -1109,12 +1109,12 @@
 <li>Used by <code>cosmos-core</code> to fetch Stars, Galaxies, and tarballs</li>
 <li>Dispatches by protocol:</li>
 <li><code>http://</code> → supported by default (via <code>ureq</code>)</li>
-<li><code>https://</code> → <strong>opt-in via <code>tls</code> feature</strong></li>
+<li><code>https://</code> → <strong>opt-in via <code>https</code> feature</strong></li>
 <li><code>file://</code> → <em>not</em> handled here (lives in <code>cosmos-core</code>)</li>
 <li>Built by default with <code>http</code>, can be slimmed with:
-  ```toml
+  <code>toml
   default-features = false
-  features = ["http"]</li>
+  features = ["http"]</code></li>
 </ul>
 <hr />
 <h3 id="3-cosmos-cli">3. <code>cosmos-cli</code></h3>
