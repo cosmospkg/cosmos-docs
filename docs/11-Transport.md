@@ -42,7 +42,6 @@ Supports:
 - Mirrors – planned, not implemented
 
 ---
-ƒ
 ## 🔧 Feature Flags
 
 ```toml
@@ -50,3 +49,4 @@ Supports:
 default = ["http"]
 http = ["ureq"]
 tls = ["ureq/tls"]
+```
