@@ -1,4 +1,4 @@
-# 22 – Transport Layer (cosmos-transport)
+# 11 – Transport Layer (cosmos-transport)
 
 This document defines the purpose and structure of the `cosmos-transport` crate, which handles remote content fetching in a clean, modular, and Cosmos-aligned way.
 
@@ -34,7 +34,7 @@ By isolating this logic, Cosmos remains modular and auditable.
 
 Supports:
 - `http://` via `ureq`
-- TLS is NOT enabled by default
+- TLS is NOT enabled by defaults
 
 ### ❌ Not included:
 - `file://` logic – handled in `cosmos-core`
