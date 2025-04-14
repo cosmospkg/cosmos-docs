@@ -970,7 +970,7 @@
 <h1 id="14-design-rationale-and-philosophy">14 – Design Rationale and Philosophy</h1>
 <p>This document explains the "why" behind key design decisions in Cosmos. It exists to clarify intentional tradeoffs and to serve as a personal or public reference when people ask, "why didn't you just use X?"</p>
 <p><strong>TL;DR:</strong><br />
-Cosmos is a Rust-based, static, musl-first package manager designed to work when everything else breaks.<br />
+Cosmos is a Rust-based, static, musl-first package manager designed to work when everything else breaks <em>or when you deliberately don't want the rest of it.</em><br />
 No Python. No Bash. No TLS <em>required</em>. If you can untar it, you can install it.</p>
 <hr />
 <p>Cosmos was built by someone who stared at a broken Linux install one too many times and thought:</p>
@@ -983,6 +983,10 @@ No Python. No Bash. No TLS <em>required</em>. If you can untar it, you can insta
 <p><strong>Can you install a working system using nothing but a static binary and a tarball?</strong></p>
 </blockquote>
 <p>If yes, you win. If not, you probably ran something written in Python.</p>
+<p>But here's the twist:</p>
+<blockquote>
+<p>Cosmos also works when you're <em>not</em> in panic mode. It's just as happy living in an embedded system or on a purpose-built, no-frills Linux box.</p>
+</blockquote>
 <hr />
 <h2 id="why-not-apt-pacman-dnf-etc">🌌 Why not APT, Pacman, DNF, etc?</h2>
 <blockquote>
@@ -995,6 +999,7 @@ No Python. No Bash. No TLS <em>required</em>. If you can untar it, you can insta
 <li>Musl-based systems</li>
 <li>Fully static systems</li>
 <li>Recovery and self-repair tools</li>
+<li>Embedded and headless systems</li>
 </ul>
 <p>Those package managers rely on:</p>
 <ul>
@@ -1024,6 +1029,7 @@ No Python. No Bash. No TLS <em>required</em>. If you can untar it, you can insta
 <li>A safe, controlled scripting environment</li>
 <li>Cross-platform compatibility</li>
 <li>Clean separation of logic from shell quirks</li>
+<li>The ability to run even on embedded systems without needing a shell at all</li>
 </ul>
 <hr />
 <h2 id="why-rust">🚀 Why Rust?</h2>
@@ -1100,8 +1106,9 @@ No Python. No Bash. No TLS <em>required</em>. If you can untar it, you can insta
 <li>Tinkerers</li>
 <li>Custom OS builders</li>
 <li>People who need to fix a system with nothing but a tarball and a dream</li>
+<li>People who deploy Linux to tiny boxes with no runtime to spare</li>
 </ul>
-<p>Cosmos is not trying to be the easiest tool. It's trying to be the one that works <em>when everything else breaks</em>.</p>
+<p>Cosmos is not trying to be the easiest tool. It's trying to be the one that works <em>when everything else breaks</em> — or when nothing else belongs there in the first place.</p>
 
 
 

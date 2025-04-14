@@ -1,7 +1,7 @@
 # 00 – Overview
 
 > **Cosmos** is a minimal, statically-linked, vendor-agnostic package management system designed for resilience, portability, and clarity.
->
+
 > Originally born from Comet, Cosmos takes the core ideas of ultra-simple packaging and expands them into a clean, modular architecture that can scale from embedded systems to full operating systems.
 
 ---

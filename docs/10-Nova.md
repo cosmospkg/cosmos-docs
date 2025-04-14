@@ -1,6 +1,6 @@
 # 10 – Nova Scripting Engine
 
-> Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.”
+> Nova gives Cosmos packages a portable, audit-friendly install logic system that works on any environment from Alpine to initramfs—no Bash required.
 
 Nova is the optional, portable scripting engine for Cosmos. It is designed to replace shell-based `install_script` fields in `star.toml` with a safe, cross-platform alternative powered by Lua.
 

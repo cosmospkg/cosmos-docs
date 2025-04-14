@@ -1071,6 +1071,9 @@
 
 <h1 id="02-core-concepts">02 – Core Concepts</h1>
 <p>Cosmos is built around four core abstractions: <strong>Stars</strong>, <strong>Constellations</strong>, <strong>Galaxies</strong>, and the <strong>Universe</strong>. These concepts form the foundation of how packages are created, grouped, distributed, and tracked within a Cosmos-based system.</p>
+<blockquote>
+<p>These abstractions are designed to work whether you’re building from scratch on an embedded board or repairing a half-broken server in a live shell.</p>
+</blockquote>
 <hr />
 <h2 id="star">✨ Star</h2>
 <p>A <strong>Star</strong> is a single package. It can contain software, configuration, or simply reference other Stars. Stars are defined by a <code>star.toml</code> file and optionally include a tarball and install logic.</p>
@@ -1108,7 +1111,7 @@ gcc = &quot;^13&quot;
 <h2 id="galaxy">🌌 Galaxy</h2>
 <p>A <strong>Galaxy</strong> is a collection of Stars—functionally a package repository. It may be hosted remotely over HTTP (enabled by default), on a USB stick, in a local directory, or via Git. HTTPS and other protocols are supported if Cosmos was built with those transport features.</p>
 <h3 id="structure">Structure:</h3>
-<pre><code>Galaxy-core/
+<pre><code>core-galaxy/
 ├── meta.toml
 ├── packages/
 │   ├── zlib-1.2.13.tar.gz

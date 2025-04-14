@@ -2,6 +2,8 @@
 
 Cosmos is built around four core abstractions: **Stars**, **Constellations**, **Galaxies**, and the **Universe**. These concepts form the foundation of how packages are created, grouped, distributed, and tracked within a Cosmos-based system.
 
+> These abstractions are designed to work whether you’re building from scratch on an embedded board or repairing a half-broken server in a live shell.
+
 ---
 
 ## ✨ Star
@@ -50,7 +52,7 @@ A **Galaxy** is a collection of Stars—functionally a package repository. It ma
 
 ### Structure:
 ```
-Galaxy-core/
+core-galaxy/
 ├── meta.toml
 ├── packages/
 │   ├── zlib-1.2.13.tar.gz

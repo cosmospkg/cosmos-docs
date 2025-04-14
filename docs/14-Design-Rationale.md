@@ -3,7 +3,7 @@
 This document explains the "why" behind key design decisions in Cosmos. It exists to clarify intentional tradeoffs and to serve as a personal or public reference when people ask, "why didn't you just use X?"
 
 **TL;DR:**  
-Cosmos is a Rust-based, static, musl-first package manager designed to work when everything else breaks.  
+Cosmos is a Rust-based, static, musl-first package manager designed to work when everything else breaks *or when you deliberately don't want the rest of it.*  
 No Python. No Bash. No TLS *required*. If you can untar it, you can install it.
 
 ---
@@ -18,6 +18,9 @@ Cosmos doesn’t care about your desktop theme, your distro war, or your 14-laye
 
 If yes, you win. If not, you probably ran something written in Python.
 
+But here's the twist:
+> Cosmos also works when you're *not* in panic mode. It's just as happy living in an embedded system or on a purpose-built, no-frills Linux box.
+
 ---
 
 ## 🌌 Why not APT, Pacman, DNF, etc?
@@ -30,6 +33,7 @@ Because those are built for general-purpose desktop Linux distributions. Cosmos 
 - Musl-based systems
 - Fully static systems
 - Recovery and self-repair tools
+- Embedded and headless systems
 
 Those package managers rely on:
 
@@ -59,6 +63,7 @@ Nova gives us:
 - A safe, controlled scripting environment
 - Cross-platform compatibility
 - Clean separation of logic from shell quirks
+- The ability to run even on embedded systems without needing a shell at all
 
 ---
 
@@ -134,6 +139,6 @@ It’s not built for everyone. It’s built for:
 - Tinkerers
 - Custom OS builders
 - People who need to fix a system with nothing but a tarball and a dream
+- People who deploy Linux to tiny boxes with no runtime to spare
 
-Cosmos is not trying to be the easiest tool. It's trying to be the one that works *when everything else breaks*.
-
+Cosmos is not trying to be the easiest tool. It's trying to be the one that works *when everything else breaks* — or when nothing else belongs there in the first place.
