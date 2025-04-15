@@ -1149,7 +1149,9 @@ cargo build --release --target x86_64-unknown-linux-musl
 </code></pre>
 <p>Then run <code>ldd</code> on the result:</p>
 <pre><code class="language-bash">$ ldd cosmos
-    not a dynamic executable
+# should only reference the libc library
+# something like this:
+linux-vdso.so.1 =&gt;  (0x00007fffdc3f7000)
 </code></pre>
 <hr />
 <h2 id="isnt-this-a-security-concern">💥 Isn't this a security concern?</h2>
