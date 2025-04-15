@@ -42,7 +42,7 @@ This document outlines future enhancements and optional tools for Cosmos that go
 
 ---
 
-## 8. `cosmos-sdk` / `cosmos-utils` (optional shared crate)
+## 8. `cosmos-sdk` (optional shared crate)
 > Shared functionality for Cosmos-related tooling.
 
 ### Purpose:
@@ -54,7 +54,6 @@ This document outlines future enhancements and optional tools for Cosmos that go
 - Config loading and validation
 - Common errors, types, and file path handling
 - Optional feature flags for ultra-minimal builds
-
 
 ---
 
@@ -77,6 +76,42 @@ This document outlines future enhancements and optional tools for Cosmos that go
 
 ---
 
+## 10. `cosmos-shell` (integrated Nova shell runtime)
+> A standalone shell-like interface for running Nova scripts interactively, performing system automation, and debugging installs.
+
+### Purpose:
+- Allow Nova scripts to be run, tested, and explored interactively
+- Provide a consistent scripting environment across install logic, test environments, and embedded tasks
+- Serve as a programmable shell-like layer that works without traditional shell dependencies
+
+### Features:
+- Launch an interactive Nova REPL (or CLI) for scripting
+- Run Nova install scripts and system logic outside of install flow
+- Inspect filesystem and configuration state
+- Offer optional Nova extensions such as:
+  - Custom functions
+  - Built-in utilities
+  - Host/target-aware scripting
+
+### Example:
+```bash
+cosmos-shell
+> run("mkdir -p /etc/cosmos")
+> copy("conf.toml", "/etc/cosmos/")
+```
+
+### Target Users:
+- Embedded developers
+- Power users who want scripting without Bash
+- System integrators and automation pipelines
+
+### Notes:
+- Not required to run packages
+- Will integrate tightly with existing Nova runtime
+- May support limited scripting extensions only available in `cosmos-shell`
+
+---
+
 ### 🔍 A Note on Git Integration
 Cosmos will **not** use `libgit2`, shell out to `git`, or embed Git transport support.
 
@@ -90,7 +125,7 @@ Cosmos will **not** support `git://` as a protocol. You’re in charge of your o
 
 ---
 
-## 10. `cosmos-utils` (minimal core command set)
+## 11. `cosmos-utils` (minimal core command set)
 > A BusyBox-style bundle of essential CLI tools written in Rust, designed to be used inside minimal or recovery environments.
 
 ### Purpose:
