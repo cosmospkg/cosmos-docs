@@ -49,7 +49,9 @@ Then run `ldd` on the result:
 
 ```bash
 $ ldd cosmos
-    not a dynamic executable
+# should only reference the libc library
+# something like this:
+linux-vdso.so.1 =>  (0x00007fffdc3f7000)
 ```
 
 ---
