@@ -19,9 +19,11 @@ Install a Star and its dependencies, supporting local or remote Galaxies, with o
    - Skip if already installed
    - Otherwise, locate the dependency and install it the same way
 7. **Core** downloads the `.tar.gz` if needed (unless in offline mode)
-8. **Core** extracts the tarball to a temporary directory and runs the installation script (if any) from that location
-9. If there's no install script, it extracts `files/*` to the `install_root`
-10. **Core** updates `universe.toml` with installed files
+8. **Core** verifies the `.tar.gz` file by checksum if enabled
+9. **Core** extracts the tarball to a temporary directory and runs the installation script (if any) from that location
+10. **Core** verifies all extracted files by checksum if enabled
+11. If there's no install script, it extracts `files/*` to the `install_root`
+12. **Core** updates `universe.toml` with installed files
 
 ---
 
