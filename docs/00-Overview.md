@@ -36,6 +36,15 @@
 
 ---
 
+## 🌎 Real-World Use Cases
+
+- Recovery: fix broken systems where the package manager failed (dependency chain breakage, runtime corruption, missing Python).
+- Airgapped Deployments: install and update packages offline without relying on HTTPS, GPG signatures, or heavy runtimes.
+- Embedded Systems: run a package manager in minimal or musl-only environments with predictable, portable builds.
+- Scratch Systems: bootstrap clean devices from USB or file servers without assuming a full distro or shell.
+
+---
+
 ## 🔍 Design Principles
 
 - **No shell required**: Nova scripting allows safe, portable install logic
