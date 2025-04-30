@@ -286,6 +286,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#real-world-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌎 Real-World Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#design-principles" class="md-nav__link">
     <span class="md-ellipsis">
       🔍 Design Principles
@@ -853,6 +862,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#real-world-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌎 Real-World Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#design-principles" class="md-nav__link">
     <span class="md-ellipsis">
       🔍 Design Principles
@@ -880,7 +898,7 @@
 <h1 id="00-overview">00 – Overview</h1>
 <blockquote>
 <p><strong>Cosmos</strong> is a minimal, statically-linked, vendor-agnostic package management system designed for resilience, portability, and clarity.</p>
-<p>Originally born from Comet, Cosmos takes the core ideas of ultra-simple packaging and expands them into a clean, modular architecture that can scale from embedded systems to full operating systems.</p>
+<p>Originally born from <a href="https://github.com/wombatlinux/comet">Comet</a>, Cosmos takes the core ideas of ultra-simple packaging and expands them into a clean, modular architecture that can scale from embedded systems to full operating systems.</p>
 </blockquote>
 <hr />
 <h2 id="goals">🚀 Goals</h2>
@@ -909,6 +927,14 @@
 <li><strong>Constellation</strong>: a list of Stars used as an install preset</li>
 <li><strong>Galaxy</strong>: a folder containing one or more Star packages and a <code>meta.toml</code></li>
 <li><strong>Universe</strong>: local system state (installed Stars, versions, and file paths)</li>
+</ul>
+<hr />
+<h2 id="real-world-use-cases">🌎 Real-World Use Cases</h2>
+<ul>
+<li>Recovery: fix broken systems where the package manager failed (dependency chain breakage, runtime corruption, missing Python).</li>
+<li>Airgapped Deployments: install and update packages offline without relying on HTTPS, GPG signatures, or heavy runtimes.</li>
+<li>Embedded Systems: run a package manager in minimal or musl-only environments with predictable, portable builds.</li>
+<li>Scratch Systems: bootstrap clean devices from USB or file servers without assuming a full distro or shell.</li>
 </ul>
 <hr />
 <h2 id="design-principles">🔍 Design Principles</h2>

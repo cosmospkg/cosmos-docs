@@ -76,8 +76,8 @@ Generates/updates the `[stars]` table in `meta.toml`
 stellar new-star hello
 # edit files and install.lua...
 stellar fetch ./hello       # get source code
-stellar build-star ./hello  # run build() inside install.lua
-stellar validate ./hello
+stellar build-star hello  # run build() inside install.lua
+stellar validate hello
 # manually update star.toml source = "file://..."
 # copy tarball to core-galaxy/packages/
 ```

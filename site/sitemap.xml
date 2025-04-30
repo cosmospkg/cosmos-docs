@@ -2,102 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.cosmos-pkg.org/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/00-Overview/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/01-Architecture/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/02-Core-Concepts/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/03-File-Formats/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/04-Nebula-vs-Constellation/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/05-Glossary/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/06-Caching-and-Syncing/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/07-Flows/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/08-CLI/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/09-Tooling/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/10-Nova/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/11-Transport/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/12-FFI/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/13-Phase-3/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/14-Design-Rationale/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/15-Security/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/16-Examples/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/17-FAQ/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/18-Galaxies/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/19-Versioning/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/20-Cosmos-Contribution/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/21-Contribution-Guide-for-Maintainers/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/22-Crate-Policy/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://docs.cosmos-pkg.org/23-Bootstrapping/</loc>
-         <lastmod>2025-04-15</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
 </urlset>
